@@ -11,7 +11,7 @@ jobs:
       with:
         host: ${{ secrets.SERVER }}
         username: ${{ secrets.USER }}
-        password: ${{ secrets.SSH_PRIVATE_KEY }}
+        password: ${{ secrets.PWD }}
         port: 22
         script: |
           cd /wp-content/themes/writingor-wp-theme
