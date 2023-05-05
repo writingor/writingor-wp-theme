@@ -1,0 +1,51 @@
+.writingor--card-4 {
+    display: block;
+    padding: 56px 48px 52px;
+    background: white;
+    border-radius: 0px 0px 0px $radius-1;
+    box-shadow: $shadow-1;
+    text-decoration: none;
+    opacity: 0;
+
+    &.writingor--visible {
+        opacity: 1;
+    }
+
+    @media screen and (max-width: 500px) {
+        padding: 42px 36px 40px;
+    }
+    
+    &__title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        text-align: center;
+        line-height: 100%;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+        transition: $transition;
+    }
+
+    p {
+        transition: $transition;
+    }
+
+    &__link-icon {
+        position: absolute;
+        right: 24px;
+        top: 24px;
+        display: block;
+        width: 24px;
+        height: 24px;
+        object-fit: contain;
+        filter: saturate(0);
+        transition: $transition;
+    }
+
+    &.writingor--mouse:hover {
+        box-shadow: 2px 5px 15px rgba($black, .25);
+
+        .writingor--card-4__link-icon {
+            filter: saturate(1);
+        }
+    }
+}

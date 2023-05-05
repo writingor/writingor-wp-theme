@@ -1,0 +1,32 @@
+.writingor--layout-4 {
+    background-color: $black;
+    padding: 50px 0 100px;
+
+    @media screen and (max-width: 800px) {
+        padding-bottom: 36px;
+    }
+
+    &__container {
+        // pass
+    }
+
+    &__header {
+        margin-bottom: 66px;
+
+        .writingor--title-1 {
+            color: white;
+        }
+    }
+
+    &__cards {
+        // pass
+
+        .writingor--card-2 {
+            margin-bottom: 80px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

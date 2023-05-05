@@ -1,0 +1,34 @@
+.writingor--layout-6 {
+    padding: 50px 0 100px;
+    background-color: white;
+    overflow: hidden;
+
+    &__container {
+        // pass
+    }
+
+    &__main {
+        padding-top: 50px;
+    }
+
+    &__slider {
+        overflow: visible;
+
+        .swiper-slide {
+            transition: $transition-2;
+            transform: translate(0, 72px);
+            // opacity: .5;
+        }
+
+        .swiper-slide-prev,
+        .swiper-slide-next {
+            transform: translate(0, 36px);
+            // opacity: .75;
+        }
+        
+        .swiper-slide-active {
+            transform: translate(0, 0);
+            // opacity: 1;
+        }
+    }
+}

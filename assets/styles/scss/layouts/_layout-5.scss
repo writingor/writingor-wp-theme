@@ -1,0 +1,81 @@
+.writingor--layout-5 {
+    position: relative;
+    background-color: $black;
+    padding: 50px 0 0;
+
+    &__container {
+        // pass
+    }
+
+    &__header {
+        padding-bottom: 24px;
+
+        .writingor--title-1 {
+            color: white;
+        }
+    }
+
+    &__main {
+        position: relative;
+    }
+
+    &__cards {
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        .writingor--card-3 {
+            &:nth-child(3n+2) {
+                transform: translate(0, -50%);
+            }
+        }
+    }
+
+    &__more {
+        position: absolute;
+        bottom: 8.8vw;    
+        left: 50%;
+        display: block;
+        width: fit-content;
+        transform: translate(-50%, 0);
+        text-align: center;
+        z-index: 10;
+        background-color: transparent;
+        outline: none;
+        border: none;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        letter-spacing: .4em;
+        font-weight: 500;
+        color: white;
+        cursor: pointer;
+        
+        @media screen and (max-width: 800px) {
+            font-size: 1rem;
+        }
+
+        @media screen and (max-width: 600px) {
+            bottom: 7.6vw;
+        }
+
+        &.writingor--mouse:hover {
+            color: $yellow;
+        }
+    }
+
+    .writingor--transition-to-prev-1 {
+        position: absolute;
+        top: -2px;
+        left: 0;
+        width: 100%;
+        z-index: 4;
+    }
+
+    .writingor--transition-to-next-1 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 4;
+    }
+}

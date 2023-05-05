@@ -1,0 +1,26 @@
+.writingor--layout-7 {
+    position: relative;
+    padding: 16vw 0 15vw;
+    background-color: $violet;
+
+    &__container {
+        position: relative;
+        z-index: 2;
+    }
+
+    .writingor--transition-to-prev-1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .writingor--transition-to-next-1 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+    }
+}

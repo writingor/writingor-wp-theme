@@ -1,0 +1,134 @@
+.writingor--container {
+    // 1524px
+    max-width: 1588px;
+    padding: 0 64px;
+    margin: 0 auto;
+
+    @media screen and (max-width: 800px) {
+        padding-left: 36px;
+        padding-right: 36px;
+    }
+}
+
+.writingor--mouse {
+    transition: $transition;
+}
+
+.writingor--main {
+    min-height: 100vh;
+}
+
+.writingor--top-section {
+    position: relative;
+    z-index: 11;
+    transition: $transition-2;
+
+    .writingor--transition-to-next-1 svg path {
+        transition: $transition-2;
+    }
+
+    &.writingor--scrolled {
+        background-color: $black;
+    }
+}
+
+.writingor--about-section {
+    // p,
+    // li {
+    //     b {
+    //         transition: $transition;
+    //     }
+    // }
+
+    &.writingor--scrolled {
+
+        // p,
+        // li {
+        //     b {
+        //         color: $violet;
+        //     }
+        // }
+
+        // .writingor--button-3 {
+        //     border-color: $violet;
+        // }
+    }
+}
+
+.writingor--transition-to-next-1,
+.writingor--transition-to-next-2,
+.writingor--transition-to-next-3,
+.writingor--transition-to-prev-1,
+.writingor--transition-to-prev-2,
+.writingor--transition-to-prev-3 {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+
+    svg {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}
+
+.writingor--transition-to-prev-1,
+.writingor--transition-to-prev-2,
+.writingor--transition-to-prev-3 {
+    transform: translate(0, -2px);
+}
+
+.writingor--transition-to-next-1,
+.writingor--transition-to-next-2,
+.writingor--transition-to-next-3 {
+    transform: translate(0, 2px);
+}
+
+.writingor--to-top {
+    display: block;
+    position: fixed;
+    left: 0;
+    bottom: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    text-decoration: none;
+    z-index: 10;
+    padding: .15em 1em .3em 1.1em;
+    text-align: center;
+    font-weight: 500;
+    box-shadow: 2px 4px 12px rgba($color: $black, $alpha: .1);
+    color: $gray-2;
+    opacity: 0;
+    transform: rotate(-90deg) translate(0, -200%);
+    transition: $transition;
+    margin: 0;
+
+    &.writingor--mouse:hover {
+        color: $black;
+        box-shadow: 2px 4px 12px rgba($color: $violet, $alpha: .15);
+    }
+
+    &.writingor--scrolled {
+        opacity: 1;
+        transform: rotate(-90deg) translate(0, -125%);
+    }
+}
+
+.writingor--layout {
+    overflow: hidden;
+}
+
+.writingor--layout .writingor--form-1 {
+    opacity: 0;
+    transition: $transition-2;
+
+    &.writingor--visible {
+        opacity: 1;
+    }
+}
+
+.writingor--disabled {
+    pointer-events: none;
+}

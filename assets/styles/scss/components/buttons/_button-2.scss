@@ -1,0 +1,28 @@
+.writingor--button-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    padding: 1.2em 2.3em 1.25em;
+    background-color: $violet;
+    border: 1px solid white;
+    outline: none;
+    border-radius: 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    line-height: 100%;
+
+    @media screen and (max-width: 1000px) {
+        padding: 1em 2.4em 1.05em;
+    }
+
+    &.writingor--mouse:hover {
+        background-color: $red;
+        border-radius: 0;
+    }
+}

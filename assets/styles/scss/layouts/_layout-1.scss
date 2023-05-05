@@ -1,0 +1,95 @@
+.writingor--layout-1 {
+    background-color: $violet;
+    overflow: hidden;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        min-height: 100vh;
+    }
+
+    h1 {
+        color: white;
+        text-align: center;
+        font-size: 2.1rem;
+        text-transform: uppercase;
+        letter-spacing: .8em;
+
+        @media screen and (max-width: 1000px) {
+            font-size: 1.8rem;
+        }
+
+        @media screen and (max-width: 800px) {
+            font-size: 1.3rem;
+        }
+
+        strong,
+        b {
+            display: block;
+            font-size: 3.2rem;
+            font-weight: 700;
+            letter-spacing: .12em;
+
+            @media screen and (max-width: 1000px) {
+                font-size: 2.4rem;
+            }
+
+            @media screen and (max-width: 800px) {
+                font-size: 1.9rem;
+            }
+
+            @media screen and (max-width: 450px) {
+                font-size: 1.8rem;
+                letter-spacing: .08em;
+            }
+        }
+        
+        em,
+        i {
+            display: block;
+            font-size: 2.6rem;
+            font-weight: 500;
+            font-style: normal;
+            letter-spacing: .4em;
+
+            @media screen and (max-width: 1000px) {
+                font-size: 2.2rem;
+            }
+
+            @media screen and (max-width: 800px) {
+                font-size: 1.7rem;
+            }
+        }
+        
+        span,
+        small {
+            display: block;
+            font-size: 1.1rem;
+            font-weight: 200;
+            line-height: 170%;
+            letter-spacing: .6em;
+            margin-top: .6em;
+
+            @media screen and (max-width: 1000px) {
+                font-size: 1rem;
+                font-weight: 300;
+            }
+
+            @media screen and (max-width: 800px) {
+                font-size: .7rem;
+            }
+        }
+    }
+
+    .writingor--transition-to-next-1 {
+        svg {
+            display: block;
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+    }
+}

@@ -1,0 +1,27 @@
+.writingor--card-3 {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: .5;
+    transition: $transition-2;
+
+    &.writingor--visible {
+        opacity: 1;
+    }
+
+    img {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: $transition;
+
+        &:hover {
+            transform: scale(1.1);
+            filter: contrast(1.05) saturate(1.03) brightness(1.02);
+        }
+    }
+}

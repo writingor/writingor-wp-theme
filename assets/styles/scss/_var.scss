@@ -1,0 +1,23 @@
+$violet: #722DCA;
+$black: #202020;
+$gray-1: #f0f0f0;
+$gray-2: #a0a0a0;
+$gray-3: #cccccc;
+$yellow: #FFD600;
+$red: #E74242;
+
+$transition: all linear 200ms;
+$transition-2: all ease-in 500ms;
+$radius-1: 28px;
+$shadow-1: 3px 5px 10px rgba($black, .16);
+
+@keyframes roll-1 {
+    from {
+        background-color: $gray-2;
+        transform: rotate(-2deg);
+    }
+    to {
+        transform: rotate(1deg);
+        background-color: $gray-1;
+    }
+}

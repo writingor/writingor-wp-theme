@@ -1,0 +1,24 @@
+.writingor--portfolio-modal-1 {
+    max-width: 1244px;
+
+    &__title {
+        font-size: 2.1rem;
+        letter-spacing: .25em;
+        font-weight: 500;
+        line-height: 110%;
+        text-align: center;
+        text-transform: uppercase;
+
+        @media screen and (max-width: 500px) {
+            font-size: 1.8rem;
+        }
+    }
+
+    &__main-img {
+        img {
+            display: block;
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+}

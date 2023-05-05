@@ -1,0 +1,27 @@
+.writingor--footer-1 {
+    background-color: $black;
+    
+    &__container {
+        padding-bottom: 100px;
+
+        @media screen and (max-width: 800px) {
+            padding-bottom: 60px;
+            padding-top: 30px;
+        }
+
+        p {
+            color: $gray-1;
+            text-align: right;
+
+            @media screen and (max-width: 500px) {
+                text-align: center;
+            }
+
+            a {
+                &.writingor--mouse:hover {
+                    color: $yellow;
+                }
+            }
+        }
+    }
+}

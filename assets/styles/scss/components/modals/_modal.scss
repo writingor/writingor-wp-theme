@@ -1,0 +1,126 @@
+.writingor--modal {
+    position: relative;
+    display: none;
+    padding: 56px 48px 52px;
+    background: white;
+    border-radius: $radius-1 0 $radius-1 $radius-1;
+    box-shadow: $shadow-1;
+    width: 100%;
+    max-width: 946px;
+    overflow: hidden;
+
+    @media screen and (max-width: 500px) {
+        padding: 42px 36px 40px;
+    }
+}
+.writingor--modal_active {
+    z-index: 1000;
+    display: block;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+}
+.writingor--modal__hide {
+    position: absolute;
+    z-index: 100;
+    right: 0;
+    top: 0;
+    width: 78px;
+    height: 78px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &:hover {
+        &::after,
+        &::before {
+            background-color: $black;
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        width: 64px;
+        height: 64px;
+    }
+}
+.writingor--modal__hide::after, .writingor--modal__hide::before {
+    position: absolute;
+    content: "";
+    display: block;
+    background: $gray-2;
+    width: 36px;
+    height: 2px;
+    transition: $transition;
+}
+.writingor--modal__hide::before {
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+.writingor--modal__hide::after {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.writingor--modal {
+
+    h3 {
+        // font-size: 2rem;
+        // margin-bottom: 1.5em;
+        // text-align: center;
+        // font-weight: 700;
+        // line-height: 125%;
+        // text-transform: uppercase;
+    }
+
+    .writingor--form-1 {
+        padding: 0;
+        box-shadow: none;
+    }
+}
+
+.writingor--body-overlay {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 100px 20px;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    z-index: 999;
+    background: rgba($black, .7);
+    backdrop-filter: blur(10px);
+}
+.writingor--body-overlay_active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.writingor--body-overlay::-webkit-scrollbar {
+    display: none;
+}
+
+.writingor--body_locked {
+    overflow: hidden;
+}
+
+.writingor--modals-heap {
+    display: none;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+}

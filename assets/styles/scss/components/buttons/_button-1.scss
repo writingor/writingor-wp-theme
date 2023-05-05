@@ -1,0 +1,23 @@
+.writingor--button-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    padding: .9em 2em .95em;
+    background-color: $black;
+    outline: none;
+    border: 2px dashed $gray-1;
+    border-radius: 40px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    line-height: 100%;
+
+    &.writingor--mouse:hover {
+        color: $yellow;
+        border: 2px dashed $gray-2;
+    }
+}
