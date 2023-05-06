@@ -4,7 +4,10 @@ const {
     registerBlockType
 } = wp.blocks
 
-const {Button} = wp.components
+const {
+    Button,
+    ColorPicker
+} = wp.components
 
 const {
     RichText,
