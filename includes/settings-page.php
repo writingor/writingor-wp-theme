@@ -5,8 +5,8 @@
 
 function writingor_admin_menu() {
     add_menu_page(
-        __('writingor page', 'writingor-textdomain'),
-        __('writingor menu', 'writingor-textdomain'),
+        __('Настройки темы', 'writingor'),
+        __('Настройки темы', 'writingor'),
         'manage_options',
         'writingor-page',
         'writingor_admin_page_contents',
