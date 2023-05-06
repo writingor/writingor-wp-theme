@@ -4,23 +4,23 @@ function writingor__add_post_types() {
     $all_params = [
         [
             'slug' => 'reviews',
-            'singular_name' => 'Review',
-            'plural_name' => 'Reviews',
+            'singular_name' => __('Отзыв', 'writingor'),
+            'plural_name' => __('Отзывы', 'writingor'),
         ],
         [
             'slug' => 'benefits',
-            'singular_name' => 'Benefit',
-            'plural_name' => 'Benefits',
+            'singular_name' => __('Преимущество', 'writingor'),
+            'plural_name' => __('Преимущества', 'writingor'),
         ],
         [
             'slug' => 'services',
-            'singular_name' => 'Service',
-            'plural_name' => 'Services',
+            'singular_name' => __('Услуга', 'writingor'),
+            'plural_name' => __('Услуги', 'writingor'),
         ],
         [
             'slug' => 'portfolio',
-            'singular_name' => 'Portfolio',
-            'plural_name' => 'Portfolio',
+            'singular_name' => __('Портфолио', 'writingor'),
+            'plural_name' => __('Портфолио', 'writingor'),
         ]
     ];
     
