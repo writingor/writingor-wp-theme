@@ -14,5 +14,5 @@ jobs:
         password: ${{ secrets.PWD }}
         port: 22
         script: |
-          cd /wp-content/themes/writingor-wp-theme
+          cd wp-content/themes/writingor-wp-theme
           git pull
