@@ -8,7 +8,7 @@
 
     <? wp_head() ?>
 </head>
-<body class="writingor--body">
+<body class="writingor--body" id="writingor--body">
 
     <!-- header-1 -->
     <header class="writingor--header-1">
