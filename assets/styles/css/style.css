@@ -1015,11 +1015,28 @@ button {
   margin-bottom: 0;
 }
 .writingor--language-switcher__list-item a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5em;
   color: #202020;
   text-decoration: none;
 }
 .writingor--language-switcher__list-item a.writingor--mouse:hover {
   opacity: 0.7;
+}
+.writingor--language-switcher__list-item a img,
+.writingor--language-switcher__list-item a svg {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .writingor--language-switcher__current {
   background-color: transparent;
