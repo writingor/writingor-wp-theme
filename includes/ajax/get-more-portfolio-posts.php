@@ -54,8 +54,8 @@ function writingor__get_more_portfolio_posts() {
         'order' => 'DESC'
     ];
 
-    if (function_exists('pll_current_language')) {
-        $args['lang'] = pll_current_language();
+    if (isset($_GET['lang'])) {
+        $args['lang'] = $_GET['lang'];
     }
     
     $loop = new WP_Query($args);
