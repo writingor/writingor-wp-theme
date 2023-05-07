@@ -18,11 +18,20 @@
                     <!-- pass -->
                 </div>
                 <div class="writingor--header-1__language-switcher writingor--language-switcher">
-                    <?
-                    if (function_exists('pll_the_languages')) {
-                        pll_the_languages();
-                    }
-                    ?>
+                    <span class="writingor--language-switcher__current">
+                        <?
+                        if (function_exists('pll_current_language')) {
+                            echo pll_current_language();
+                        }
+                        ?>
+                    </span>
+                    <ul class="writingor--language-switcher__list">
+                        <?
+                        if (function_exists('pll_the_languages')) {
+                            str_replace(' class="', ' class="writingor--language-switcher__list-item" data-class="' pll_the_languages());
+                        }
+                        ?>
+                    </ul>
                 </div>
                 <div class="writingor--header-1__menu-toggler writingor--menu-toggler">
                     <span></span>
