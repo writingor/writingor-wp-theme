@@ -11,9 +11,24 @@
         padding: 20px;
         transform: translate(0, 100%);
         list-style: none;
+        background-color: white;
 
         &_active {
             display: block;
+        }
+    }
+
+    &__list-item {
+        color: $black;
+        text-decoration: none;
+    }
+
+    &__current {
+        color: $yellow;
+        font-weight: 500;
+
+        &.writingor--mouse:hover {
+            color: white;
         }
     }
 }

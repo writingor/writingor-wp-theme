@@ -18,13 +18,13 @@
                     <!-- pass -->
                 </div>
                 <div class="writingor--header-1__language-switcher writingor--language-switcher" onclick="toggleLanguageSwitcherList(event)">
-                    <span class="writingor--language-switcher__current">
+                    <button class="writingor--language-switcher__current">
                         <?
                         if (function_exists('pll_current_language')) {
                             echo pll_current_language();
                         }
                         ?>
-                    </span>
+                    </button>
                     <ul class="writingor--language-switcher__list">
                         <?
                         if (function_exists('pll_the_languages')) {

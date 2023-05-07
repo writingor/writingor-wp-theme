@@ -981,9 +981,21 @@ button {
       -ms-transform: translate(0, 100%);
           transform: translate(0, 100%);
   list-style: none;
+  background-color: white;
 }
 .writingor--language-switcher__list_active {
   display: block;
+}
+.writingor--language-switcher__list-item {
+  color: #202020;
+  text-decoration: none;
+}
+.writingor--language-switcher__current {
+  color: #FFD600;
+  font-weight: 500;
+}
+.writingor--language-switcher__current.writingor--mouse:hover {
+  color: white;
 }
 
 .writingor--layout-1 {
