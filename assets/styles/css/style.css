@@ -976,7 +976,7 @@ button {
   display: none;
   width: 100%;
   max-width: 280px;
-  padding: 20px;
+  padding: 20px 25px;
   -webkit-transform: translate(0, 100%);
       -ms-transform: translate(0, 100%);
           transform: translate(0, 100%);
@@ -986,9 +986,21 @@ button {
 .writingor--language-switcher__list_active {
   display: block;
 }
+.writingor--language-switcher__list-item {
+  margin: 1em 0;
+}
+.writingor--language-switcher__list-item:first-child {
+  margin-top: 0;
+}
+.writingor--language-switcher__list-item:last-child {
+  margin-bottom: 0;
+}
 .writingor--language-switcher__list-item a {
   color: #202020;
   text-decoration: none;
+}
+.writingor--language-switcher__list-item a.writingor--mouse:hover {
+  opacity: 0.7;
 }
 .writingor--language-switcher__current {
   background-color: transparent;
@@ -996,7 +1008,7 @@ button {
   font-weight: 500;
 }
 .writingor--language-switcher__current.writingor--mouse:hover {
-  color: white;
+  opacity: 0.7;
 }
 
 .writingor--layout-1 {
