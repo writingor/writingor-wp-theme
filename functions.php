@@ -66,6 +66,11 @@ function writingor__theme_setup() {
      * Thumbnail
      */
     add_theme_support('post-thumbnails');
+
+    /**
+     * Add theme translate
+     */
+    load_theme_textdomain('writingor', THEME_DIR . '/assets/languages');
 }
 
 /**
