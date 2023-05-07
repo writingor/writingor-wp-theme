@@ -1,0 +1,20 @@
+.writingor--menu-toggler {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    width: 50px;
+    height: 50px;
+
+    &.mouse:hover {
+        opacity: .7;
+    }
+
+    span {
+        display: block;
+        width: 36px;
+        height: 2px;
+        background-color: $yellow;
+    }
+}

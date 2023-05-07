@@ -1,0 +1,134 @@
+.writingor--menu-1 {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 101;
+    width: 100%;
+    max-width: 480px;
+    height: 100%;
+    overflow: hidden;
+    transform: translate(100%, 0);
+    transition: $transition;
+
+    &_active {
+        transform: translate(0, 0);
+        overflow: unset;
+    }
+
+    *::selection {
+        background-color: none;
+    }
+
+    a.writingor--mouse:hover {
+        opacity: .7;
+    }
+
+    &__html-overlay {
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: -100;
+        width: 0;
+        height: 100%;
+        background-color: rgba($color: white, $alpha: .05);
+        backdrop-filter: blur(3px);
+        opacity: 0;
+        transition: $transition;
+    }
+
+    &_active {
+        .mobile-menu__html-overlay {
+            width: 100vw;
+            opacity: 1;
+        }
+    }
+
+    &__body {
+        display: flex;
+        justify-content: stretch;
+        flex-direction: column;
+        height: 100%;
+        background-color: white;
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 1.5rem 1rem;
+    }
+
+    &__hide {
+        // pass
+    }
+
+    &__ui-icon {
+        transform: translate(0, 50%);
+    }
+
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding-top: 37px;
+        overflow-y: auto;
+
+        &::-webkit-scrollbar {
+            width: 12px;
+            background-color: white;
+        }
+        
+        &::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+        
+        &::-webkit-scrollbar-thumb {
+            background-color: $black;
+            border: 4px solid white;
+        } 
+    }
+
+    &__menu-nav {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    &__menu-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        padding: 30px 0;
+    }
+
+    &__menu-list-item {
+        // pass
+    }
+
+    &__menu-link {
+        font-size: 1.5rem;
+        color: $black;
+        text-decoration: none;
+    }
+
+    &__submenu {
+        display: none;
+
+        &_active {
+            display: block;
+        }
+    }
+
+    &__submenu-list {
+        // pass
+    }
+
+    &__submenu-list-item {
+        // pass
+    }
+
+    &__submenu-link {
+        // pass
+    }
+}

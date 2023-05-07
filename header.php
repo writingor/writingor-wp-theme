@@ -33,12 +33,58 @@
                         ?>
                     </ul>
                 </div>
-                <div class="writingor--header-1__menu-toggler writingor--menu-toggler">
+                <button onclick="showMobileMenu(event)" class="writingor--header-1__menu-toggler writingor--menu-toggler">
                     <span></span>
                     <span></span>
                     <span></span>
-                </div>
+                </button>
             </div>
         </div>
     </header>
     <!--/ header-1 -->
+
+    <!-- writingor--menu-1 -->
+    <div class="writingor--menu-1">
+            <div class="writingor--menu-1__html-overlay" onclick="hideMobileMenu(event)"></div>
+            <div class="writingor--menu-1__body">
+                <div class="writingor--menu-1__header">
+    
+                    <!-- menu hide -->
+                    <button class="writingor--menu-hide" onclick="hideMobileMenu(event)">
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <!--/ menu hide -->
+                </div>
+    
+                <!-- nested menu -->
+                <div class="writingor--menu-1__menu">
+                    <nav class="writingor--menu-1__menu-nav">
+                        <ul class="writingor--menu-1__menu-list">
+                            <li class="writingor--menu-1__menu-list-item">
+                                <a href="#writingor--portfolio-section" class="writingor--menu-1__menu-link writingor--anchor" onclick="hideMobileMenu(event, false)">
+                                    Portfolio
+                                </a>
+                            </li>
+                            <li class="writingor--menu-1__menu-list-item">
+                                <a href="#writingor--benefits-section" class="writingor--menu-1__menu-link writingor--anchor" onclick="hideMobileMenu(event, false)">
+                                    Benefits
+                                </a>
+                            </li>
+                            <li class="writingor--menu-1__menu-list-item">
+                                <a href="#writingor--reviews-section" class="writingor--menu-1__menu-link writingor--anchor" onclick="hideMobileMenu(event, false)">
+                                    Reviews
+                                </a>
+                            </li>
+                            <li class="writingor--menu-1__menu-list-item">
+                                <a href="#writingor--contacts-section" class="writingor--menu-1__menu-link writingor--anchor" onclick="hideMobileMenu(event, false)">
+                                    Contacts
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <!--/ nested menu -->
+            </div>
+        </div>
+        <!--/ writingor--menu-1 -->

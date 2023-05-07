@@ -6,4 +6,8 @@
     text-align: center;
     text-transform: uppercase;
     color: $yellow;
+
+    &.writingor--mouse:hover {
+        opacity: .7;
+    }
 }

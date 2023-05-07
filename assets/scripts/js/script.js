@@ -824,3 +824,69 @@ function hideAllActiveLanguageSwitherLists() {
         passive: true
     })
 }
+
+/**
+ * Show mobile menu
+ * @param {*} event - event prevent
+ */
+function showMobileMenu(event, prevent = true) {
+    if (event && prevent) {
+        event.preventDefault()
+    }
+
+    let menu = document.querySelector('.writingor--menu-1')
+
+    if (menu) {
+        menu.classList.add('writingor--menu-1_active')
+    }
+
+    let body = document.querySelector('body')
+
+    if (body) {
+        body.classList.add('writingor--body_locked')
+    }
+}
+
+/**
+ * Hide mobile menu
+ * @param {*} event - event prevent
+ */
+function hideMobileMenu(event, prevent = true) {
+    if (event && prevent) {
+        event.preventDefault()
+    }
+
+    let menu = document.querySelector('.writingor--menu-1')
+
+    if (menu) {
+        menu.classList.remove('writingor--menu-1_active')
+    }
+
+    let body = document.querySelector('body')
+
+    if (body) {
+        body.classList.remove('writingor--body_locked')
+    }
+}
+
+/**
+ * Call hiding menu on doc
+ * events
+ */
+{
+    // on esc button
+    document.addEventListener('keydown', function (e) {
+        e = e || window.event
+        let isEscape = false
+        if ('key' in e) {
+            isEscape = (e.key === 'Escape' || e.key === 'Esc')
+        } else {
+            isEscape = (e.keyCode === 27)
+        }
+        if (isEscape) {
+            hideMobileMenu()
+        }
+    }, {
+        passive: true
+    })
+}
