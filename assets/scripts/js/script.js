@@ -27,7 +27,7 @@ const addScrolledClass = (element, distance) => {
     }
 }
 {
-    const header = document.querySelector('.writingor--header')
+    const header = document.querySelector('.writingor--header-1')
     const toTopButton = document.querySelector('.writingor--to-top')
     const topSection = document.querySelector('#writingor--top-section')
     const aboutSection = document.querySelector('#writingor--about-section')

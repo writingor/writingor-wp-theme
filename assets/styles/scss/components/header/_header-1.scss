@@ -2,9 +2,16 @@
     position: fixed;
     left: 0;
     top: 0;
-    width: 100%;
-    padding: 20px 0;
     z-index: 100;
+    width: 100%;
+    padding: 2rem 0;
+    background-color: transparent;
+    box-shadow: 2px 4px 12px rgba($color: $black, $alpha: .1);
+    backdrop-filter: blur(1px);
+
+    &.writingor--scrolled {
+        backdrop-filter: blur(3px);
+    }
 
     &__row {
         display: flex;

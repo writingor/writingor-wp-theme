@@ -419,16 +419,16 @@ button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: transparent;
   text-decoration: none;
   z-index: 10;
   padding: 0.15em 1em 0.3em 1.1em;
   text-align: center;
   font-weight: 500;
+  background-color: transparent;
   -webkit-box-shadow: 2px 4px 12px rgba(32, 32, 32, 0.1);
           box-shadow: 2px 4px 12px rgba(32, 32, 32, 0.1);
-  -webkit-backdrop-filter: blur(2px);
-          backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
   color: #FFD600;
   opacity: 0;
   -webkit-transform: rotate(-90deg) translate(0, -200%);
@@ -793,9 +793,18 @@ button {
   position: fixed;
   left: 0;
   top: 0;
-  width: 100%;
-  padding: 20px 0;
   z-index: 100;
+  width: 100%;
+  padding: 2rem 0;
+  background-color: transparent;
+  -webkit-box-shadow: 2px 4px 12px rgba(32, 32, 32, 0.1);
+          box-shadow: 2px 4px 12px rgba(32, 32, 32, 0.1);
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
+}
+.writingor--header-1.writingor--scrolled {
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
 }
 .writingor--header-1__row {
   display: -webkit-box;
