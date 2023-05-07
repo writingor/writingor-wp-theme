@@ -991,7 +991,9 @@ button {
   right: 0;
   bottom: 0;
   display: none;
-  width: 100vw;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   max-width: 250px;
   padding: 20px 25px;
   -webkit-transform: translate(0, 100%);
