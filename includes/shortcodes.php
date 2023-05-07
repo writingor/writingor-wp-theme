@@ -53,8 +53,8 @@ function writingor__services_loop() {
     $args = [
         'post_type' => 'services',
         'posts_per_page' => -1,
-        'orderby' => 'menu_order',
-        'order' => 'ASC'
+        'orderby' => 'date',
+        'order' => 'DESC'
     ];
     $loop = new WP_Query($args);
     $index = 1;
@@ -127,8 +127,8 @@ function writingor__portfolio_loop() {
     $args = [
         'post_type' => 'portfolio',
         'posts_per_page' => 6,
-        'orderby' => 'menu_order',
-        'order' => 'ASC'
+        'orderby' => 'date',
+        'order' => 'DESC'
     ];
     $loop = new WP_Query($args);
     $index = 1;
@@ -172,8 +172,8 @@ function writingor__reviews_loop() {
     $args = [
         'post_type' => 'reviews',
         'posts_per_page' => -1,
-        'orderby' => 'menu_order',
-        'order' => 'ASC'
+        'orderby' => 'date',
+        'order' => 'DESC'
     ];
     $loop = new WP_Query($args);
     $index = 1;

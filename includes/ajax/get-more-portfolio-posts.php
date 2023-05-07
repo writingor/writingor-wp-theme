@@ -50,8 +50,8 @@ function writingor__get_more_portfolio_posts() {
         'post_type' => 'portfolio',
         'posts_per_page' => $per_page,
         'paged' => $paged + 1,
-        'orderby' => 'menu_order',
-        'order' => 'ASC'
+        'orderby' => 'date',
+        'order' => 'DESC'
     ];
     $loop = new WP_Query($args);
     $index = $paged * $per_page + 1;
