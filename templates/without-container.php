@@ -3,7 +3,12 @@
 <? get_header() ?>
 
 <main class="writingor--main" id="writingor--main">
-        <? the_content() ?>
+    <br>
+    <br>
+    <br>
+    <? the_content() ?>
+    <br>
+    <br>
 </main>
 
 <? get_footer() ?>
