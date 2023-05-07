@@ -8,7 +8,7 @@
     <!--/ footer-1 -->
 
     <!-- to top -->
-    <a href="#writingor--body" class="writingor--to-top writingor--anchor">Наверх</a>
+    <a href="#writingor--body" class="writingor--to-top writingor--anchor"><?= esc_html__('To top', 'writingor') ?></a>
     <!--/ to top -->
 
     <!-- MODALS -->

@@ -5,8 +5,8 @@
 
 function writingor_admin_menu() {
     add_menu_page(
-        __('Настройки темы', 'writingor'),
-        __('Настройки темы', 'writingor'),
+        __('Theme settings', 'writingor'),
+        __('Theme settings', 'writingor'),
         'manage_options',
         'writingor-page',
         'writingor_admin_page_contents',
@@ -18,7 +18,7 @@ add_action('admin_menu', 'writingor_admin_menu');
 
 function writingor_admin_page_contents() {
     ?>
-    <h1>Writingor Settings</h1>
+    <h1><?= esc_html__('Theme settings', 'writingor') ?></h1>
     <form method="POST" action="options.php">
     <?
     settings_fields('writingor-page');
@@ -52,7 +52,7 @@ function writingor_settings_init() {
 }
 
 function writingor_setting_section_callback_function() {
-    echo '<p>Use html "p" and "a" for formatting</p>';
+    echo '<p>'. esc_html__('Use html p and a for formatting', 'writingor') . '</p>';
 }
 
 function writingor_setting_markup() {

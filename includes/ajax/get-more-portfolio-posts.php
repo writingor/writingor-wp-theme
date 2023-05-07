@@ -60,33 +60,18 @@ function writingor__get_more_portfolio_posts() {
 
     if($loop->have_posts()) :
         while($loop->have_posts()) :
-        $loop->the_post(); 
-            ?>
-            <!-- card-3 (№ <?= $index ?>) -->
-            <div data-modal="#writingor--portfolio-modal-<?= $index ?>" class="writingor--card-3 writingor--visible" onclick="showModal(event.target.closest('[data-modal]'))">
-                <img loading="lazy" src="<?= get_the_post_thumbnail_url(get_the_ID()) ?>" alt="<?= esc_attr(get_the_title()) ?>">
-                <!-- portfolio-modal-<?= $index ?> -->
-                <div id="writingor--portfolio-modal-<?= $index ?>" class="writingor--modal writingor--portfolio-modal-1">
-                    <div class="writingor--modal__hide"></div>
-                    <div class="writingor--modal__content">
-                        <div class="writingor--portfolio-modal-1__main-img">
-                            <h3 class="writingor--portfolio-modal-1__title">
-                                <? the_title() ?>
-                            </h3>
-                            <div class="writingor--portfolio-modal-1__main-img">
-                                <img loading="lazy" src="<?= get_the_post_thumbnail_url(get_the_ID()) ?>" alt="<?= esc_attr(get_the_title()) ?>">
-                            </div>
-                            <p>
-                                <? the_excerpt() ?>
-                            </p>
-                            <p><a rel="noreferrer noopener" target="_blank" href="<?= get_post_permalink() ?>">Посмотреть вёрстку</a></p>
-                        </div>
-                    </div>
-                </div>
-                <!--/ portfolio-modal-<?= $index ?> -->
-            </div>
-            <!--/ card-3 (№ <?= $index ?>) -->
-            <?
+            $loop->the_post();
+
+            get_template_part(
+                'template-parts/cards/card',
+                '3',
+                [
+                    'index' => $index,
+                    'visible' => true,
+                    'add_onclick' => true
+                ]
+            );
+            
             $index++;
         endwhile;
         wp_reset_postdata();

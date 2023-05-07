@@ -89,7 +89,7 @@ function writingor__services_loop() {
                             </div>
                         </div>
                         <a href="#get-service-modal-<?= $index ?>" data-modal class="writingor--button-1">
-                            Заказать
+                            <?= esc_html__('Get', 'writingor') ?>
                         </a>
                     </div>
                 </div>
@@ -137,33 +137,18 @@ function writingor__portfolio_loop() {
 
     if($loop->have_posts()) :
         while($loop->have_posts()) :
-        $loop->the_post(); 
-            ?>
-            <!-- card-3 (№ <?= $index ?>) -->
-            <div data-modal="#writingor--portfolio-modal-<?= $index ?>" class="writingor--card-3">
-                <img loading="lazy" src="<?= get_the_post_thumbnail_url(get_the_ID()) ?>" alt="<?= esc_attr(get_the_title()) ?>">
-                <!-- portfolio-modal-<?= $index ?> -->
-                <div id="writingor--portfolio-modal-<?= $index ?>" class="writingor--modal writingor--portfolio-modal-1">
-                    <div class="writingor--modal__hide"></div>
-                    <div class="writingor--modal__content">
-                        <div class="writingor--portfolio-modal-1__main-img">
-                            <h3 class="writingor--portfolio-modal-1__title">
-                                <? the_title() ?>
-                            </h3>
-                            <div class="writingor--portfolio-modal-1__main-img">
-                                <img loading="lazy" src="<?= get_the_post_thumbnail_url(get_the_ID()) ?>" alt="<?= esc_attr(get_the_title()) ?>">
-                            </div>
-                            <p>
-                                <? the_excerpt() ?>
-                            </p>
-                            <p><a rel="noreferrer noopener" target="_blank" href="<?= get_post_permalink() ?>">Посмотреть вёрстку</a></p>
-                        </div>
-                    </div>
-                </div>
-                <!--/ portfolio-modal-<?= $index ?> -->
-            </div>
-            <!--/ card-3 (№ <?= $index ?>) -->
-            <?
+            $loop->the_post(); 
+            
+            get_template_part(
+                'template-parts/cards/card',
+                '3',
+                [
+                    'index' => $index,
+                    'visible' => false,
+                    'add_onclick' => false
+                ]
+            );
+
             $index++;
         endwhile;
         wp_reset_postdata();
@@ -238,15 +223,15 @@ function writingor__form_1($props) {
         </h2>
         <?= str_replace('id="', 'data-id="', wp_nonce_field('writingor_send_contact_and_task', 'nonce', false, false)) ?>
         <input type="hidden" name="form_name" value="">
-        <input type="text" name="name" placeholder="Имя" style="display: none">
-        <input type="text" name="contact" placeholder="Любой контакт (подпишите)">
-        <textarea name="task" placeholder="Задача"></textarea>
+        <input type="text" name="name" placeholder="<?= esc_attr__('Firstname', 'writingor') ?>" style="display: none">
+        <input type="text" name="contact" placeholder="<?= esc_attr__('Any contact', 'writingor') ?>">
+        <textarea name="task" placeholder="<?= esc_attr__('Task', 'writingor') ?>"></textarea>
         <p class="writingor--form-1__response-message"></p>
-        <button data-text-1="отправить" data-text-2="отправка..." class="writingor--button-4">отправить</button>
+        <button data-text-1="<?= esc_attr__('Send', 'writingor') ?>" data-text-2="<?= esc_attr__('Sending...', 'writingor') ?>" class="writingor--button-4"><?= esc_html__('Send', 'writingor') ?></button>
         <p class="writingor--form-1__agreement">
-            Отправляя форму вы соглашаетесь с
+            <?= esc_html__('By submitting the form you agree to', 'writingor') ?>
             <a href="/privacy-policy/" target="_blank" rel="noreferrer noopener">
-                правилами обработки персональных данных
+                <?= esc_html__('the rules for the processing of personal data', 'writingor') ?>
             </a>
             .
         </p>
