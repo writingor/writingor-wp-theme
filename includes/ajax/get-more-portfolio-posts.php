@@ -53,6 +53,11 @@ function writingor__get_more_portfolio_posts() {
         'orderby' => 'date',
         'order' => 'DESC'
     ];
+
+    if (function_exists('pll_current_language')) {
+        $args['lang'] = pll_current_language();
+    }
+    
     $loop = new WP_Query($args);
     $index = $paged * $per_page + 1;
 
