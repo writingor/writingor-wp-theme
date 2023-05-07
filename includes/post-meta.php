@@ -10,7 +10,7 @@ add_action('add_meta_boxes', 'writingor__add_meta_box_price');
 function writingor__add_meta_box_price() {
     add_meta_box(
         'writingor__meta_box_price', // $id
-        'Price from', // $title
+        __('Price', 'writingor'), // $title
         'writingor__show_meta_box_price', // $callback
         'services', // $page_slug
         'normal', // $context
@@ -20,9 +20,9 @@ function writingor__add_meta_box_price() {
 
 function writingor__show_meta_box_price() {
     global $post;
-    $value = get_post_meta($post->ID, 'writingor__price', true);
+    $value = esc_attr(get_post_meta($post->ID, 'writingor__price', true));
     wp_nonce_field('writingor', 'price_nonce');
-    echo "<input type=\"number\" name=\"writingor__price\" value=\"$value\">";
+    echo "<input type=\"text\" name=\"writingor__price\" value=\"$value\">";
 }
 
 
@@ -52,7 +52,7 @@ function writingor__save_meta_box_price($post_id) {
         }
     }
 
-    $price = intval($_POST['writingor__price']);
+    $price = sanitize_text_field($_POST['writingor__price']);
   
     update_post_meta($post_id, 'writingor__price', $price);
 }
@@ -68,7 +68,7 @@ add_action('add_meta_boxes', 'writingor__add_meta_box_production_time');
 function writingor__add_meta_box_production_time() {
     add_meta_box(
         'writingor__meta_box_production_time', // $id
-        'Production time from', // $title
+        __('Production time', 'writingor'), // $title
         'writingor__show_meta_box_production_time', // $callback
         'services', // $page_slug
         'normal', // $context
@@ -78,9 +78,9 @@ function writingor__add_meta_box_production_time() {
 
 function writingor__show_meta_box_production_time() {
     global $post;
-    $value = get_post_meta($post->ID, 'writingor__production_time', true);
+    $value = esc_attr(get_post_meta($post->ID, 'writingor__production_time', true));
     wp_nonce_field('writingor', 'production_time_nonce');
-    echo "<input type=\"number\" name=\"writingor__production_time\" value=\"$value\">";
+    echo "<input type=\"text\" name=\"writingor__production_time\" value=\"$value\">";
 }
 
 
@@ -110,7 +110,7 @@ function writingor__save_meta_box_production_time($post_id) {
         }
     }
 
-    $production_time = intval($_POST['writingor__production_time']);
+    $production_time = sanitize_text_field($_POST['writingor__production_time']);
   
     update_post_meta($post_id, 'writingor__production_time', $production_time);
 }
@@ -125,7 +125,7 @@ add_action('add_meta_boxes', 'writingor__add_meta_box_review_link');
 function writingor__add_meta_box_review_link() {
     add_meta_box(
         'writingor__meta_box_review_link', // $id
-        'Review link', // $title
+        __('Review link', 'writingor'), // $title
         'writingor__show_meta_box_review_link', // $callback
         'reviews', // $page_slug
         'normal', // $context
@@ -167,8 +167,7 @@ function writingor__save_meta_box_review_link($post_id) {
         }
     }
 
-    $review_link = htmlspecialchars($_POST['writingor__review_link']);
+    $review_link = sanitize_text_field($_POST['writingor__review_link']);
 
     update_post_meta($post_id, 'writingor__review_link', $review_link);
 }
-
