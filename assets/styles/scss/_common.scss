@@ -1,8 +1,13 @@
 .writingor--container {
     // 1524px
     max-width: 1588px;
-    padding: 0 3rem;
+    padding: 0 4rem;
     margin: 0 auto;
+
+    @media screen and (max-width: 800px) {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
 }
 
 .writingor--mouse {
