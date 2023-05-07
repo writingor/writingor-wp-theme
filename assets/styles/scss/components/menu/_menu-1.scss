@@ -99,10 +99,14 @@
     }
 
     &__menu-list-item {
+        display: block;
+        width: 100%;
+        height: fit-content;
         margin: 0;
     }
 
     &__menu-link {
+        display: block;
         padding: 1rem 1.5rem;
         font-size: 1.5rem;
         color: $black;

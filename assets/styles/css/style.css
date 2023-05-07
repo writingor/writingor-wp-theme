@@ -1261,9 +1261,15 @@ button {
   padding: 30px 0;
 }
 .writingor--menu-1__menu-list-item {
+  display: block;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   margin: 0;
 }
 .writingor--menu-1__menu-link {
+  display: block;
   padding: 1rem 1.5rem;
   font-size: 1.5rem;
   color: #202020;

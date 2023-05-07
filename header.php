@@ -62,6 +62,11 @@
                     <nav class="writingor--menu-1__menu-nav">
                         <ul class="writingor--menu-1__menu-list">
                             <li class="writingor--menu-1__menu-list-item">
+                                <a href="#writingor--services-section" class="writingor--menu-1__menu-link writingor--anchor" onclick="hideMobileMenu(event, false)">
+                                    Portfolio
+                                </a>
+                            </li>
+                            <li class="writingor--menu-1__menu-list-item">
                                 <a href="#writingor--portfolio-section" class="writingor--menu-1__menu-link writingor--anchor" onclick="hideMobileMenu(event, false)">
                                     Portfolio
                                 </a>
