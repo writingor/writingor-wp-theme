@@ -1207,6 +1207,9 @@ button {
   gap: 20px;
   padding: 1.5rem;
 }
+.writingor--menu-1__hide {
+  margin-left: auto;
+}
 .writingor--menu-1__ui-icon {
   -webkit-transform: translate(0, 50%);
       -ms-transform: translate(0, 50%);
@@ -1221,7 +1224,6 @@ button {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 100%;
-  padding-top: 37px;
   overflow-y: auto;
 }
 .writingor--menu-1__menu::-webkit-scrollbar {
@@ -1254,7 +1256,7 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 30px 0;
+  padding: 1rem 0;
 }
 .writingor--menu-1__menu-list-item {
   display: block;
