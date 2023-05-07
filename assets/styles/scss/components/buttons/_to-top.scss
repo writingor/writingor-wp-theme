@@ -13,6 +13,7 @@
     text-align: center;
     font-weight: 500;
     box-shadow: 2px 4px 12px rgba($color: $black, $alpha: .1);
+    backdrop-filter: blur(2px);
     color: $yellow;
     opacity: 0;
     transform: rotate(-90deg) translate(0, -200%);
