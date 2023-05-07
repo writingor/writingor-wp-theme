@@ -784,6 +784,15 @@ button {
   text-align: center;
 }
 
+.writingor--header-1 {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 20px 0;
+  z-index: 100;
+}
+
 .writingor--footer-1 {
   background-color: #202020;
 }
