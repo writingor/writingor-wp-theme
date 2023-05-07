@@ -3,11 +3,11 @@
 
     &__list {
         position: absolute;
-        left: 0;
+        right: 0;
         bottom: 0;
         display: none;
-        width: 100%;
-        max-width: 280px;
+        width: 100vw;
+        max-width: 250px;
         padding: 20px 25px;
         transform: translate(0, 100%);
         list-style: none;
