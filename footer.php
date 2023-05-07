@@ -17,7 +17,7 @@
     <div id="text-me-modal-1" class="writingor--modal">
         <div class="writingor--modal__hide"></div>
         <div class="writingor--modal__content">
-            <?= do_shortcode('[writingor__form_1 title="Опишите задачу"]') ?>
+            <?= do_shortcode('[writingor__form_1 title="'. esc_attr__('Write task', 'writingor') .'"]') ?>
         </div>
     </div>
     <!--/ text-me-modal-1 -->
