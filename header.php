@@ -17,7 +17,7 @@
                 <div class="writingor--header-1__logo writingor-logo">
                     <!-- pass -->
                 </div>
-                <div class="writingor--header-1__language-switcher writingor--language-switcher">
+                <div class="writingor--header-1__language-switcher writingor--language-switcher" onclick="toggleLanguageSwitcherList(event)">
                     <span class="writingor--language-switcher__current">
                         <?
                         if (function_exists('pll_current_language')) {
