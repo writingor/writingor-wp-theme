@@ -1,0 +1,30 @@
+.writingor--to-top {
+    display: block;
+    position: fixed;
+    left: 0;
+    bottom: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    text-decoration: none;
+    z-index: 10;
+    padding: .15em 1em .3em 1.1em;
+    text-align: center;
+    font-weight: 500;
+    box-shadow: 2px 4px 12px rgba($color: $black, $alpha: .1);
+    color: $yellow;
+    opacity: 0;
+    transform: rotate(-90deg) translate(0, -200%);
+    transition: $transition;
+    margin: 0;
+
+    &.writingor--mouse:hover {
+        opacity: .7;
+    }
+
+    &.writingor--scrolled {
+        opacity: 1;
+        transform: rotate(-90deg) translate(0, -125%);
+    }
+}

@@ -18,43 +18,6 @@
     min-height: 100vh;
 }
 
-.writingor--top-section {
-    position: relative;
-    z-index: 11;
-    transition: $transition-2;
-
-    .writingor--transition-to-next-1 svg path {
-        transition: $transition-2;
-    }
-
-    &.writingor--scrolled {
-        background-color: $black;
-    }
-}
-
-.writingor--about-section {
-    // p,
-    // li {
-    //     b {
-    //         transition: $transition;
-    //     }
-    // }
-
-    &.writingor--scrolled {
-
-        // p,
-        // li {
-        //     b {
-        //         color: $violet;
-        //     }
-        // }
-
-        // .writingor--button-3 {
-        //     border-color: $violet;
-        // }
-    }
-}
-
 .writingor--transition-to-next-1,
 .writingor--transition-to-next-2,
 .writingor--transition-to-next-3,
@@ -84,35 +47,17 @@
     transform: translate(0, 2px);
 }
 
-.writingor--to-top {
-    display: block;
-    position: fixed;
-    left: 0;
-    bottom: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    text-decoration: none;
-    z-index: 10;
-    padding: .15em 1em .3em 1.1em;
-    text-align: center;
-    font-weight: 500;
-    box-shadow: 2px 4px 12px rgba($color: $black, $alpha: .1);
-    color: $gray-2;
-    opacity: 0;
-    transform: rotate(-90deg) translate(0, -200%);
-    transition: $transition;
-    margin: 0;
+.writingor--top-section {
+    position: relative;
+    z-index: 11;
+    transition: $transition-2;
 
-    &.writingor--mouse:hover {
-        color: $black;
-        box-shadow: 2px 4px 12px rgba($color: $violet, $alpha: .15);
+    .writingor--transition-to-next-1 svg path {
+        transition: $transition-2;
     }
 
     &.writingor--scrolled {
-        opacity: 1;
-        transform: rotate(-90deg) translate(0, -125%);
+        background-color: $black;
     }
 }
 

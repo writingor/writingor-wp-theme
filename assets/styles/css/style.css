@@ -163,22 +163,6 @@ button {
   min-height: 100vh;
 }
 
-.writingor--top-section {
-  position: relative;
-  z-index: 11;
-  -webkit-transition: all ease-in 500ms;
-  -o-transition: all ease-in 500ms;
-  transition: all ease-in 500ms;
-}
-.writingor--top-section .writingor--transition-to-next-1 svg path {
-  -webkit-transition: all ease-in 500ms;
-  -o-transition: all ease-in 500ms;
-  transition: all ease-in 500ms;
-}
-.writingor--top-section.writingor--scrolled {
-  background-color: #202020;
-}
-
 .writingor--transition-to-next-1,
 .writingor--transition-to-next-2,
 .writingor--transition-to-next-3,
@@ -216,48 +200,20 @@ button {
           transform: translate(0, 2px);
 }
 
-.writingor--to-top {
-  display: block;
-  position: fixed;
-  left: 0;
-  bottom: 100px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: white;
-  text-decoration: none;
-  z-index: 10;
-  padding: 0.15em 1em 0.3em 1.1em;
-  text-align: center;
-  font-weight: 500;
-  -webkit-box-shadow: 2px 4px 12px rgba(32, 32, 32, 0.1);
-          box-shadow: 2px 4px 12px rgba(32, 32, 32, 0.1);
-  color: #a0a0a0;
-  opacity: 0;
-  -webkit-transform: rotate(-90deg) translate(0, -200%);
-      -ms-transform: rotate(-90deg) translate(0, -200%);
-          transform: rotate(-90deg) translate(0, -200%);
-  -webkit-transition: all linear 200ms;
-  -o-transition: all linear 200ms;
-  transition: all linear 200ms;
-  margin: 0;
+.writingor--top-section {
+  position: relative;
+  z-index: 11;
+  -webkit-transition: all ease-in 500ms;
+  -o-transition: all ease-in 500ms;
+  transition: all ease-in 500ms;
 }
-.writingor--to-top.writingor--mouse:hover {
-  color: #202020;
-  -webkit-box-shadow: 2px 4px 12px rgba(114, 45, 202, 0.15);
-          box-shadow: 2px 4px 12px rgba(114, 45, 202, 0.15);
+.writingor--top-section .writingor--transition-to-next-1 svg path {
+  -webkit-transition: all ease-in 500ms;
+  -o-transition: all ease-in 500ms;
+  transition: all ease-in 500ms;
 }
-.writingor--to-top.writingor--scrolled {
-  opacity: 1;
-  -webkit-transform: rotate(-90deg) translate(0, -125%);
-      -ms-transform: rotate(-90deg) translate(0, -125%);
-          transform: rotate(-90deg) translate(0, -125%);
+.writingor--top-section.writingor--scrolled {
+  background-color: #202020;
 }
 
 .writingor--layout {
@@ -447,6 +403,48 @@ button {
 .writingor--button-4.writingor--mouse:hover {
   background-color: #722DCA;
   border-radius: 18px 0 18px 18px;
+}
+
+.writingor--to-top {
+  display: block;
+  position: fixed;
+  left: 0;
+  bottom: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: transparent;
+  text-decoration: none;
+  z-index: 10;
+  padding: 0.15em 1em 0.3em 1.1em;
+  text-align: center;
+  font-weight: 500;
+  -webkit-box-shadow: 2px 4px 12px rgba(32, 32, 32, 0.1);
+          box-shadow: 2px 4px 12px rgba(32, 32, 32, 0.1);
+  color: #FFD600;
+  opacity: 0;
+  -webkit-transform: rotate(-90deg) translate(0, -200%);
+      -ms-transform: rotate(-90deg) translate(0, -200%);
+          transform: rotate(-90deg) translate(0, -200%);
+  -webkit-transition: all linear 200ms;
+  -o-transition: all linear 200ms;
+  transition: all linear 200ms;
+  margin: 0;
+}
+.writingor--to-top.writingor--mouse:hover {
+  opacity: 0.7;
+}
+.writingor--to-top.writingor--scrolled {
+  opacity: 1;
+  -webkit-transform: rotate(-90deg) translate(0, -125%);
+      -ms-transform: rotate(-90deg) translate(0, -125%);
+          transform: rotate(-90deg) translate(0, -125%);
 }
 
 .writingor--card-1 {
