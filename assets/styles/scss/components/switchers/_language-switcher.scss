@@ -1,0 +1,19 @@
+.writingor--language-switcher {
+    position: relative;
+
+    &__list {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        display: none;
+        width: 100%;
+        max-width: 280px;
+        padding: 20px;
+        transform: translate(0, 100%);
+        list-style: none;
+
+        &_active {
+            display: block;
+        }
+    }
+}

@@ -966,6 +966,26 @@ button {
   height: 0;
 }
 
+.writingor--language-switcher {
+  position: relative;
+}
+.writingor--language-switcher__list {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: none;
+  width: 100%;
+  max-width: 280px;
+  padding: 20px;
+  -webkit-transform: translate(0, 100%);
+      -ms-transform: translate(0, 100%);
+          transform: translate(0, 100%);
+  list-style: none;
+}
+.writingor--language-switcher__list_active {
+  display: block;
+}
+
 .writingor--layout-1 {
   background-color: #722DCA;
   overflow: hidden;
