@@ -986,11 +986,12 @@ button {
 .writingor--language-switcher__list_active {
   display: block;
 }
-.writingor--language-switcher__list-item {
+.writingor--language-switcher__list-item a {
   color: #202020;
   text-decoration: none;
 }
 .writingor--language-switcher__current {
+  background-color: transparent;
   color: #FFD600;
   font-weight: 500;
 }
