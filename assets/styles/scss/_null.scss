@@ -56,6 +56,11 @@ a {
     text-underline-offset: .3rem;
 }
 
+a,
+button {
+    cursor: pointer;
+}
+
 input,
 textarea,
 button {
