@@ -1163,9 +1163,6 @@ button {
 .writingor--menu-1 *::selection {
   background-color: none;
 }
-.writingor--menu-1 a.writingor--mouse:hover {
-  opacity: 0.7;
-}
 .writingor--menu-1__html-overlay {
   position: fixed;
   top: 0;
@@ -1181,7 +1178,7 @@ button {
   -o-transition: all linear 200ms;
   transition: all linear 200ms;
 }
-.writingor--menu-1_active .mobile-menu__html-overlay {
+.writingor--menu-1_active .writingor--menu-1__html-overlay {
   width: 100vw;
   opacity: 1;
 }
@@ -1210,7 +1207,7 @@ button {
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 20px;
-  padding: 1.5rem 1rem;
+  padding: 1.5rem;
 }
 .writingor--menu-1__ui-icon {
   -webkit-transform: translate(0, 50%);
@@ -1261,10 +1258,17 @@ button {
           flex-direction: column;
   padding: 30px 0;
 }
+.writingor--menu-1__menu-list-item {
+  margin: 0;
+}
 .writingor--menu-1__menu-link {
+  padding: 1rem 1.5rem;
   font-size: 1.5rem;
   color: #202020;
   text-decoration: none;
+}
+.writingor--menu-1__menu-link.writingor--mouse:hover {
+  opacity: 0.7;
 }
 .writingor--menu-1__submenu {
   display: none;

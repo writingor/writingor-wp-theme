@@ -19,10 +19,6 @@
         background-color: none;
     }
 
-    a.writingor--mouse:hover {
-        opacity: .7;
-    }
-
     &__html-overlay {
         position: fixed;
         top: 0;
@@ -37,7 +33,7 @@
     }
 
     &_active {
-        .mobile-menu__html-overlay {
+        .writingor--menu-1__html-overlay {
             width: 100vw;
             opacity: 1;
         }
@@ -56,7 +52,7 @@
         align-items: center;
         justify-content: space-between;
         gap: 20px;
-        padding: 1.5rem 1rem;
+        padding: 1.5rem ;
     }
 
     &__hide {
@@ -103,13 +99,18 @@
     }
 
     &__menu-list-item {
-        // pass
+        margin: 0;
     }
 
     &__menu-link {
+        padding: 1rem 1.5rem;
         font-size: 1.5rem;
         color: $black;
         text-decoration: none;
+
+        &.writingor--mouse:hover {
+            opacity: .7;
+        }
     }
 
     &__submenu {
