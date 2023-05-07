@@ -143,14 +143,8 @@ button {
 
 .writingor--container {
   max-width: 1588px;
-  padding: 0 64px;
+  padding: 0 3rem;
   margin: 0 auto;
-}
-@media screen and (max-width: 800px) {
-  .writingor--container {
-    padding-left: 36px;
-    padding-right: 36px;
-  }
 }
 
 .writingor--mouse {
@@ -468,7 +462,7 @@ button {
   height: 50px;
   background-color: transparent;
 }
-.writingor--menu-toggler.mouse:hover {
+.writingor--menu-toggler.writingor--mouse:hover {
   opacity: 0.7;
 }
 .writingor--menu-toggler span {
@@ -493,7 +487,7 @@ button {
   height: 50px;
   background-color: transparent;
 }
-.writingor--menu-hide.mouse:hover {
+.writingor--menu-hide.writingor--mouse:hover {
   opacity: 0.7;
 }
 .writingor--menu-hide span {
@@ -878,7 +872,7 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 .writingor--header-1__row .writingor--language-switcher {
   margin-left: auto;
@@ -1119,6 +1113,7 @@ button {
   background-color: transparent;
   color: #FFD600;
   font-weight: 500;
+  line-height: 1rem;
 }
 .writingor--language-switcher__current.writingor--mouse:hover {
   opacity: 0.7;
@@ -1126,6 +1121,7 @@ button {
 
 .writingor--logo-1 {
   font-size: 1.2rem;
+  line-height: 1rem;
   font-weight: 500;
   margin: 0;
   text-decoration: none;
@@ -1206,7 +1202,7 @@ button {
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 20px;
-  padding: 1.5rem;
+  padding: 1.5rem 2rem;
 }
 .writingor--menu-1__hide {
   margin-left: auto;
@@ -1269,7 +1265,7 @@ button {
 }
 .writingor--menu-1__menu-link {
   display: block;
-  padding: 1rem 1.5rem;
+  padding: 1rem 2rem;
   font-size: 1.5rem;
   color: #202020;
   text-decoration: none;
