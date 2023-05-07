@@ -13,10 +13,22 @@
     <!-- header-1 -->
     <header class="writingor--header-1">
         <div class="writingor--header-1__container writingor--container">
-            <div class="writingor--header-1__menu-toggler">
-                <span></span>
-                <span></span>
-                <span></span>
+            <div class="writingor--header-1__row">
+                <div class="writingor--header-1__logo writingor-logo">
+                    <!-- pass -->
+                </div>
+                <div class="writingor--header-1__language-switcher writingor--language-switcher">
+                    <?
+                    if (function_exists('pll_the_languages')) {
+                        pll_the_languages();
+                    }
+                    ?>
+                </div>
+                <div class="writingor--header-1__menu-toggler writingor--menu-toggler">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </div>
     </header>
