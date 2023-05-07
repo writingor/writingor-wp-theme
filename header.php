@@ -28,7 +28,7 @@
                     <ul class="writingor--language-switcher__list">
                         <?
                         if (function_exists('pll_the_languages')) {
-                            str_replace(' class="', ' class="writingor--language-switcher__list-item" data-class="', pll_the_languages());
+                            str_replace(' class="', ' class="writingor--language-switcher__list-item" data-class="', pll_the_languages(['echo' => 0]));
                         }
                         ?>
                     </ul>
