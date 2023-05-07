@@ -1032,6 +1032,9 @@ button {
 }
 .writingor--language-switcher__list-item a img,
 .writingor--language-switcher__list-item a svg {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
   display: block;
   width: 1rem;
   height: 1rem;
