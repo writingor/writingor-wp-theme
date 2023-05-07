@@ -734,6 +734,7 @@ function elementInViewport_byY(element, percent = 0) {
                 data: {
                     action: 'get_more_portfolio_posts',
                     nonce: writingor__ajax_variables.nonce,
+                    lang: writingor__ajax_variables.lang,
                     paged: moreButton.getAttribute('data-paged')
                 },
 

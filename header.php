@@ -15,7 +15,7 @@
         <div class="writingor--header-1__container writingor--container">
             <div class="writingor--header-1__row">
                 <a href="/" class="writingor--header-1__logo writingor--logo-1">
-                    Writingor <?= get_locale() ?>
+                    Writingor
                 </a>
                 <div class="writingor--header-1__language-switcher writingor--language-switcher" onclick="toggleLanguageSwitcherList(event)">
                     <button class="writingor--language-switcher__current">
