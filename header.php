@@ -50,7 +50,7 @@
                 <div class="writingor--menu-1__header">
     
                     <!-- menu hide -->
-                    <button class="writingor--menu-hide" onclick="hideMobileMenu(event)">
+                    <button class="writingor--menu-1__hide writingor--menu-hide" onclick="hideMobileMenu(event)">
                         <span></span>
                         <span></span>
                     </button>

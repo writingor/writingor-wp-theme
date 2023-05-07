@@ -464,7 +464,7 @@ button {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 7px;
-  width: 50px;
+  width: 36px;
   height: 50px;
   background-color: transparent;
 }
@@ -489,7 +489,7 @@ button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 50px;
+  width: 36px;
   height: 50px;
   background-color: transparent;
 }
