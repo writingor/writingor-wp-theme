@@ -1166,23 +1166,19 @@ button {
   background-color: none;
 }
 .writingor--menu-1__html-overlay {
+  display: none;
   position: fixed;
   top: 0;
-  right: 0;
+  left: 0;
   z-index: -100;
-  width: 0;
+  width: 100vw;
   height: 100%;
   background-color: rgba(255, 255, 255, 0.05);
   -webkit-backdrop-filter: blur(3px);
           backdrop-filter: blur(3px);
-  opacity: 0;
-  -webkit-transition: all linear 200ms;
-  -o-transition: all linear 200ms;
-  transition: all linear 200ms;
 }
 .writingor--menu-1_active .writingor--menu-1__html-overlay {
-  width: 100vw;
-  opacity: 1;
+  display: block;
 }
 .writingor--menu-1__body {
   display: -webkit-box;

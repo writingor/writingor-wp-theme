@@ -20,22 +20,20 @@
     }
 
     &__html-overlay {
+        display: none;
         position: fixed;
         top: 0;
-        right: 0;
+        left: 0;;
         z-index: -100;
-        width: 0;
+        width: 100vw;
         height: 100%;
         background-color: rgba($color: white, $alpha: .05);
         backdrop-filter: blur(3px);
-        opacity: 0;
-        transition: $transition;
     }
 
     &_active {
         .writingor--menu-1__html-overlay {
-            width: 100vw;
-            opacity: 1;
+            display: block;
         }
     }
 
