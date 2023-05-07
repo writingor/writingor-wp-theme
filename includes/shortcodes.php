@@ -82,13 +82,10 @@ function writingor__services_loop() {
                     <div class="writingor--card-2__footer">
                         <div class="writingor--card-2__terms">
                             <div class="writingor--card-2__price">
-                                <small>от</small>
-                                <?= number_format(get_post_meta(get_the_ID(), 'writingor__price', true), 0, ',', ' ') ?>₽
+                                <?= get_post_meta(get_the_ID(), 'writingor__price', true) ?>
                             </div>
-                            <div class="writingor--card-2__production-time">
-                                <small>от</small>
-                                <?= get_post_meta(get_the_ID(), 'writingor__production_time', true) ?>х
-                                <small>рабочих&nbsp;дней</small>
+                            <div class="writingor--card-2__production-time">                             
+                                <?= get_post_meta(get_the_ID(), 'writingor__production_time', true) ?>
                             </div>
                         </div>
                         <a href="#get-service-modal-<?= $index ?>" data-modal class="writingor--button-1">
