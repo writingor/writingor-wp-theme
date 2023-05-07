@@ -1029,12 +1029,13 @@ button {
 }
 
 .writingor--logo-1 {
-  font-size: 2rem;
+  font-size: 1.2rem;
   font-weight: 500;
   margin: 0;
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
+  color: #FFD600;
 }
 
 .writingor--layout-1 {
