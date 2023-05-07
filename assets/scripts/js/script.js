@@ -760,3 +760,67 @@ function elementInViewport_byY(element, percent = 0) {
         }
     }
 }
+
+/**
+ * Toggle language switcher list visible
+ * @param {*} e - event
+ */
+function toggleLanguageSwitcherList(e) {
+    if (
+        e &&
+        e.target.closest('.writingor--language-switcher') &&
+        !e.target.closest('.writingor--language-switcher__list')
+        ) {
+
+        let list = e.target.closest('.writingor--language-switcher').querySelector('.writingor--language-switcher__list')
+        
+        if (list) {
+            list.classList.toggle('writingor--language-switcher__list_active')
+        }
+    }
+}
+
+/**
+ * Hide all active
+ * language switchers
+ */
+function hideAllActiveLanguageSwitherLists() {
+    let allLanguageSwitcherListActive = document.querySelectorAll('.writingor--language-switcher__list_active')
+            
+    if (allLanguageSwitcherListActive) {
+        allLanguageSwitcherListActive.forEach(list => {
+            list.classList.remove('writingor--language-switcher__list_active')
+        })
+    }
+}
+
+/**
+ * Hide language all
+ * switchers
+ */
+{
+    // on click outside
+    document.addEventListener('click', function (e) {
+        if (!e.target.closest('.writingor--language-switcher')) {
+            hideAllActiveLanguageSwitherLists()
+        }
+    }, {
+        passive: true
+    })
+
+    // on esc button
+    document.addEventListener('keydown', function (e) {
+        e = e || window.event
+        let isEscape = false
+        if ('key' in e) {
+            isEscape = (e.key === 'Escape' || e.key === 'Esc')
+        } else {
+            isEscape = (e.keyCode === 27)
+        }
+        if (isEscape) {
+            hideAllActiveLanguageSwitherLists()
+        }
+    }, {
+        passive: true
+    })
+}
