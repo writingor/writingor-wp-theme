@@ -42,6 +42,7 @@
         flex-direction: column;
         height: 100%;
         background-color: white;
+        box-shadow: 2px 4px 12px rgba($color: $black, $alpha: .1);
     }
 
     &__header {

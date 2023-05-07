@@ -1192,6 +1192,8 @@ button {
           flex-direction: column;
   height: 100%;
   background-color: white;
+  -webkit-box-shadow: 2px 4px 12px rgba(32, 32, 32, 0.1);
+          box-shadow: 2px 4px 12px rgba(32, 32, 32, 0.1);
 }
 .writingor--menu-1__header {
   display: -webkit-box;
