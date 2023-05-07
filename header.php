@@ -14,9 +14,9 @@
     <header class="writingor--header-1">
         <div class="writingor--header-1__container writingor--container">
             <div class="writingor--header-1__row">
-                <div class="writingor--header-1__logo writingor-logo">
-                    <!-- pass -->
-                </div>
+                <a href="/" class="writingor--header-1__logo writingor-logo-1">
+                    Writingor
+                </a>
                 <div class="writingor--header-1__language-switcher writingor--language-switcher" onclick="toggleLanguageSwitcherList(event)">
                     <button class="writingor--language-switcher__current">
                         <?
