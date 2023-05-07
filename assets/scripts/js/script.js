@@ -430,8 +430,6 @@ function showModal(button = false, body = document.querySelector('body'), heap =
                 button.addEventListener('click', function (e) {
                     e.preventDefault()
                     showModal(button)
-                }, {
-                    passive: true
                 })
             } else {
                 console.warn('Element with "data-modal" is undefined')
@@ -741,7 +739,7 @@ function elementInViewport_byY(element, percent = 0) {
 
                 success: function(response) {
 
-                    console.log(response)
+                    // console.log(response)
 
                     moreButton.textContent = moreButton.getAttribute('data-text-1')
                     moreButton.setAttribute('data-paged', response.paged)
