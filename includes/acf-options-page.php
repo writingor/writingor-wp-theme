@@ -32,8 +32,16 @@ if (function_exists('acf_add_options_page')) {
      * Translatable options specific languages
      */
 
-    // check how to get list of langs from polylang
-    $languages = ['en', 'ru'];
+    if (function_exists('pll_languages_list')) {
+        $pll_languages = pll_languages_list(['fields' => ['slug']]);
+        
+        foreach ($pll_languages as $lang) {
+            $languages[] = $lang->slug;
+        }
+        
+    } else {
+        $languages = ['en'];
+    }
 
     foreach ($languages as $lang) {
         acf_add_options_sub_page([
