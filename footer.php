@@ -9,7 +9,7 @@
 
             } else {
                 // needs to include in functions.php
-                echo get_option('writingor__settings_footer_text_content');
+                // echo get_option('writingor__settings_footer_text_content');
             }
             ?>
         </div>
