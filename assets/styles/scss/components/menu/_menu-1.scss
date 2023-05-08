@@ -104,10 +104,15 @@
 
     &__menu-link {
         display: block;
-        padding: 1rem 2rem;
-        font-size: 1.5rem;
+        padding: 1em 2rem;
+        font-size: 1.2rem;
+        font-weight: 500;
         color: $black;
         text-decoration: none;
+
+        @media screen and (max-width: 800) {
+            font-size: 1.5rem;
+        }
 
         &.writingor--mouse:hover {
             opacity: .7;
