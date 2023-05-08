@@ -1343,6 +1343,9 @@ button {
           justify-content: center;
   width: 16px;
   height: 16px;
+  -webkit-transition: all linear 200ms;
+  -o-transition: all linear 200ms;
+  transition: all linear 200ms;
 }
 .writingor--menu-1__menu-link-arrow::before, .writingor--menu-1__menu-link-arrow::after {
   position: absolute;
@@ -1352,6 +1355,9 @@ button {
   width: 14px;
   height: 2px;
   background-color: #202020;
+  -webkit-transition: all linear 200ms;
+  -o-transition: all linear 200ms;
+  transition: all linear 200ms;
 }
 .writingor--menu-1__menu-link-arrow::before {
   -webkit-transform: translate(0, -200%) rotate(45deg);

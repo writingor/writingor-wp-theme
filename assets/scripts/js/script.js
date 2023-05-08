@@ -912,4 +912,10 @@ function toggleMobileSubMenu(event, prevent = true) {
     if (subMenu) {
         subMenu.classList.toggle('writingor--menu-1__menu-list_active')
     }
+
+    let link = event.target.closest('.writingor--menu-1__menu-list-item_has_children').querySelector('.writingor--menu-1__menu-link')
+
+    if (link) {
+        link.classList.toggle('writingor--menu-1__menu-link_active')
+    }
 }
