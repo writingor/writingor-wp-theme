@@ -171,6 +171,12 @@ include get_theme_file_path('/includes/shortcodes.php');
 include get_theme_file_path('/includes/settings-page.php');
 
 /**
+ * Add ACF options page
+ */
+
+include get_theme_file_path('/includes/acf-options-page.php');
+
+/**
  * Add gutenberg
  * block category
  */
