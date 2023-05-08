@@ -185,7 +185,7 @@ function writingor__add_gutebnerg_block_categories($categories) {
         [
             [
                 'slug'  => 'writingor',
-                'title' => 'writingor Blocks'
+                'title' => __('Writingor Blocks', 'writingor')
             ]
         ],
         $categories

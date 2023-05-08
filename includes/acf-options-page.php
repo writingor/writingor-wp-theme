@@ -10,8 +10,8 @@ if (function_exists('acf_add_options_page')) {
      */
 
     $parent = acf_add_options_page([
-        'menu_title' => __('ACF Theme Settings', 'writingor'),
-        'page_title' => __('ACF Theme Settings', 'writingor'),
+        'menu_title' => __('Theme Settings (ACF)', 'writingor'),
+        'page_title' => __('Theme Settings (ACF)', 'writingor'),
         'menu_slug'     => 'acf-options',
         'capability'    => 'edit_posts',
         'redirect'      => false
@@ -31,8 +31,8 @@ if (function_exists('acf_add_options_page')) {
 
     foreach ($languages as $lang) {
         acf_add_options_sub_page([
-            'page_title' => __("Options", 'writingor') . ' ' . strtoupper($lang),
-            'menu_title' => __("Options", 'writingor') . ' ' . strtoupper($lang),
+            'page_title' => __('Settings', 'writingor') . ' ' . strtoupper($lang),
+            'menu_title' => __('Settings', 'writingor') . ' ' . strtoupper($lang),
             'menu_slug'  => "acf-options-$lang",
             'post_id'    => "acf_options_$lang",
             'parent'     => $parent['menu_slug']
