@@ -104,7 +104,13 @@
 
         &_has {
             &_children {
+                .writingor--menu-1__menu-list {
+                    display: none;
 
+                    &_active {
+                        display: flex;
+                    }
+                }
             }
         }
     }

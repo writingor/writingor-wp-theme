@@ -1289,6 +1289,14 @@ button {
   height: fit-content;
   margin: 0;
 }
+.writingor--menu-1__menu-list-item_has_children .writingor--menu-1__menu-list {
+  display: none;
+}
+.writingor--menu-1__menu-list-item_has_children .writingor--menu-1__menu-list_active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 .writingor--menu-1__menu-link {
   display: -webkit-box;
   display: -ms-flexbox;
