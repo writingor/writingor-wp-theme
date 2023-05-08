@@ -37,7 +37,7 @@ if (function_exists('acf_add_options_page')) {
         
         foreach ($pll_languages as $lang) {
             // $languages[] = $lang->slug;
-            $languages[] = $lang['slug'];
+            $languages[] = $lang->slug;
         }
 
     } else {
