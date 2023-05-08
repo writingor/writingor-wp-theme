@@ -44,8 +44,8 @@ if (function_exists('acf_add_options_page')) {
 
     foreach ($languages as $lang) {
         acf_add_options_sub_page([
-            'page_title' => __("Options", 'writingor') . " $lang",
-            'menu_title' => __("Options", 'writingor') . " $lang",
+            'page_title' => __("Options", 'writingor') . ' ' . strtoupper($lang),
+            'menu_title' => __("Options", 'writingor') . ' ' . strtoupper($lang),
             'menu_slug'  => "acf-options-$lang",
             'post_id'    => "acf_options_$lang",
             'parent'     => $parent['menu_slug']
