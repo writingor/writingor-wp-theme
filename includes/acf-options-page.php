@@ -18,19 +18,6 @@ if (function_exists('acf_add_options_page')) {
     ]);
 
     /**
-     * Global Options
-     * Same options on all languages
-     */
-
-    acf_add_options_sub_page([
-        'page_title' => __('Theme Global Options', 'writingor'),
-        'menu_title' => __('Theme Global Options', 'writingor'),
-        'menu_slug'  => "acf-options-global",
-        'post_id'    => "acf_options_global",
-        'parent'     => $parent['menu_slug']
-    ]);
-
-    /**
      * Language Specific Options
      * Translatable options specific languages
      */
