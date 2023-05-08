@@ -1303,6 +1303,14 @@ button {
   display: -ms-flexbox;
   display: flex;
 }
+.writingor--menu-1__menu-list-item_has_children .writingor--menu-1__menu-link {
+  font-size: 1rem;
+}
+@media screen and (max-width: 800) {
+  .writingor--menu-1__menu-list-item_has_children .writingor--menu-1__menu-link {
+    font-size: 1.2rem;
+  }
+}
 .writingor--menu-1__menu-link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1325,6 +1333,7 @@ button {
   -webkit-transition: all linear 200ms;
   -o-transition: all linear 200ms;
   transition: all linear 200ms;
+  cursor: pointer;
 }
 @media screen and (max-width: 800) {
   .writingor--menu-1__menu-link {
@@ -1381,12 +1390,7 @@ button {
       -ms-transform: translate(0, 200%) rotate(-45deg);
           transform: translate(0, 200%) rotate(-45deg);
 }
-.writingor--menu-1__submenu {
-  display: none;
-}
-.writingor--menu-1__submenu_active {
-  display: block;
-}
+
 .writingor--layout-1 {
   background-color: #722DCA;
   overflow: hidden;

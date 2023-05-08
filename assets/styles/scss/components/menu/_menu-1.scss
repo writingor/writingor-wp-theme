@@ -115,6 +115,14 @@
                         display: flex;
                     }
                 }
+
+                .writingor--menu-1__menu-link {
+                    font-size: 1rem;
+
+                    @media screen and (max-width: 800) {
+                        font-size: 1.2rem;
+                    }
+                }
             }
         }
     }
@@ -133,6 +141,7 @@
         text-decoration: none;
         margin: 0;
         transition: $transition;
+        cursor: pointer;
 
         @media screen and (max-width: 800) {
             font-size: 1.5rem;
@@ -179,25 +188,5 @@
         &::after {
             transform: translate(0, 200%) rotate(-45deg);
         }
-    }
-
-    &__submenu {
-        display: none;
-
-        &_active {
-            display: block;
-        }
-    }
-
-    &__submenu-list {
-        // pass
-    }
-
-    &__submenu-list-item {
-        // pass
-    }
-
-    &__submenu-link {
-        // pass
     }
 }
