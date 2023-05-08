@@ -115,45 +115,32 @@ function writingor__register_nav_menus() {
 }
 
 /**
- * 
+ * Nav menu walker
  */
 
-function writingor__get_menu_array($location) {
-    
-    $target_menu = wp_nav_menu([
-        'theme_location'  => $location,
-        'container'       => false,
-        'menu_class'      => false,
-        'menu_id'         => false,
-        'echo'            => false,
-        'items_wrap'      => '<ul>%3$s</ul>',
-    ]);
+class Writingor__Header_Menu_Walker extends Walker_Nav_Menu {
+    function start_el(&$output, $item, $depth = 0, $args = [], $id = 0) {
 
-    $array_menu = wp_get_nav_menu_items($target_menu);
-    $menu = [];
+        // classlists
 
-    foreach ($array_menu as $m) {
-        if (empty($m->menu_item_parent)) {
-            $menu[$m->ID] = [];
-            $menu[$m->ID]['ID'] = $m->ID;
-            $menu[$m->ID]['title'] = $m->title;
-            $menu[$m->ID]['url'] = 	$m->url;
-            $menu[$m->ID]['children'] = [];
+        $list_item_classlist = 'writingor--menu-1__menu-list-item';
+
+        if ($args->walker->has_children) {
+            $list_item_classlist .= ' writingor--menu-1__menu-list-item_has_children';
         }
-    }
 
-    $submenu = [];
-    foreach ($array_menu as $m) {
-        if ($m->menu_item_parent) {
-            $submenu[$m->ID] = [];
-            $submenu[$m->ID]['ID'] = $m->ID;
-            $submenu[$m->ID]['title'] = $m->title;
-            $submenu[$m->ID]['url'] = $m->url;
-            $menu[$m->menu_item_parent]['children'][$m->ID] = $submenu[$m->ID];
+        $link_classlist = 'writingor--menu-1__menu-link';
+
+        if ($item->url && str_contains($item->url, '#')) {
+            $link_classlist .= ' writingor--anchor';
         }
-    }
 
-    return $menu;
+        // output
+
+        $output .= "<li class='$list_item_classlist'>";
+        $output .= "<a href='$item->url' class='$link_classlist'>$item->title</a>";
+        $output .= "</li>";
+    }
 }
 
 /**
