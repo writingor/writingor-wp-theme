@@ -298,8 +298,16 @@ const scrollToWithAnimation = (el, t, state) => {
     if (allAnchorLinks) {
         allAnchorLinks.forEach(link => {
             if (link) {
-                link.addEventListener("click", () => {
-                    scrollToWithAnimation(link, 500, false)
+                link.addEventListener("click", (e) => {
+
+                    target = link.getAttribute('href')
+                    target = target.substring(target.indexOf('#'))
+
+                    if (!document.querySelector(el)) {
+                        e.preventDefault()
+                    } else {
+                        scrollToWithAnimation(link, 500, false)
+                    }
                 })
             }
         })
