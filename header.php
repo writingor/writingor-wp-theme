@@ -77,6 +77,7 @@
                             'echo'            => true,
                             'items_wrap'      => '<ul class="writingor--menu-1__menu-list">%3$s</ul>',
                             'walker' => new Writingor__Header_Menu_Walker(),
+                            'show_carets' => true
                         ]);
                         ?>
                     </nav>
