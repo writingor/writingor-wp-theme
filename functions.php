@@ -119,7 +119,17 @@ function writingor__register_nav_menus() {
  */
 
 function writingor__get_menu_array($location) {
-    $array_menu = wp_get_nav_menu_items($location);
+    
+    $target_menu = wp_nav_menu([
+        'theme_location'  => $location,
+        'container'       => false,
+        'menu_class'      => false,
+        'menu_id'         => false,
+        'echo'            => false,
+        'items_wrap'      => '<ul>%3$s</ul>',
+    ]);
+
+    $array_menu = wp_get_nav_menu_items($target_menu);
     $menu = [];
 
     foreach ($array_menu as $m) {

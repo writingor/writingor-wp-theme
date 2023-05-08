@@ -14,7 +14,7 @@
             <h2>Testing wp menu arr</h2>
             <pre>
                 <?
-                print_r(writingor__get_menu_array('writingor--header-menu'))
+                print_r(writingor__get_menu_array('writingor--header-menu'));
                 ?>
             </pre>
         </div>
