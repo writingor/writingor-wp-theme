@@ -114,6 +114,37 @@ function writingor__register_nav_menus() {
     register_nav_menu('writingor--footer-menu', __('Footer menu', 'writingor'));
 }
 
+/**
+ * 
+ */
+
+function writingor__get_menu_array($location) {
+    $array_menu = wp_get_nav_menu_items($location);
+    $menu = [];
+
+    foreach ($array_menu as $m) {
+        if (empty($m->menu_item_parent)) {
+            $menu[$m->ID] = [];
+            $menu[$m->ID]['ID'] = $m->ID;
+            $menu[$m->ID]['title'] = $m->title;
+            $menu[$m->ID]['url'] = 	$m->url;
+            $menu[$m->ID]['children'] = [];
+        }
+    }
+
+    $submenu = [];
+    foreach ($array_menu as $m) {
+        if ($m->menu_item_parent) {
+            $submenu[$m->ID] = [];
+            $submenu[$m->ID]['ID'] = $m->ID;
+            $submenu[$m->ID]['title'] = $m->title;
+            $submenu[$m->ID]['url'] = $m->url;
+            $menu[$m->menu_item_parent]['children'][$m->ID] = $submenu[$m->ID];
+        }
+    }
+
+    return $menu;
+}
 
 /**
  * Add post meta
