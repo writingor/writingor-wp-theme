@@ -104,6 +104,18 @@ function writingor__upload_allow_types($mimes) {
 }
 
 /**
+ * Add nav menus
+ */
+
+add_action('after_setup_theme', 'writingor__register_nav_menus');
+
+function writingor__register_nav_menus() {
+    register_nav_menu('writingor--header-menu', __('Header menu', 'writingor'));
+    register_nav_menu('writingor--footer-menu', __('Footer menu', 'writingor'));
+}
+
+
+/**
  * Add post meta
  */
 
