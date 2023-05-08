@@ -3,10 +3,10 @@
         <div class="writingor--transition-to-prev-1"></div>
         <div class="writingor--footer-1__container writingor--container">
             <?
-            if (function_exists('pll_current_language') && function_exists('get_field')) {
+            if (function_exists('pll_current_language') && function_exists('the_field')) {
                 $current_lang_slug = pll_current_language();
                 echo "footer_content_$current_lang_slug.";
-                the_field('test', 'option');
+                the_field('test2', 'option');
 
             } else {
                 echo get_option('writingor__settings_footer_text_content');
