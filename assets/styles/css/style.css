@@ -1279,7 +1279,7 @@ button {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 1rem 0;
-  background-color: white;
+  background-color: transparent;
   margin: 0;
   -webkit-transform: all linear 200ms;
       -ms-transform: all linear 200ms;
@@ -1296,7 +1296,7 @@ button {
 .writingor--menu-1__menu-list-item_has_children .writingor--menu-1__menu-list {
   display: none;
   padding-left: 1rem;
-  background-color: #cccccc;
+  background-color: #f0f0f0;
 }
 .writingor--menu-1__menu-list-item_has_children .writingor--menu-1__menu-list_active {
   display: -webkit-box;
@@ -1316,12 +1316,15 @@ button {
   gap: 1em;
   width: 100%;
   padding: 0.6em 2rem;
-  background-color: white;
+  background-color: transparent;
   font-size: 1.2rem;
   font-weight: 500;
   color: #202020;
   text-decoration: none;
   margin: 0;
+  -webkit-transform: all linear 200ms;
+      -ms-transform: all linear 200ms;
+          transform: all linear 200ms;
 }
 @media screen and (max-width: 800) {
   .writingor--menu-1__menu-link {
