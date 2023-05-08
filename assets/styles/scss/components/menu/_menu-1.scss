@@ -118,6 +118,7 @@
     &__menu-link {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         gap: 1em;
         width: 100%;
         padding: .6em 2rem;
@@ -128,6 +129,12 @@
 
         @media screen and (max-width: 800) {
             font-size: 1.5rem;
+        }
+
+        &_active {
+            .writingor--menu-1__menu-link-arrow {
+                transform: rotate(90deg);
+            }
         }
 
         &.writingor--mouse:hover {
@@ -155,11 +162,11 @@
         }
 
         &::before {
-            transform: translate(0, -100%) rotate(45deg);
+            transform: translate(0, -200%) rotate(45deg);
         }
 
         &::after {
-            transform: translate(0, 100%) rotate(-45deg);
+            transform: translate(0, 200%) rotate(-45deg);
         }
     }
 

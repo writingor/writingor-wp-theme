@@ -1304,6 +1304,9 @@ button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 1em;
   width: 100%;
   padding: 0.6em 2rem;
@@ -1316,6 +1319,11 @@ button {
   .writingor--menu-1__menu-link {
     font-size: 1.5rem;
   }
+}
+.writingor--menu-1__menu-link_active .writingor--menu-1__menu-link-arrow {
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 .writingor--menu-1__menu-link.writingor--mouse:hover {
   opacity: 0.7;
@@ -1344,14 +1352,14 @@ button {
   background-color: #202020;
 }
 .writingor--menu-1__menu-link-arrow::before {
-  -webkit-transform: translate(0, -100%) rotate(45deg);
-      -ms-transform: translate(0, -100%) rotate(45deg);
-          transform: translate(0, -100%) rotate(45deg);
+  -webkit-transform: translate(0, -200%) rotate(45deg);
+      -ms-transform: translate(0, -200%) rotate(45deg);
+          transform: translate(0, -200%) rotate(45deg);
 }
 .writingor--menu-1__menu-link-arrow::after {
-  -webkit-transform: translate(0, 100%) rotate(-45deg);
-      -ms-transform: translate(0, 100%) rotate(-45deg);
-          transform: translate(0, 100%) rotate(-45deg);
+  -webkit-transform: translate(0, 200%) rotate(-45deg);
+      -ms-transform: translate(0, 200%) rotate(-45deg);
+          transform: translate(0, 200%) rotate(-45deg);
 }
 .writingor--menu-1__submenu {
   display: none;
