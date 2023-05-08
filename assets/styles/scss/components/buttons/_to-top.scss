@@ -11,10 +11,10 @@
     padding: .15em 1em .3em 1.1em;
     text-align: center;
     font-weight: 500;
-    background-color: transparent;
+    background-color: rgba($color: white, $alpha: .7);
     box-shadow: 2px 4px 12px rgba($color: $black, $alpha: .1);
     backdrop-filter: blur(3px);
-    color: $yellow;
+    color: $black;
     opacity: 0;
     transform: rotate(-90deg) translate(0, -200%);
     transition: $transition;
