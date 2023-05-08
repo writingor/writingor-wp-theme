@@ -60,33 +60,17 @@
                 <!-- nested menu -->
                 <div class="writingor--menu-1__menu">
                     <nav class="writingor--menu-1__menu-nav">
-                        <ul class="writingor--menu-1__menu-list">
-                            <li class="writingor--menu-1__menu-list-item">
-                                <a href="#writingor--services-section" class="writingor--menu-1__menu-link writingor--anchor" onclick="hideMobileMenu(event, false)">
-                                    Services
-                                </a>
-                            </li>
-                            <li class="writingor--menu-1__menu-list-item">
-                                <a href="#writingor--portfolio-section" class="writingor--menu-1__menu-link writingor--anchor" onclick="hideMobileMenu(event, false)">
-                                    Portfolio
-                                </a>
-                            </li>
-                            <li class="writingor--menu-1__menu-list-item">
-                                <a href="#writingor--benefits-section" class="writingor--menu-1__menu-link writingor--anchor" onclick="hideMobileMenu(event, false)">
-                                    Benefits
-                                </a>
-                            </li>
-                            <li class="writingor--menu-1__menu-list-item">
-                                <a href="#writingor--reviews-section" class="writingor--menu-1__menu-link writingor--anchor" onclick="hideMobileMenu(event, false)">
-                                    Reviews
-                                </a>
-                            </li>
-                            <li class="writingor--menu-1__menu-list-item">
-                                <a href="#writingor--contacts-section" class="writingor--menu-1__menu-link writingor--anchor" onclick="hideMobileMenu(event, false)">
-                                    Contacts
-                                </a>
-                            </li>
-                        </ul>
+                        <?
+                        wp_nav_menu([
+                            'theme_location'  => 'writingor--header-menu',
+                            'container'       => false,
+                            'menu_class'      => false,
+                            'menu_id'         => false,
+                            'echo'            => true,
+                            'items_wrap'      => '<ul class="writingor--menu-1__menu-list">%3$s</ul>',
+                            'walker' => new Writingor__Header_Menu_Walker(),
+                        ]);
+                        ?>
                     </nav>
                 </div>
                 <!--/ nested menu -->
