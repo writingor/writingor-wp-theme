@@ -11,8 +11,10 @@ if (function_exists('acf_add_options_page')) {
 
     $parent = acf_add_options_page([
         'menu_title' => __('ACF Theme Settings', 'writingor'),
-        'redirect'   => __('ACF Theme Settings', 'writingor'),
-        'page_title' => __('ACF Theme Settings', 'writingor')
+        'page_title' => __('ACF Theme Settings', 'writingor'),
+        'menu_slug'     => 'acf-options',
+        'capability'    => 'edit_posts',
+        'redirect'      => false
     ]);
 
     /**
