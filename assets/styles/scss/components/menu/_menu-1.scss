@@ -117,6 +117,7 @@
 
     &__menu-link {
         display: flex;
+        justify-content: space-between;
         gap: 1em;
         width: 100%;
         padding: .6em 2rem;
@@ -154,11 +155,11 @@
         }
 
         &::before {
-            transform: translate(0, -100%) rotate(-45deg);
+            transform: translate(0, -100%) rotate(45deg);
         }
 
         &::after {
-            transform: translate(0, 100%) rotate(45deg);
+            transform: translate(0, 100%) rotate(-45deg);
         }
     }
 

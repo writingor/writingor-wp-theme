@@ -1301,6 +1301,9 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   gap: 1em;
   width: 100%;
   padding: 0.6em 2rem;
@@ -1341,14 +1344,14 @@ button {
   background-color: #202020;
 }
 .writingor--menu-1__menu-link-arrow::before {
-  -webkit-transform: translate(0, -100%) rotate(-45deg);
-      -ms-transform: translate(0, -100%) rotate(-45deg);
-          transform: translate(0, -100%) rotate(-45deg);
+  -webkit-transform: translate(0, -100%) rotate(45deg);
+      -ms-transform: translate(0, -100%) rotate(45deg);
+          transform: translate(0, -100%) rotate(45deg);
 }
 .writingor--menu-1__menu-link-arrow::after {
-  -webkit-transform: translate(0, 100%) rotate(45deg);
-      -ms-transform: translate(0, 100%) rotate(45deg);
-          transform: translate(0, 100%) rotate(45deg);
+  -webkit-transform: translate(0, 100%) rotate(-45deg);
+      -ms-transform: translate(0, 100%) rotate(-45deg);
+          transform: translate(0, 100%) rotate(-45deg);
 }
 .writingor--menu-1__submenu {
   display: none;
