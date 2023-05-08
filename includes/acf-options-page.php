@@ -26,6 +26,7 @@ if (function_exists('acf_add_options_page')) {
         'page_title' => __('Theme Global Options', 'writingor'),
         'menu_title' => __('Theme Global Options', 'writingor'),
         'menu_slug'  => "acf-options-global",
+        'post_id'    => "acf_options_global",
         'parent'     => $parent['menu_slug']
     ]);
 
@@ -45,8 +46,8 @@ if (function_exists('acf_add_options_page')) {
         acf_add_options_sub_page([
             'page_title' => __('Options (' . strtoupper($lang) . ')', 'writingor'),
             'menu_title' => __('Options (' . strtoupper($lang) . ')', 'writingor'),
-            'menu_slug'  => "acf-options-${lang}",
-            'post_id'    => $lang,
+            'menu_slug'  => "acf-options-$lang",
+            'post_id'    => "acf_options_$lang",
             'parent'     => $parent['menu_slug']
         ]);
     }
