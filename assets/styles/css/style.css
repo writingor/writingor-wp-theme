@@ -1303,11 +1303,11 @@ button {
   display: -ms-flexbox;
   display: flex;
 }
-.writingor--menu-1__menu-list-item_has_children .writingor--menu-1__menu-link {
+.writingor--menu-1__menu-list-item_has_children .writingor--menu-1__menu-list .writingor--menu-1__menu-link {
   font-size: 1rem;
 }
 @media screen and (max-width: 800) {
-  .writingor--menu-1__menu-list-item_has_children .writingor--menu-1__menu-link {
+  .writingor--menu-1__menu-list-item_has_children .writingor--menu-1__menu-list .writingor--menu-1__menu-link {
     font-size: 1.2rem;
   }
 }
@@ -1325,7 +1325,7 @@ button {
   width: 100%;
   padding: 0.6em 2rem;
   background-color: transparent;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 500;
   color: #202020;
   text-decoration: none;
@@ -1337,7 +1337,7 @@ button {
 }
 @media screen and (max-width: 800) {
   .writingor--menu-1__menu-link {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 }
 .writingor--menu-1__menu-link_active {

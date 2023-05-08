@@ -114,13 +114,13 @@
                     &_active {
                         display: flex;
                     }
-                }
 
-                .writingor--menu-1__menu-link {
-                    font-size: 1rem;
-
-                    @media screen and (max-width: 800) {
-                        font-size: 1.2rem;
+                    .writingor--menu-1__menu-link {
+                        font-size: 1rem;
+    
+                        @media screen and (max-width: 800) {
+                            font-size: 1.2rem;
+                        }
                     }
                 }
             }
@@ -135,7 +135,7 @@
         width: 100%;
         padding: .6em 2rem;
         background-color: transparent;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         font-weight: 500;
         color: $black;
         text-decoration: none;
@@ -144,7 +144,7 @@
         cursor: pointer;
 
         @media screen and (max-width: 800) {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
         }
 
         &_active {
