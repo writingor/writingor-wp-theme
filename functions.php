@@ -89,6 +89,21 @@ function writingor__unset_image_sizes($sizes) {
 }
 
 /**
+ * Add and remove
+ * filetypes allowed to upload
+ */
+
+add_filter('upload_mimes', 'writingor__upload_allow_types');
+
+function writingor__upload_allow_types($mimes) {
+	$mimes['svg']  = 'image/svg+xml';
+	$mimes['woff'] = 'font/woff';
+	
+	unset($mimes['mp4a']);
+	return $mimes;
+}
+
+/**
  * Add post meta
  */
 
