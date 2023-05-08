@@ -2,7 +2,15 @@
     <footer data-layout='writingor--layout' class="writingor--footer writingor--footer-1">
         <div class="writingor--transition-to-prev-1"></div>
         <div class="writingor--footer-1__container writingor--container">
-            <?= get_option( 'writingor__settings_footer_text_content' ) ?>
+            <?
+            if (function_exists('pll_current_language') && function_exists('the_field')) {
+                $current_lang_slug = pll_current_language();
+                the_field("footer_content_$current_lang_slug", 'options');
+                
+            } else {
+                echo get_option('writingor__settings_footer_text_content');
+            }
+            ?>
         </div>
     </footer>
     <!--/ footer-1 -->
