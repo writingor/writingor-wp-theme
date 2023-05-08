@@ -12,7 +12,7 @@
             <br>
             <br>
             <h2>Testing wp menu arr</h2>
-            <pre>
+            <ul>
                 <?
                 wp_nav_menu([
                     'theme_location'  => 'writingor--header-menu',
@@ -21,10 +21,10 @@
                     'menu_id'         => false,
                     'echo'            => true,
                     'items_wrap'      => '<ul>%3$s</ul>',
+                    'walker' => new Writingor__Header_Menu_Walker(),
                 ]);
-                // print_r(writingor__get_menu_array('writingor--header-menu'));
                 ?>
-            </pre>
+            </ul>
         </div>
     </div>
 </main>
