@@ -74,6 +74,21 @@ function writingor__theme_setup() {
 }
 
 /**
+ * Disable unsusable
+ * img sizes
+ */
+
+add_filter('intermediate_image_sizes_advanced', 'writingor__unset_image_sizes');
+
+function writingor__unset_image_sizes($sizes) {
+    unset($sizes['medium_large']);
+    unset($sizes['large']);
+    unset($sizes['1536x1536']);
+    unset($sizes['2048x2048']);
+    return $sizes;
+}
+
+/**
  * Add post meta
  */
 
