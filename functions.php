@@ -119,6 +119,12 @@ function writingor__register_nav_menus() {
  */
 
 class Writingor__Header_Menu_Walker extends Walker_Nav_Menu {
+
+    function start_lvl(&$output, $depth) {
+        $indent = str_repeat("\t", $depth);
+        $output .= "\n$indent<ul class=\"writingor--menu-1__menu-list\">\n";
+    }
+
     function start_el(&$output, $item, $depth = 0, $args = [], $id = 0) {
 
         // classlists
