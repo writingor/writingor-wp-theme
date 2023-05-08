@@ -93,6 +93,7 @@
         display: flex;
         flex-direction: column;
         padding: 1rem 0;
+        margin: 0;
     }
 
     &__menu-list-item {
@@ -100,10 +101,18 @@
         width: 100%;
         height: fit-content;
         margin: 0;
+
+        &_has {
+            &_children {
+
+            }
+        }
     }
 
     &__menu-link {
-        display: block;
+        display: flex;
+        gap: 1em;
+        width: 100%;
         padding: .6em 2rem;
         font-size: 1.2rem;
         font-weight: 500;
@@ -116,6 +125,34 @@
 
         &.writingor--mouse:hover {
             opacity: .7;
+        }
+    }
+
+    &__menu-link-arrow {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 16px;
+        height: 16px;
+
+        &::before,
+        &::after {
+            position: absolute;
+            right: 0;
+            content: '';
+            display: block;
+            width: 14px;
+            height: 2px;
+            background-color: $black;
+        }
+
+        &::before {
+            transform: translate(0, -100%) rotate(-45deg);
+        }
+
+        &::after {
+            transform: translate(0, 100%) rotate(45deg);
         }
     }
 
