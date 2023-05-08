@@ -9,21 +9,23 @@
     <? wp_head() ?>
 </head>
 <body class="writingor--body" id="writingor--body">
+    <?
+    $current_lang_slug = '';
 
+    if (function_exists('pll_current_language')) {
+        $current_lang_slug = pll_current_language();
+    }
+    ?>
     <!-- header-1 -->
     <header class="writingor--header-1">
         <div class="writingor--header-1__container writingor--container">
             <div class="writingor--header-1__row">
-                <a href="/" class="writingor--header-1__logo writingor--logo-1">
+                <a href="/<?= esc_attr($current_lang_slug) ?>" class="writingor--header-1__logo writingor--logo-1">
                     Writingor
                 </a>
                 <div class="writingor--header-1__language-switcher writingor--language-switcher" onclick="toggleLanguageSwitcherList(event)">
                     <button class="writingor--language-switcher__current">
-                        <?
-                        if (function_exists('pll_current_language')) {
-                            echo pll_current_language();
-                        }
-                        ?>
+                        <?= $current_lang_slug ?>
                     </button>
                     <ul class="writingor--language-switcher__list">
                         <?
