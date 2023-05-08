@@ -11,6 +11,19 @@
             <p>404</p>
             <br>
             <br>
+            <pre>
+                <?
+                if (function_exists('pll_languages_list')) {
+                    $pll_languages = pll_languages_list();
+                    
+                    foreach ($pll_languages as $lang) {
+                        // $languages[] = $lang->slug;
+                        print_r($lang);
+                    }
+            
+                }
+                ?>
+            </pre>
         </div>
     </div>
 </main>
