@@ -33,12 +33,13 @@ if (function_exists('acf_add_options_page')) {
      */
 
     if (function_exists('pll_languages_list')) {
-        $pll_languages = pll_languages_list(['fields' => ['slug']]);
+        $pll_languages = pll_languages_list();
         
         foreach ($pll_languages as $lang) {
-            $languages[] = $lang->slug;
+            // $languages[] = $lang->slug;
+            $languages[] = $lang['slug'];
         }
-        
+
     } else {
         $languages = ['en'];
     }
