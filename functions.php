@@ -138,7 +138,7 @@ class Writingor__Header_Menu_Walker extends Walker_Nav_Menu {
         // output
 
         $output .= "<li class='$list_item_classlist'>";
-        $output .= "<a href='$item->url' class='$link_classlist'>$item->title</a>";
+        $output .= "<a onclick='hideMobileMenu(event, false)' href='$item->url' class='$link_classlist'>$item->title</a>";
     }
 }
 
