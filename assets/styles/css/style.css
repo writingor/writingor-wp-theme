@@ -489,8 +489,8 @@ button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 36px;
-  height: 50px;
+  width: 30px;
+  height: 40px;
   background-color: transparent;
 }
 .writingor--menu-hide.writingor--mouse:hover {
@@ -1362,8 +1362,8 @@ button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
   -webkit-transition: all linear 200ms;
   -o-transition: all linear 200ms;
   transition: all linear 200ms;
