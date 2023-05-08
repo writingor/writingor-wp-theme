@@ -15,13 +15,19 @@
     if (function_exists('pll_current_language')) {
         $current_lang_slug = pll_current_language();
     }
+
+    $current_home_url = '/';
+
+    if ($current_lang_slug !== 'en') {
+        $current_home_url .= "$current_lang_slug/";
+    }
     ?>
     <!-- header-1 -->
     <header class="writingor--header-1">
         <div class="writingor--header-1__container writingor--container">
             <div class="writingor--header-1__row">
-                <a href="/<?= esc_attr($current_lang_slug) ?>" class="writingor--header-1__logo writingor--logo-1">
-                    Writingor
+                <a href="<?= esc_url($current_home_url) ?>" class="writingor--header-1__logo writingor--logo-1">
+                    <?= esc_html__('Writingor', 'writingor') ?>
                 </a>
                 <div class="writingor--header-1__language-switcher writingor--language-switcher" onclick="toggleLanguageSwitcherList(event)">
                     <button class="writingor--language-switcher__current">
