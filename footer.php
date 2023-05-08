@@ -5,7 +5,7 @@
             <?
             if (function_exists('pll_current_language') && function_exists('the_field')) {
                 $current_lang_slug = pll_current_language();
-                echo "footer_content_$current_lang_slug";
+                echo "footer_content_$current_lang_slug.";
                 the_field("footer_content_$current_lang_slug", "option");
 
             } else {
