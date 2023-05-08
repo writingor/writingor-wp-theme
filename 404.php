@@ -13,15 +13,8 @@
             <br>
             <pre>
                 <?
-                if (function_exists('pll_languages_list')) {
-                    $pll_languages = pll_languages_list();
-                    
-                    foreach ($pll_languages as $lang) {
-                        // $languages[] = $lang->slug;
-                        print_r($lang);
-                    }
-            
-                }
+                // tests here
+                
                 ?>
             </pre>
         </div>
