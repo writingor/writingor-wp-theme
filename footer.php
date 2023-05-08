@@ -8,6 +8,7 @@
                 the_field("footer_content_$current_lang_slug", "acf_options_$current_lang_slug");
 
             } else {
+                // needs to include in functions.php
                 echo get_option('writingor__settings_footer_text_content');
             }
             ?>

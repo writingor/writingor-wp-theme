@@ -167,8 +167,8 @@ include get_theme_file_path('/includes/shortcodes.php');
 /**
  * Add theme settings page
  */
-
-include get_theme_file_path('/includes/settings-page.php');
+// deprecated, now use acf options page
+// include get_theme_file_path('/includes/settings-page.php');
 
 /**
  * Add ACF options page
