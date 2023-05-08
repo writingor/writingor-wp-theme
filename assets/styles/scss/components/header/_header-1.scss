@@ -4,13 +4,34 @@
     top: 0;
     z-index: 100;
     width: 100%;
-    padding: 1.2rem 0;
-    background-color: rgba($color: white, $alpha: .7);
+    padding: 1.4rem 0;
+    background-color: transparent;
     box-shadow: 2px 4px 12px rgba($color: $black, $alpha: .1);
     backdrop-filter: blur(1px);
+    transition: $transition;
+    
+    .writingor--menu-toggler span {
+        background-color: white;
+    }
+
+    .writingor--logo-1,
+    .writingor--language-switcher__current {
+        color: white;
+    }
 
     &.writingor--scrolled {
+        padding: 1.2rem 0;
         backdrop-filter: blur(3px);
+        background-color: rgba($color: white, $alpha: .7);
+
+        .writingor--menu-toggler span {
+            background-color: $black;
+        }
+    
+        .writingor--logo-1,
+        .writingor--language-switcher__current {
+            color: $black;
+        }
     }
 
     &__row {
