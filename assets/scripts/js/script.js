@@ -266,7 +266,8 @@ const scrollToWithAnimation = (el, t, state) => {
     if (typeof el === 'string' && el.includes('#')) {
         el = el
     } else if (el) {
-        el = el.getAttribute("href")
+        el = el.getAttribute('href')
+        el = el.substring(el.indexOf('#'))
     } else {
         return
     }
