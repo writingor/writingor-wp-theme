@@ -52,7 +52,7 @@ function writingor__save_meta_box_price($post_id) {
         }
     }
 
-    $price = sanitize_text_field($_POST['writingor__price']);
+    $price = $_POST['writingor__price'];
   
     update_post_meta($post_id, 'writingor__price', $price);
 }
@@ -110,7 +110,7 @@ function writingor__save_meta_box_production_time($post_id) {
         }
     }
 
-    $production_time = sanitize_text_field($_POST['writingor__production_time']);
+    $production_time = $_POST['writingor__production_time'];
   
     update_post_meta($post_id, 'writingor__production_time', $production_time);
 }
