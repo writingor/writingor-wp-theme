@@ -120,7 +120,28 @@ function writingor__register_nav_menus() {
 
 class Writingor__Header_Menu_Walker extends Walker_Nav_Menu {
 
-    function start_el(&$output, $item, $depth = 0, $args = [], $id = 0) {
+    public function start_lvl(&$output, $depth = 0, $args = null) {
+
+        if (isset($args->item_spacing) && 'discard' === $args->item_spacing) {
+            $t = '';
+            $n = '';
+
+        } else {
+            $t = "\t";
+            $n = "\n";
+        }
+
+        $indent = str_repeat($t, $depth);
+
+        $classes = array('writingor--menu-1__menu-list');
+
+        $class_names = implode(' ', apply_filters('nav_menu_submenu_css_class', $classes, $args, $depth));
+        $class_names = $class_names ? ' class="' . esc_attr($class_names) . '"' : '';
+
+        $output .= "{$n}{$indent}<ul{$class_names}>{$n}";
+    }
+
+    public function start_el(&$output, $item, $depth = 0, $args = [], $id = 0) {
 
         // classlists
 
