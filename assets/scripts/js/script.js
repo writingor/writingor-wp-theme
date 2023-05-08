@@ -897,3 +897,19 @@ function hideMobileMenu(event, prevent = true) {
         passive: true
     })
 }
+
+/**
+ * Toggle Mobile Sub Menu
+ * @param {*} event - event prevent
+ */
+function toggleMobileSubMenu(event, prevent = true) {
+    if (event && prevent) {
+        event.preventDefault()
+    }
+
+    let subMenu = event.target.closest('.writingor--menu-1__menu-list-item_has_children').querySelector('.writingor--menu-1__menu-list')
+
+    if (subMenu) {
+        subMenu.classList.toggle('writingor--menu-1__menu-list_active')
+    }
+}
