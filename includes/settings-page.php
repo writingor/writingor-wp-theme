@@ -3,6 +3,8 @@
  * Add options page
  */
 
+add_action('admin_menu', 'writingor_admin_menu');
+
 function writingor_admin_menu() {
     add_menu_page(
         __('Theme settings', 'writingor'),
@@ -13,18 +15,25 @@ function writingor_admin_menu() {
         'dashicons-schedule',
         3
     );
+    add_submenu_page(
+        'writingor-page',
+        __('Footer', 'writingor'),
+        __('Footer', 'writingor'),
+        'manage_options',
+        'woo-wholesale-registrations',
+        'wwpr_page_call'
+    ); 
 }
-add_action('admin_menu', 'writingor_admin_menu');
 
 function writingor_admin_page_contents() {
     ?>
     <h1><?= esc_html__('Theme settings', 'writingor') ?></h1>
     <form method="POST" action="options.php">
-    <?
-    settings_fields('writingor-page');
-    do_settings_sections('writingor-page');
-    submit_button();
-    ?>
+        <?
+        settings_fields('writingor-page');
+        do_settings_sections('writingor-page');
+        submit_button();
+        ?>
     </form>
     <?
 }
@@ -40,15 +49,15 @@ function writingor_settings_init() {
         'writingor-page'
     );
 
-		add_settings_field(
-		   'writingor__settings_footer_text_content',
-		   'Footer text content',
-		   'writingor_setting_markup',
-		   'writingor-page',
-		   'writingor_page_setting_section'
-		);
+    add_settings_field(
+        'writingor__settings_footer_text_content',
+        'Footer text content',
+        'writingor_setting_markup',
+        'writingor-page',
+        'writingor_page_setting_section'
+    );
 
-		register_setting('writingor-page', 'writingor__settings_footer_text_content');
+    register_setting('writingor-page', 'writingor__settings_footer_text_content');
 }
 
 function writingor_setting_section_callback_function() {
