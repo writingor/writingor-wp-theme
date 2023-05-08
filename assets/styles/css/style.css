@@ -1362,7 +1362,7 @@ button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 24px;
+  width: 16px;
   height: 24px;
   -webkit-transition: all linear 200ms;
   -o-transition: all linear 200ms;
