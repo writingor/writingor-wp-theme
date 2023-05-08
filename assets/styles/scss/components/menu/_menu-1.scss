@@ -95,7 +95,7 @@
         padding: 1rem 0;
         background-color: transparent;
         margin: 0;
-        transform: $transition;
+        transition: $transition;
     }
 
     &__menu-list-item {
@@ -108,8 +108,8 @@
             &_children {
                 .writingor--menu-1__menu-list {
                     display: none;
-                    padding-left: 1rem;
-                    background-color: $gray-1;
+                    padding-left: 1.5rem;
+                    border-bottom: 1px solid $gray-1;
 
                     &_active {
                         display: flex;
@@ -132,14 +132,14 @@
         color: $black;
         text-decoration: none;
         margin: 0;
-        transform: $transition;
+        transition: $transition;
 
         @media screen and (max-width: 800) {
             font-size: 1.5rem;
         }
 
         &_active {
-            background-color: $gray-3;
+            background-color: $gray-1;
 
             .writingor--menu-1__menu-link-arrow {
                 transform: rotate(90deg);

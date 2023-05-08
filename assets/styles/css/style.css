@@ -1281,9 +1281,9 @@ button {
   padding: 1rem 0;
   background-color: transparent;
   margin: 0;
-  -webkit-transform: all linear 200ms;
-      -ms-transform: all linear 200ms;
-          transform: all linear 200ms;
+  -webkit-transition: all linear 200ms;
+  -o-transition: all linear 200ms;
+  transition: all linear 200ms;
 }
 .writingor--menu-1__menu-list-item {
   display: block;
@@ -1295,8 +1295,8 @@ button {
 }
 .writingor--menu-1__menu-list-item_has_children .writingor--menu-1__menu-list {
   display: none;
-  padding-left: 1rem;
-  background-color: #f0f0f0;
+  padding-left: 1.5rem;
+  border-bottom: 1px solid #f0f0f0;
 }
 .writingor--menu-1__menu-list-item_has_children .writingor--menu-1__menu-list_active {
   display: -webkit-box;
@@ -1322,9 +1322,9 @@ button {
   color: #202020;
   text-decoration: none;
   margin: 0;
-  -webkit-transform: all linear 200ms;
-      -ms-transform: all linear 200ms;
-          transform: all linear 200ms;
+  -webkit-transition: all linear 200ms;
+  -o-transition: all linear 200ms;
+  transition: all linear 200ms;
 }
 @media screen and (max-width: 800) {
   .writingor--menu-1__menu-link {
@@ -1332,7 +1332,7 @@ button {
   }
 }
 .writingor--menu-1__menu-link_active {
-  background-color: #cccccc;
+  background-color: #f0f0f0;
 }
 .writingor--menu-1__menu-link_active .writingor--menu-1__menu-link-arrow {
   -webkit-transform: rotate(90deg);
