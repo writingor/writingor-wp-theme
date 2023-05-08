@@ -302,8 +302,7 @@ const scrollToWithAnimation = (el, t, state) => {
 
                     let target = link.getAttribute('href')
                     target = target.substring(target.indexOf('#'))
-                    console.log(target)
-                    
+
                     if (document.querySelector(target)) {
                         e.preventDefault()
                         scrollToWithAnimation(link, 500, false)

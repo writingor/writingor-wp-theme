@@ -139,6 +139,10 @@ class Writingor__Header_Menu_Walker extends Walker_Nav_Menu {
 
         $output .= "<li class='$list_item_classlist'>";
         $output .= "<a href='$item->url' class='$link_classlist' onclick='hideMobileMenu(event, false)'>$item->title</a>";
+    
+        if ($args->show_carets && $args->walker->has_children) {
+            $output .= "<span class='writingor--menu-1__menu-link-arrow'></span>";
+        }
     }
 }
 
