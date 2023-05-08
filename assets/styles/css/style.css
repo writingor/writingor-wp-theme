@@ -1291,6 +1291,7 @@ button {
 }
 .writingor--menu-1__menu-list-item_has_children .writingor--menu-1__menu-list {
   display: none;
+  padding-left: 1rem;
 }
 .writingor--menu-1__menu-list-item_has_children .writingor--menu-1__menu-list_active {
   display: -webkit-box;
@@ -1314,6 +1315,7 @@ button {
   font-weight: 500;
   color: #202020;
   text-decoration: none;
+  margin: 0;
 }
 @media screen and (max-width: 800) {
   .writingor--menu-1__menu-link {
