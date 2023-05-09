@@ -322,6 +322,20 @@ button {
   pointer-events: none;
 }
 
+code {
+  padding: 1rem;
+  background-color: #202020;
+  color: white;
+}
+code::-moz-selection {
+  background-color: #FFD600;
+  color: #202020;
+}
+code::selection {
+  background-color: #FFD600;
+  color: #202020;
+}
+
 .writingor--title-1 {
   font-weight: 500;
   font-size: 2.3rem;
