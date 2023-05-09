@@ -24,6 +24,17 @@
         .writingor--language-switcher__current {
             color: $black;
         }
+
+        .writingor--menu-toggler {
+            span {
+                background-color: $black;
+        
+                &::after,
+                &::before {
+                    background-color: $black;
+                }
+            }
+        }
     }
 
     &__row {
