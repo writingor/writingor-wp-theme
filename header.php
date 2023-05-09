@@ -48,9 +48,7 @@
                         ?>
                     </ul>
                 </div>
-                <button onclick="showMobileMenu(event)" class="writingor--header-1__menu-toggler writingor--menu-toggler">
-                    <span></span>
-                    <span></span>
+                <button onclick="toggleMobileMenu(event)" class="writingor--header-1__menu-toggler writingor--menu-toggler">
                     <span></span>
                 </button>
             </div>

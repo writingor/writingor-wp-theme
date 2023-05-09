@@ -833,6 +833,67 @@ function hideAllActiveLanguageSwitherLists() {
 }
 
 /**
+ * Toggle mobile menu
+ * @param {*} event - event prevent
+ */
+function toggleMobileMenu(event, prevent = true) {
+    if (event && prevent) {
+        event.preventDefault()
+    }
+
+    let currentToggler = event.target.closest('.writingor--menu-toggler')
+
+    if (currentToggler) {
+        if (currentToggler.classList.contains('writingor--menu-toggler_active')) {
+            currentToggler.classList.remove('writingor--menu-toggler_active')
+
+            let allTogglers = document.querySelectorAll('.writingor--menu-toggler')
+
+            if (allTogglers) {
+                allTogglers.forEach(toggler => {
+                    toggler.classList.remove('writingor--menu-toggler_active')
+                })
+            }
+
+            let menu = document.querySelector('.writingor--menu-1')
+
+            if (menu) {
+                menu.classList.remove('writingor--menu-1_active')
+            }
+
+            let body = document.querySelector('body')
+
+            if (body) {
+                body.classList.remove('writingor--body_locked')
+            }
+
+        } else {
+            currentToggler.classList.add('writingor--menu-toggler_active')
+
+            let allTogglers = document.querySelectorAll('.writingor--menu-toggler')
+
+            if (allTogglers) {
+                allTogglers.forEach(toggler => {
+                    toggler.classList.add('writingor--menu-toggler_active')
+                })
+            }
+
+            let menu = document.querySelector('.writingor--menu-1')
+
+            if (menu) {
+                menu.classList.add('writingor--menu-1_active')
+            }
+
+            let body = document.querySelector('body')
+
+            if (body) {
+                body.classList.add('writingor--body_locked')
+            }
+        }
+    }
+}
+
+/**
  * Show mobile menu
  * @param {*} event - event prevent
  */
@@ -926,7 +987,7 @@ function toggleMobileSubMenu(event, prevent = true) {
 {
     window.addEventListener('load', () => {
         let preloader = document.querySelector('.writingor--preloader')
-        
+
         if (preloader) {
             preloader.remove()
         }
