@@ -171,3 +171,117 @@ function writingor__save_meta_box_review_link($post_id) {
 
     update_post_meta($post_id, 'writingor__review_link', $review_link);
 }
+
+/**
+ * Portfolio
+ * link
+ */
+
+add_action('add_meta_boxes', 'writingor__add_meta_box_portfolio_link');
+
+function writingor__add_meta_box_portfolio_link() {
+    add_meta_box(
+        'writingor__meta_box_portfolio_link', // $id
+        __('Portfolio link', 'writingor'), // $title
+        'writingor__show_meta_box_portfolio_link', // $callback
+        'portfolio', // $page_slug
+        'normal', // $context
+        'high' // $priority
+    );
+}
+
+function writingor__show_meta_box_portfolio_link() {
+    global $post;
+    $value = esc_attr(get_post_meta($post->ID, 'writingor__portfolio_link', true));
+    wp_nonce_field('writingor', 'portfolio_link_nonce');
+    echo "<input type=\"text\" name=\"writingor__portfolio_link\" value=\"$value\">";
+}
+
+
+add_action('save_post', 'writingor__save_meta_box_portfolio_link');
+add_action('new_to_publish', 'writingor__save_meta_box_portfolio_link');
+
+function writingor__save_meta_box_portfolio_link($post_id) {
+
+    if (!isset($_POST['portfolio_link_nonce']) || !wp_verify_nonce($_POST['portfolio_link_nonce'], 'writingor')) {
+        return 'nonce not verified';
+    }
+
+    if (wp_is_post_autosave($post_id)) {
+        return 'autosave';
+    }
+
+    if (wp_is_post_revision($post_id)) {
+        return 'revision';
+    }
+
+    if (isset($_POST['post_type']) && 'portfolio' === $_POST['post_type']) {
+
+        if (!current_user_can('edit_page', $post_id)) {
+            return 'cannot edit page';
+        } else if (!current_user_can('edit_post', $post_id)) {
+            return 'cannot edit post';
+        }
+    }
+
+    $portfolio_link = esc_url($_POST['writingor__portfolio_link']);
+
+    update_post_meta($post_id, 'writingor__portfolio_link', $portfolio_link);
+}
+
+/**
+ * Portfolio
+ * git
+ */
+
+add_action('add_meta_boxes', 'writingor__add_meta_box_portfolio_git');
+
+function writingor__add_meta_box_portfolio_git() {
+    add_meta_box(
+        'writingor__meta_box_portfolio_git', // $id
+        __('GitHub', 'writingor'), // $title
+        'writingor__show_meta_box_portfolio_git', // $callback
+        'portfolio', // $page_slug
+        'normal', // $context
+        'high' // $priority
+    );
+}
+ 
+function writingor__show_meta_box_portfolio_git() {
+    global $post;
+    $value = esc_attr(get_post_meta($post->ID, 'writingor__portfolio_git', true));
+    wp_nonce_field('writingor', 'portfolio_git_nonce');
+    echo "<input type=\"text\" name=\"writingor__portfolio_git\" value=\"$value\">";
+}
+
+
+add_action('save_post', 'writingor__save_meta_box_portfolio_git');
+add_action('new_to_publish', 'writingor__save_meta_box_portfolio_git');
+
+function writingor__save_meta_box_portfolio_git($post_id) {
+
+    if (!isset($_POST['portfolio_git_nonce']) || !wp_verify_nonce($_POST['portfolio_git_nonce'], 'writingor')) {
+        return 'nonce not verified';
+    }
+
+    if (wp_is_post_autosave($post_id)) {
+        return 'autosave';
+    }
+
+    if (wp_is_post_revision($post_id)) {
+        return 'revision';
+    }
+
+    if (isset($_POST['post_type']) && 'portfolio' === $_POST['post_type']) {
+
+        if (!current_user_can('edit_page', $post_id)) {
+            return 'cannot edit page';
+        } else if (!current_user_can('edit_post', $post_id)) {
+            return 'cannot edit post';
+        }
+    }
+
+    $portfolio_git = esc_url($_POST['writingor__portfolio_git']);
+
+    update_post_meta($post_id, 'writingor__portfolio_git', $portfolio_git);
+}
