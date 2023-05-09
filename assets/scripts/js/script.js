@@ -913,6 +913,14 @@ function showMobileMenu(event, prevent = true) {
     if (body) {
         body.classList.add('writingor--body_locked')
     }
+
+    let allTogglers = document.querySelectorAll('.writingor--menu-toggler')
+
+    if (allTogglers) {
+        allTogglers.forEach(toggler => {
+            toggler.classList.add('writingor--menu-toggler_active')
+        })
+    }
 }
 
 /**
@@ -934,6 +942,14 @@ function hideMobileMenu(event, prevent = true) {
 
     if (body) {
         body.classList.remove('writingor--body_locked')
+    }
+
+    let allTogglers = document.querySelectorAll('.writingor--menu-toggler')
+
+    if (allTogglers) {
+        allTogglers.forEach(toggler => {
+            toggler.classList.remove('writingor--menu-toggler_active')
+        })
     }
 }
 

@@ -61,13 +61,9 @@
             <div class="writingor--menu-1__html-overlay" onclick="hideMobileMenu(event)"></div>
             <div class="writingor--menu-1__body">
                 <div class="writingor--menu-1__header">
-    
-                    <!-- menu hide -->
-                    <button class="writingor--menu-1__hide writingor--menu-hide" onclick="hideMobileMenu(event)">
-                        <span></span>
+                    <button onclick="toggleMobileMenu(event)" class="writingor--menu-1__hide writingor--menu-toggler">
                         <span></span>
                     </button>
-                    <!--/ menu hide -->
                 </div>
     
                 <!-- nested menu -->
