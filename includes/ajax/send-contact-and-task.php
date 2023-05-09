@@ -121,7 +121,7 @@ function writingor__send_contact_and_task() {
     }
 
     echo json_encode([
-        'message' => 'Спасибо, сообщение успешно отправлено!',
+        'message' => __('Thank you, message sent successfully!', 'writingor'),
         'success' => true
     ]);
 
