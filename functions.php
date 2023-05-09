@@ -153,7 +153,7 @@ class Writingor__Header_Menu_Walker extends Walker_Nav_Menu {
 
         $link_classlist = 'writingor--menu-1__menu-link';
 
-        if ($item->url && str_contains($item->url, '#')) {
+        if ($item->url && str_contains($item->url, '#') && !$args->walker->has_children) {
             $link_classlist .= ' writingor--anchor';
         }
 
@@ -162,7 +162,7 @@ class Writingor__Header_Menu_Walker extends Walker_Nav_Menu {
         $output .= "<li class='$list_item_classlist'>";
     
         if ($args->show_carets && $args->walker->has_children) {
-            $output .= "<p class='$link_classlist' onclick='toggleMobileSubMenu(event, false)'>$item->title<span class='writingor--menu-1__menu-link-arrow'></span></p>";
+            $output .= "<a href='$item->url' class='$link_classlist' onclick='toggleMobileSubMenu(event, true)'>$item->title<span class='writingor--menu-1__menu-link-arrow'></span></a>";
         } else {
             $output .= "<a href='$item->url' class='$link_classlist' onclick='hideMobileMenu(event, false)'>$item->title</a>";
         }

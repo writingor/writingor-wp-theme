@@ -1330,10 +1330,6 @@ button {
   color: #202020;
   text-decoration: none;
   margin: 0;
-  -webkit-transition: all linear 200ms;
-  -o-transition: all linear 200ms;
-  transition: all linear 200ms;
-  cursor: pointer;
 }
 @media screen and (max-width: 800) {
   .writingor--menu-1__menu-link {
@@ -1342,6 +1338,7 @@ button {
 }
 .writingor--menu-1__menu-link_active {
   background-color: #f0f0f0;
+  padding: 0.8em 2rem;
 }
 .writingor--menu-1__menu-link_active .writingor--menu-1__menu-link-arrow {
   -webkit-transform: rotate(90deg);
