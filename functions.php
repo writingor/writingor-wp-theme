@@ -55,7 +55,15 @@ function writingor__theme_setup() {
      * Disable type attribute
      * fo script and style
      */
-    add_theme_support('html5', ['script', 'style']);
+    add_theme_support('html5', [
+        'search-form',
+        'comment-form',
+        'comment-list',
+        'gallery',
+        'caption',
+        'style',
+        'script'
+    ]);
 
     /**
      * Add <title> render
