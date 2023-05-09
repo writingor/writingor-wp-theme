@@ -166,6 +166,10 @@ button {
   margin: 0;
 }
 
+html {
+  color: #202020;
+}
+
 pre,
 code,
 hr,
