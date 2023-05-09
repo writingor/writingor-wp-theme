@@ -20,14 +20,14 @@ if (!defined('THEME_DIR')) {
  * Disable authors page
  */
 
-// add_action('parse_query', 'writingor__disable_authors_page');
+add_action('parse_query', 'writingor__disable_authors_page');
 
-// function writingor__disable_authors_page($query) {
-//     if(is_author()) {
-//         wp_redirect(home_url());
-//         exit;
-//     }
-// }
+function writingor__disable_authors_page($query) {
+    if(is_author()) {
+        wp_redirect(home_url());
+        exit;
+    }
+}
 
 /**
  * Theme setup

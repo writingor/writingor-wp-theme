@@ -18,8 +18,8 @@ function writingor__add_woocommerce_support() {
 add_filter('nonce_user_logged_out', 'writingor__return_user_0', 100, 2);
 
 function writingor__return_user_0($uid, $action) {
-    
-    if ($uid && $uid != 0 && $action && $action == 'caldera_forms_front') {
+
+    if ($uid && $uid != 0 && $action && $action === 'caldera_forms_front') {
        $uid = 0;
     }
   
