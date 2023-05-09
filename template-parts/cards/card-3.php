@@ -31,7 +31,24 @@ if ($add_onclick) {
                 <p>
                     <? the_excerpt() ?>
                 </p>
-                <p><a rel="noreferrer noopener" target="_blank" href="<?= get_post_permalink() ?>"><?= esc_html__('View', 'writingor') ?></a></p>
+                <?
+                $git = get_post_meta(get_the_ID(), 'writingor__portfolio_git', true);
+                if ($git) :
+                ?>
+                    <p>
+                        <b><?= __('GitHub', 'writingor') ?>: </b>
+                        <a href="<?= $git ?>" rel="noreferrer noopener" target="_blank" ></a>
+                    </p>
+                <? endif ?>
+                <?
+                $link = get_post_meta(get_the_ID(), 'writingor__portfolio_link', true);
+                if ($link) :
+                ?>
+                    <p>
+                        <b><?= esc_html__('View', 'writingor') ?>: </b>
+                        <a href="<?= $link ?>" rel="noreferrer noopener" target="_blank"></a>
+                    </p>
+                <? endif ?>
             </div>
         </div>
     </div>
