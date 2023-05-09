@@ -559,7 +559,7 @@ button {
   position: absolute;
   width: 8px;
   height: 8px;
-  background-color: #cccccc;
+  background-color: white;
   -webkit-transition: all linear 200ms;
   -o-transition: all linear 200ms;
   transition: all linear 200ms;
@@ -570,7 +570,7 @@ button {
   display: block;
   width: 8px;
   height: 8px;
-  background-color: #cccccc;
+  background-color: white;
   -webkit-transition: all linear 200ms;
   -o-transition: all linear 200ms;
   transition: all linear 200ms;
