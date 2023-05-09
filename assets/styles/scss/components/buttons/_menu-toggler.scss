@@ -14,9 +14,9 @@
         height: 8px;
         background-color: $gray-3;
         transition: $transition;
-        
-        &::before,
-        &::after {
+
+        &::after,
+        &::before {
             position: absolute;
             content: '';
             display: block;
@@ -27,11 +27,11 @@
         }
 
         &::before {
-            transform: translateX(13px);
+            transform: translateX(-13px);
         }
 
         &::after {
-            transform: translateX(-13px);
+            transform: translateX(13px);
         }
     }
 
@@ -41,12 +41,12 @@
             transform: translateY(-60%);
 
             &::before {
-                background-color: $yellow;
-                transform: translateY(100%) translateX(13px);
+                transform: translateY(100%) translateX(-13px);
             }
 
             &::after {
-                transform: translateY(60%) translateX(-13px);
+                background-color: $yellow;
+                transform: translateY(60%) translateX(13px);
             }
         }
     }
