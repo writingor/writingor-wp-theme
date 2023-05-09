@@ -10,10 +10,6 @@
     backdrop-filter: blur(1px);
     transition: $transition;
 
-    .writingor--menu-toggler span::before {
-        background-color: white;
-    }
-
     .writingor--logo-1,
     .writingor--language-switcher__current {
         color: white;
@@ -24,10 +20,6 @@
         backdrop-filter: blur(3px);
         background-color: rgba($color: white, $alpha: .7);
 
-        .writingor--menu-toggler span::after {
-            background-color: $black;
-        }
-    
         .writingor--logo-1,
         .writingor--language-switcher__current {
             color: $black;

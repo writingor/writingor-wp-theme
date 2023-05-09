@@ -564,7 +564,7 @@ button {
   -o-transition: all linear 200ms;
   transition: all linear 200ms;
 }
-.writingor--menu-toggler span::after, .writingor--menu-toggler span::before {
+.writingor--menu-toggler span::before, .writingor--menu-toggler span::after {
   position: absolute;
   content: "";
   display: block;
@@ -576,14 +576,14 @@ button {
   transition: all linear 200ms;
 }
 .writingor--menu-toggler span::before {
-  -webkit-transform: translateX(-13px);
-      -ms-transform: translateX(-13px);
-          transform: translateX(-13px);
-}
-.writingor--menu-toggler span::after {
   -webkit-transform: translateX(13px);
       -ms-transform: translateX(13px);
           transform: translateX(13px);
+}
+.writingor--menu-toggler span::after {
+  -webkit-transform: translateX(-13px);
+      -ms-transform: translateX(-13px);
+          transform: translateX(-13px);
 }
 .writingor--menu-toggler_active span {
   background-color: #722DCA;
@@ -592,15 +592,15 @@ button {
           transform: translateY(-60%);
 }
 .writingor--menu-toggler_active span::before {
-  -webkit-transform: translateY(100%) translateX(-13px);
-      -ms-transform: translateY(100%) translateX(-13px);
-          transform: translateY(100%) translateX(-13px);
+  background-color: #FFD600;
+  -webkit-transform: translateY(100%) translateX(13px);
+      -ms-transform: translateY(100%) translateX(13px);
+          transform: translateY(100%) translateX(13px);
 }
 .writingor--menu-toggler_active span::after {
-  background-color: #FFD600;
-  -webkit-transform: translateY(60%) translateX(13px);
-      -ms-transform: translateY(60%) translateX(13px);
-          transform: translateY(60%) translateX(13px);
+  -webkit-transform: translateY(60%) translateX(-13px);
+      -ms-transform: translateY(60%) translateX(-13px);
+          transform: translateY(60%) translateX(-13px);
 }
 .writingor--menu-toggler.writingor--mouse:hover span {
   background-color: #FFD600;
@@ -1013,9 +1013,6 @@ button {
   -o-transition: all linear 200ms;
   transition: all linear 200ms;
 }
-.writingor--header-1 .writingor--menu-toggler span::before {
-  background-color: white;
-}
 .writingor--header-1 .writingor--logo-1,
 .writingor--header-1 .writingor--language-switcher__current {
   color: white;
@@ -1025,9 +1022,6 @@ button {
   -webkit-backdrop-filter: blur(3px);
           backdrop-filter: blur(3px);
   background-color: rgba(255, 255, 255, 0.7);
-}
-.writingor--header-1.writingor--scrolled .writingor--menu-toggler span::after {
-  background-color: #202020;
 }
 .writingor--header-1.writingor--scrolled .writingor--logo-1,
 .writingor--header-1.writingor--scrolled .writingor--language-switcher__current {
