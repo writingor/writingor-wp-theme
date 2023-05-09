@@ -21,6 +21,16 @@ function writingor__add_post_types() {
             'slug' => 'portfolio',
             'singular_name' => __('Portfolio', 'writingor'),
             'plural_name' => __('Portfolio', 'writingor'),
+        ],
+        [
+            'slug' => 'notebook',
+            'singular_name' => __('Notebook', 'writingor'),
+            'plural_name' => __('Notebook', 'writingor'),
+        ],
+        [
+            'slug' => 'blog',
+            'singular_name' => __('Blog', 'writingor'),
+            'plural_name' => __('Blog', 'writingor'),
         ]
     ];
     
