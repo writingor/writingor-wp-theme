@@ -585,24 +585,6 @@ button {
       -ms-transform: translateX(13px);
           transform: translateX(13px);
 }
-.writingor--menu-toggler span.writingor--mouse:hover span {
-  background-color: #FFD600;
-}
-.writingor--menu-toggler span.writingor--mouse:hover span::before {
-  background-color: #FFD600;
-}
-.writingor--menu-toggler span.writingor--mouse:hover span::after {
-  background-color: #FFD600;
-}
-.writingor--menu-toggler span.writingor--mouse:active span {
-  background-color: #722DCA;
-}
-.writingor--menu-toggler span.writingor--mouse:active span::before {
-  background-color: #722DCA;
-}
-.writingor--menu-toggler span.writingor--mouse:active span::after {
-  background-color: #722DCA;
-}
 .writingor--menu-toggler_active span {
   background-color: #722DCA;
   -webkit-transform: translateY(-60%);
@@ -619,6 +601,24 @@ button {
   -webkit-transform: translateY(60%) translateX(13px);
       -ms-transform: translateY(60%) translateX(13px);
           transform: translateY(60%) translateX(13px);
+}
+.writingor--menu-toggler.writingor--mouse:hover span {
+  background-color: #FFD600;
+}
+.writingor--menu-toggler.writingor--mouse:hover span::before {
+  background-color: #FFD600;
+}
+.writingor--menu-toggler.writingor--mouse:hover span::after {
+  background-color: #FFD600;
+}
+.writingor--menu-toggler.writingor--mouse:active span {
+  background-color: #722DCA;
+}
+.writingor--menu-toggler.writingor--mouse:active span::before {
+  background-color: #722DCA;
+}
+.writingor--menu-toggler.writingor--mouse:active span::after {
+  background-color: #722DCA;
 }
 
 .writingor--menu-hide {

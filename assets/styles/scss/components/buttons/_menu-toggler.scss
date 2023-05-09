@@ -33,34 +33,6 @@
         &::after {
             transform: translateX(13px);
         }
-
-        &.writingor--mouse:hover {
-            span {
-                background-color: $yellow;
-
-                &::before {
-                    background-color: $yellow;
-                }
-
-                &::after {
-                    background-color: $yellow;
-                }
-            }
-        }
-
-        &.writingor--mouse:active {
-            span {
-                background-color: $violet;
-
-                &::before {
-                    background-color: $violet;
-                }
-
-                &::after {
-                    background-color: $violet;
-                }
-            }
-        }
     }
 
     &_active {
@@ -75,6 +47,34 @@
             &::after {
                 background-color: $yellow;
                 transform: translateY(60%) translateX(13px);
+            }
+        }
+    }
+
+    &.writingor--mouse:hover {
+        span {
+            background-color: $yellow;
+
+            &::before {
+                background-color: $yellow;
+            }
+
+            &::after {
+                background-color: $yellow;
+            }
+        }
+    }
+
+    &.writingor--mouse:active {
+        span {
+            background-color: $violet;
+
+            &::before {
+                background-color: $violet;
+            }
+
+            &::after {
+                background-color: $violet;
             }
         }
     }
