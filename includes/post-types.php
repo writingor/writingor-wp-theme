@@ -6,37 +6,43 @@ function writingor__add_post_types() {
             'slug' => 'reviews',
             'singular_name' => __('Review', 'writingor'),
             'plural_name' => __('Reviews', 'writingor'),
-            'taxonomies' => []
+            'taxonomies' => [],
+            'hierarchical' => false
         ],
         [
             'slug' => 'benefits',
             'singular_name' => __('Benefit', 'writingor'),
             'plural_name' => __('Benefits', 'writingor'),
-            'taxonomies' => []
+            'taxonomies' => [],
+            'hierarchical' => false
         ],
         [
             'slug' => 'services',
             'singular_name' => __('Service', 'writingor'),
             'plural_name' => __('Services', 'writingor'),
-            'taxonomies' => []
+            'taxonomies' => [],
+            'hierarchical' => false
         ],
         [
             'slug' => 'portfolio',
             'singular_name' => __('Portfolio', 'writingor'),
             'plural_name' => __('Portfolio', 'writingor'),
-            'taxonomies' => ['category']
+            'taxonomies' => ['category'],
+            'hierarchical' => true
         ],
         [
             'slug' => 'notebook',
             'singular_name' => __('Notebook', 'writingor'),
             'plural_name' => __('Notebook', 'writingor'),
-            'taxonomies' => ['category']
+            'taxonomies' => ['category'],
+            'hierarchical' => true
         ],
         [
             'slug' => 'blog',
             'singular_name' => __('Blog', 'writingor'),
             'plural_name' => __('Blog', 'writingor'),
-            'taxonomies' => ['category']
+            'taxonomies' => ['category'],
+            'hierarchical' => true
         ]
     ];
     
@@ -53,7 +59,8 @@ function writingor__add_post_types() {
                 'rewrite' => ['slug' => $params['slug']],
                 'show_in_rest' => true,
                 'supports' => ['title', 'excerpt', 'editor', 'author', 'thumbnail', 'revisions', 'custom-fields'],
-                'taxonomies' => $params['taxonomies']
+                'taxonomies' => $params['taxonomies'],
+                'hierarchical' => $params['hierarchical']
             ]
         );
     }
