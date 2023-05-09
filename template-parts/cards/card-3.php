@@ -37,7 +37,7 @@ if ($add_onclick) {
                 ?>
                     <p>
                         <b><?= __('GitHub', 'writingor') ?>: </b>
-                        <a href="<?= $git ?>" rel="noreferrer noopener" target="_blank" ></a>
+                        <a href="<?= $git ?>" rel="noreferrer noopener" target="_blank"><?= esc_html($git) ?></a>
                     </p>
                 <? endif ?>
                 <?
@@ -46,7 +46,7 @@ if ($add_onclick) {
                 ?>
                     <p>
                         <b><?= esc_html__('View', 'writingor') ?>: </b>
-                        <a href="<?= $link ?>" rel="noreferrer noopener" target="_blank"></a>
+                        <a href="<?= $link ?>" rel="noreferrer noopener" target="_blank"><?= esc_html($link) ?></a>
                     </p>
                 <? endif ?>
             </div>
