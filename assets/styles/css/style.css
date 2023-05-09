@@ -2160,4 +2160,14 @@ code::selection {
 }
 .writingor--layout-9 h1 {
   font-weight: 700;
+}
+
+.writingor--layout-10 {
+  padding: 8rem 0 5rem;
+  background-color: white;
+}
+.writingor--layout-10__body {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 2rem;
 }/*# sourceMappingURL=style.css.map */
