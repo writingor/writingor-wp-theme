@@ -2,13 +2,13 @@
 <!DOCTYPE html>
 <html lang="<?= get_bloginfo('language') ?>">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="<? bloginfo('charset') ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <? wp_head() ?>
 </head>
-<body class="<? body_class() ?> writingor--body" id="writingor--body">
+<body class="writingor--body" id="writingor--body">
     <!-- preloader -->
     <div class="writingor--preloader">
         <span class="writingor--preloader__square writingor--preloader__square_first"></span>
