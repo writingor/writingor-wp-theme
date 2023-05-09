@@ -618,7 +618,7 @@ function elementInViewport_byY(element, percent = 0) {
  * Send 'send contact & task' form
  */
 {
-    const forms = document.querySelectorAll('form')
+    const forms = document.querySelectorAll('form[name=writingor__send_contact_and_task]')
 
     if (forms) {
         forms.forEach(form => {

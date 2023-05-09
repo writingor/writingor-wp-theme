@@ -217,7 +217,7 @@ function writingor__form_1($props) {
 
     ?>
     <!-- form 1 -->
-    <form method="post" class="writingor--form-1" action="<?= admin_url('admin-ajax.php') ?>">
+    <form name="writingor__send_contact_and_task" method="post" class="writingor--form-1" action="<?= admin_url('admin-ajax.php') ?>">
         <h2 class="writingor--form-1__title">
             <?= $props['title'] ?>
         </h2>
