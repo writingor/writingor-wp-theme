@@ -6,8 +6,8 @@
     padding: .9em 2em .95em;
     background-color: $black;
     outline: none;
-    border: 2px dashed $gray-1;
-    border-radius: 40px;
+    border: 1px solid $gray-1;
+    border-radius: 0;
     font-size: 1.25rem;
     font-weight: 700;
     text-align: center;
@@ -18,6 +18,6 @@
 
     &.writingor--mouse:hover {
         color: $yellow;
-        border: 2px dashed $gray-2;
+        border: 1px dashed $gray-2;
     }
 }
