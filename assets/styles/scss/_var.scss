@@ -21,3 +21,46 @@ $shadow-1: 3px 5px 10px rgba($black, .16);
         background-color: $gray-1;
     }
 }
+
+@keyframes preloader {
+    0% {
+        background-color: $black;
+    }
+    100% {
+        background-color: $violet;
+    }
+}
+
+@keyframes first-square {
+    0% {
+        background-color: $gray-3;
+        transform: translateY(40%);
+    }
+    100% {
+        background-color: white;
+        transform: translateY(0);
+    }
+}
+
+@keyframes second-square {
+    0% {
+        background-color: $violet;
+        transform: translateY(-60%);
+    }
+    100% {
+        background-color: $gray-3;
+        transform: translateY(0);
+    }
+}
+
+@keyframes third-square {
+    0% {
+        transform: translateY(20%);
+        background-color: $yellow;
+    }
+    100% {
+        transform: translateY(-10%) translateX(0);
+        background-color: $gray-3;
+    }
+}
+  

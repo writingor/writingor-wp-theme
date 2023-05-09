@@ -11,9 +11,9 @@
 <body class="writingor--body" id="writingor--body">
     <!-- preloader -->
     <div class="writingor--preloader">
-        <span class="writingor--preloader__square preloader__square_first"></span>
-        <span class="writingor--preloader__square preloader__square_second"></span>
-        <span class="writingor--preloader__square preloader__square_third"></span>
+        <span class="writingor--preloader__square writingor--preloader__square_first"></span>
+        <span class="writingor--preloader__square writingor--preloader__square_second"></span>
+        <span class="writingor--preloader__square writingor--preloader__square_third"></span>
     </div>
     <!--/ preloader -->
     <?
