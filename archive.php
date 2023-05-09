@@ -3,7 +3,7 @@
 <main class="writingor--main" id="writingor--main">
     <div class="writingor--layout-9">
         <div class="writingor--layout-9__container writingor--container">
-            <h1><?= sanitize_term_field(get_the_archive_title()) ?></h1>
+            <h1><?= sanitize_text_field(get_the_archive_title()) ?></h1>
             
             <?
             while (have_posts()) :
