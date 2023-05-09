@@ -1308,7 +1308,7 @@ button {
 }
 @media screen and (max-width: 800) {
   .writingor--menu-1__menu-list-item_has_children .writingor--menu-1__menu-list .writingor--menu-1__menu-link {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 }
 .writingor--menu-1__menu-link {
@@ -1325,7 +1325,7 @@ button {
   width: 100%;
   padding: 0.6em 2rem;
   background-color: transparent;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 500;
   color: #202020;
   text-decoration: none;
@@ -1337,7 +1337,7 @@ button {
 }
 @media screen and (max-width: 800) {
   .writingor--menu-1__menu-link {
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
 }
 .writingor--menu-1__menu-link_active {
@@ -1381,14 +1381,14 @@ button {
   transition: all linear 200ms;
 }
 .writingor--menu-1__menu-link-arrow::before {
-  -webkit-transform: translate(0, -200%) rotate(45deg);
-      -ms-transform: translate(0, -200%) rotate(45deg);
-          transform: translate(0, -200%) rotate(45deg);
+  -webkit-transform: translate(0, -240%) rotate(45deg);
+      -ms-transform: translate(0, -240%) rotate(45deg);
+          transform: translate(0, -240%) rotate(45deg);
 }
 .writingor--menu-1__menu-link-arrow::after {
-  -webkit-transform: translate(0, 200%) rotate(-45deg);
-      -ms-transform: translate(0, 200%) rotate(-45deg);
-          transform: translate(0, 200%) rotate(-45deg);
+  -webkit-transform: translate(0, 240%) rotate(-45deg);
+      -ms-transform: translate(0, 240%) rotate(-45deg);
+          transform: translate(0, 240%) rotate(-45deg);
 }
 
 .writingor--layout-1 {

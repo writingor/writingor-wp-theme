@@ -119,7 +119,7 @@
                         font-size: 1rem;
     
                         @media screen and (max-width: 800) {
-                            font-size: 1.5rem;
+                            font-size: 1.8rem;
                         }
                     }
                 }
@@ -135,7 +135,7 @@
         width: 100%;
         padding: .6em 2rem;
         background-color: transparent;
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         font-weight: 500;
         color: $black;
         text-decoration: none;
@@ -144,7 +144,7 @@
         cursor: pointer;
 
         @media screen and (max-width: 800) {
-            font-size: 1.6rem;
+            font-size: 2rem;
         }
 
         &_active {
@@ -182,11 +182,11 @@
         }
 
         &::before {
-            transform: translate(0, -200%) rotate(45deg);
+            transform: translate(0, -240%) rotate(45deg);
         }
 
         &::after {
-            transform: translate(0, 200%) rotate(-45deg);
+            transform: translate(0, 240%) rotate(-45deg);
         }
     }
 }
