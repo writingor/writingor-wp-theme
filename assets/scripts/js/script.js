@@ -919,3 +919,18 @@ function toggleMobileSubMenu(event, prevent = true) {
         link.classList.toggle('writingor--menu-1__menu-link_active')
     }
 }
+
+/**
+ * Remove preloader
+ */
+{
+    window.addEventListener('load', () => {
+        let preloader = document.querySelector('.writingor--preloader')
+        
+        if (preloader) {
+            preloader.remove()
+        }
+    }, {
+        passive: true
+    })
+}
