@@ -18,10 +18,10 @@
         &::before {
             position: absolute;
             content: '';
+            display: block;
             width: 8px;
             height: 8px;
             background-color: $gray-3;
-            transform: translateX(-13px);
             transition: $transition;
         }
 

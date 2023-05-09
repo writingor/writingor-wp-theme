@@ -566,12 +566,10 @@ button {
 .writingor--menu-toggler span::after, .writingor--menu-toggler span::before {
   position: absolute;
   content: "";
+  display: block;
   width: 8px;
   height: 8px;
   background-color: #cccccc;
-  -webkit-transform: translateX(-13px);
-      -ms-transform: translateX(-13px);
-          transform: translateX(-13px);
   -webkit-transition: all linear 200ms;
   -o-transition: all linear 200ms;
   transition: all linear 200ms;
