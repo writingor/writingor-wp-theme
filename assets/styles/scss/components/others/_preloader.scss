@@ -1,0 +1,34 @@
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    width: 100vw;
+    height: 100vh;
+    background-color: $black;
+    animation: preloader 2000ms ease-in infinite alternate;
+
+    &__square {
+        display: block;
+        width: 14px;
+        height: 14px;
+        background-color: $gray-3;
+        transition: $transition;
+    }
+
+    &__square_first {
+        animation: first-square 500ms ease-in infinite alternate;
+    }
+
+    &__square_second {
+        animation: second-square 400ms ease-in infinite alternate;
+    }
+
+    &__square_third {
+        animation: third-square 300ms ease-in infinite alternate;
+    }
+}
