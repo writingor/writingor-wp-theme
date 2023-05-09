@@ -93,7 +93,7 @@ function writingor__send_contact_and_task() {
 
         if ($contact === '') {
             echo json_encode([
-                'message' => 'Укажите контакт',
+                'message' => __('Fill in the contact', 'writingor'),
                 'success' => false
             ]);
 
@@ -112,7 +112,7 @@ function writingor__send_contact_and_task() {
 
         if ($task === '') {
             echo json_encode([
-                'message' => 'Опишите задачу',
+                'message' => __('Write a task', 'writingor'),
                 'success' => false
             ]);
 
