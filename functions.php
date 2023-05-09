@@ -280,3 +280,10 @@ include get_theme_file_path('/includes/ajax/send-contact-and-task.php');
  */
 
 include get_theme_file_path('/includes/ajax/get-more-portfolio-posts.php');
+
+/**
+ * Add woocommerce
+ * functions
+ */
+
+include get_theme_file_path('/includes/woocommerce-functions.php');
