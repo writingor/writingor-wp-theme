@@ -4,10 +4,15 @@
     flex-wrap: nowrap;
     gap: 1rem;
     width: 100%;
+    border: 1px solid $black;
 
     input {
         display: block;
         height: 50px;
         width: 100%;
+    }
+
+    button {
+        height: 50px;
     }
 }

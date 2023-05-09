@@ -535,8 +535,8 @@ code::selection {
   background-color: #202020;
   outline: none;
   border-radius: 0;
-  font-size: 1rem;
-  font-weight: 700;
+  font-size: 0.75rem;
+  font-weight: 500;
   line-height: 100%;
   text-align: center;
   text-transform: uppercase;
@@ -1074,11 +1074,15 @@ code::selection {
       flex-wrap: nowrap;
   gap: 1rem;
   width: 100%;
+  border: 1px solid #202020;
 }
 .writingor--searchform-1 input {
   display: block;
   height: 50px;
   width: 100%;
+}
+.writingor--searchform-1 button {
+  height: 50px;
 }
 
 .writingor--header-1 {
