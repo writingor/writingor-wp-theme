@@ -1,7 +1,3 @@
-<?
-$dir = get_template_directory_uri();
-?>
-
 <? get_header() ?>
 
 <main class="writingor--main" id="writingor--main">
