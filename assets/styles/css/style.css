@@ -161,10 +161,13 @@ button {
   letter-spacing: 0.2em;
   font-weight: 300;
   line-height: 150%;
+  color: #202020;
   padding: 0;
   margin: 0;
 }
 
+pre,
+code,
 hr,
 h1,
 h2,
@@ -178,6 +181,8 @@ li,
 p {
   margin: 1.5em 0;
 }
+pre:first-child,
+code:first-child,
 hr:first-child,
 h1:first-child,
 h2:first-child,
@@ -191,6 +196,8 @@ li:first-child,
 p:first-child {
   margin-top: 0;
 }
+pre:last-child,
+code:last-child,
 hr:last-child,
 h1:last-child,
 h2:last-child,
@@ -2132,4 +2139,12 @@ code::selection {
 }
 .writingor--layout-8__main ul li a.writingor--mouse:hover {
   color: #722DCA;
+}
+
+.writingor--layout-9 {
+  padding: 8rem 0 5rem;
+  background-color: white;
+}
+.writingor--layout-9 h1 {
+  font-weight: 700;
 }/*# sourceMappingURL=style.css.map */
