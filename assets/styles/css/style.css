@@ -1075,7 +1075,6 @@ code::selection {
           align-items: center;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  gap: 1rem;
   width: 100%;
   border: 1px solid #202020;
 }
