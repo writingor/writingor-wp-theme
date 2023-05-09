@@ -592,6 +592,7 @@ button {
           transform: translateY(-60%);
 }
 .writingor--menu-toggler_active span::before {
+  background-color: #cccccc;
   -webkit-transform: translateY(100%) translateX(-13px);
       -ms-transform: translateY(100%) translateX(-13px);
           transform: translateY(100%) translateX(-13px);

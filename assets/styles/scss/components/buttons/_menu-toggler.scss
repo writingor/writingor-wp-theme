@@ -41,6 +41,7 @@
             transform: translateY(-60%);
 
             &::before {
+                background-color: $gray-3;
                 transform: translateY(100%) translateX(-13px);
             }
 
