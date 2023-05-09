@@ -34,6 +34,7 @@
         <div class="writingor--header-1__container writingor--container">
             <div class="writingor--header-1__row">
                 <a href="<?= esc_url($current_home_url) ?>" class="writingor--header-1__logo writingor--logo-1">
+                    <!-- the_custom_logo() -->
                     <?= esc_html__('Writingor', 'writingor') ?>
                 </a>
                 <div class="writingor--header-1__language-switcher writingor--language-switcher" onclick="toggleLanguageSwitcherList(event)">
@@ -61,6 +62,7 @@
             <div class="writingor--menu-1__html-overlay" onclick="hideMobileMenu(event)"></div>
             <div class="writingor--menu-1__body">
                 <div class="writingor--menu-1__header">
+                    <? get_search_form() ?>
                     <button onclick="toggleMobileMenu(event)" class="writingor--menu-1__hide writingor--menu-toggler">
                         <span></span>
                     </button>
