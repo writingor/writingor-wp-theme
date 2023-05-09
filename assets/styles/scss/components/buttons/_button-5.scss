@@ -1,0 +1,22 @@
+.writingor--button-5 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    padding: .75em 1.2em;
+    background-color: $black;
+    outline: none;
+    border-radius: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+
+    &.writingor--mouse:hover {
+        background-color: $violet;
+    }
+}

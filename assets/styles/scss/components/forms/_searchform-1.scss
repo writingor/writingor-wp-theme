@@ -1,0 +1,13 @@
+.writingor--searchform-1 {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    width: 100%;
+
+    input {
+        display: block;
+        height: 50px;
+        width: 100%;
+    }
+}

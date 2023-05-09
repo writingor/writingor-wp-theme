@@ -518,6 +518,36 @@ code::selection {
   border-radius: 18px 0 18px 18px;
 }
 
+.writingor--button-5 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.75em 1.2em;
+  background-color: #202020;
+  outline: none;
+  border-radius: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+.writingor--button-5.writingor--mouse:hover {
+  background-color: #722DCA;
+}
+
 .writingor--to-top {
   display: block;
   position: fixed;
@@ -1031,6 +1061,24 @@ code::selection {
   font-size: 0.7rem;
   color: #202020;
   text-align: center;
+}
+
+.writingor--searchform-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  gap: 1rem;
+  width: 100%;
+}
+.writingor--searchform-1 input {
+  display: block;
+  height: 50px;
+  width: 100%;
 }
 
 .writingor--header-1 {
