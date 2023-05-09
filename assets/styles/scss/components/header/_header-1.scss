@@ -10,7 +10,7 @@
     backdrop-filter: blur(1px);
     transition: $transition;
 
-    .writingor--menu-toggler span {
+    .writingor--menu-toggler span::before {
         background-color: white;
     }
 
@@ -24,7 +24,7 @@
         backdrop-filter: blur(3px);
         background-color: rgba($color: white, $alpha: .7);
 
-        .writingor--menu-toggler span {
+        .writingor--menu-toggler span::after {
             background-color: $black;
         }
     

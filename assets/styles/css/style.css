@@ -1013,7 +1013,7 @@ button {
   -o-transition: all linear 200ms;
   transition: all linear 200ms;
 }
-.writingor--header-1 .writingor--menu-toggler span {
+.writingor--header-1 .writingor--menu-toggler span::before {
   background-color: white;
 }
 .writingor--header-1 .writingor--logo-1,
@@ -1026,7 +1026,7 @@ button {
           backdrop-filter: blur(3px);
   background-color: rgba(255, 255, 255, 0.7);
 }
-.writingor--header-1.writingor--scrolled .writingor--menu-toggler span {
+.writingor--header-1.writingor--scrolled .writingor--menu-toggler span::after {
   background-color: #202020;
 }
 .writingor--header-1.writingor--scrolled .writingor--logo-1,
