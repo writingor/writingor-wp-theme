@@ -1,0 +1,9 @@
+.writingor--card-5 {
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid $gray-3;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}

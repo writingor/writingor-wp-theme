@@ -940,6 +940,15 @@ code::selection {
           filter: saturate(1);
 }
 
+.writingor--card-5 {
+  padding: 1rem 2rem;
+  margin-bottom: 2rem;
+  border: 1px solid #cccccc;
+}
+.writingor--card-5:last-child {
+  margin-bottom: 0;
+}
+
 .writingor--form-1 {
   padding: 56px 48px 52px;
   background: white;
