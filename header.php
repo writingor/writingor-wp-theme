@@ -8,7 +8,7 @@
 
     <? wp_head() ?>
 </head>
-<body class="writingor--body" id="writingor--body">
+<body class="<? body_class() ?> writingor--body" id="writingor--body">
     <!-- preloader -->
     <div class="writingor--preloader">
         <span class="writingor--preloader__square writingor--preloader__square_first"></span>
