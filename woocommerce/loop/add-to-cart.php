@@ -26,7 +26,7 @@ echo apply_filters(
 	sprintf(
 		'<a href="%s" data-quantity="%s" class="%s" %s>%s</a>',
 		esc_url($product->add_to_cart_url()),
-		esc_attr(isset($args['quantity']) ? $args['quantity'] : 1 ),
+		esc_attr(isset($args['quantity']) ? $args['quantity'] : 1),
 		esc_attr(isset($args['class']) ? $args['class'] : 'writingor--button-3'),
 		isset($args['attributes']) ? wc_implode_html_attributes($args['attributes']) : '',
 		esc_html($product->add_to_cart_text())
@@ -34,3 +34,14 @@ echo apply_filters(
 	$product,
 	$args
 );
+/**
+ * 
+ * priority 10, args 3 
+ * 
+ * example:
+ * 
+ * add_filter('woocommerce_loop_add_to_cart_link', function($html, $product, $args) {
+ * 	return $html;
+ * }, 10, 3);
+ * 
+ */
