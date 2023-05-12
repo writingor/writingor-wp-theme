@@ -20,4 +20,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 <div class="writingor--layout-11 products">
-	<div class="writingor--layout-11__body columns-<?php echo esc_attr( wc_get_loop_prop( 'columns' ) ); ?>">
+	<div class="writingor--layout-11__body writingor--layout-11__body_col_<?= esc_attr(wc_get_loop_prop('columns')) ?> columns-<?= esc_attr(wc_get_loop_prop('columns')) ?>">

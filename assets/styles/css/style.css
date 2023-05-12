@@ -2275,4 +2275,16 @@ code::selection {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 2rem;
+}
+.writingor--layout-11__body_col_1 {
+  grid-template-columns: 1fr;
+}
+.writingor--layout-11__body_col_2 {
+  grid-template-columns: 1fr 1fr;
+}
+.writingor--layout-11__body_col_3 {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.writingor--layout-11__body_col_4 {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }/*# sourceMappingURL=style.css.map */

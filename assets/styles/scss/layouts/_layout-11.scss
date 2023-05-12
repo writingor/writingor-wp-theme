@@ -4,5 +4,24 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 2rem;
+
+        &_col {
+
+            &_1 {
+                grid-template-columns: 1fr;
+            }
+
+            &_2 {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            &_3 {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+
+            &_4 {
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+            }
+        }
     }
 }
