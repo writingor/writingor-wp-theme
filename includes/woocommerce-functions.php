@@ -246,7 +246,7 @@ if ( ! function_exists( 'writingor__woocommerce_header_cart' ) ) {
  * Change class
  * cover link single product
  */
-add_filter('woocommerce_template_loop_product_link_open', function() {
+add_action('woocommerce_template_loop_product_link_open', function() {
 	global $product;
 
 	$link = apply_filters('woocommerce_loop_product_link', get_the_permalink(), $product);
