@@ -21,13 +21,13 @@
                             $link = get_sub_field('link');
                             $attrs = '';
                             
-                            // if (get_sub_field('is_modal')) {
-                            //     $link = esc_attr($link);
-                            //     $attrs += " data-modal='$link'";
+                            if (get_sub_field('is_modal')) {
+                                $link = esc_attr($link);
+                                $attrs .= " data-modal='$link'";
 
-                            // } else if (get_sub_field('is_anchor')) {
-                            //     $attrs += " class='writingor--anchor'";
-                            // }
+                            } else if (get_sub_field('is_anchor')) {
+                                $attrs .= " class='writingor--anchor'";
+                            }
                         ?>
                             <a <?= $attrs ?> href="<?= esc_url($link) ?>">
                                 <?= esc_html(get_sub_field('link_text')) ?>
