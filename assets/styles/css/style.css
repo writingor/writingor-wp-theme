@@ -1025,6 +1025,9 @@ code::selection {
   font-weight: 700;
   margin-bottom: auto;
 }
+.writingor--card-6 .writingor--button-4 {
+  padding: 0.95em 1.5em 1em;
+}
 
 .writingor--form-1 {
   padding: 56px 48px 52px;
