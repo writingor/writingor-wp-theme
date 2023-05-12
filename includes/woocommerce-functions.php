@@ -241,3 +241,15 @@ if ( ! function_exists( 'writingor__woocommerce_header_cart' ) ) {
 		<?php
 	}
 }
+
+/**
+ * Change class
+ * cover link single product
+ */
+add_filter('woocommerce_template_loop_product_link_open', function() {
+	global $product;
+
+	$link = apply_filters('woocommerce_loop_product_link', get_the_permalink(), $product);
+
+	echo '<a href="' . esc_url( $link ) . '" class="writingor--card-6__cover woocommerce-LoopProduct-link woocommerce-loop-product__link">';
+}, 10, 2);
