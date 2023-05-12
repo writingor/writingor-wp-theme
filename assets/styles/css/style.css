@@ -1126,7 +1126,7 @@ code::selection {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   width: 100%;
-  border: 1px solid #202020;
+  border: 1px solid #cccccc;
 }
 .writingor--searchform-1 input {
   display: block;
@@ -1554,8 +1554,8 @@ code::selection {
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 2rem;
-  padding: 1.5rem 2rem;
-  border-bottom: 1px solid #cccccc;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #f0f0f0;
 }
 .writingor--menu-1__hide {
   margin-left: auto;
