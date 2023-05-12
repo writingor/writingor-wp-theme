@@ -242,7 +242,8 @@ registerBlockType('writingor/layout-1', {
                     {
                         href: props.attributes.button_link,
                         'data-modal': props.attributes.button_link,
-                        class: buttonClasslist
+                        class: buttonClasslist,
+                        'data-test': 'test'
                     },
                     props.attributes.button_text
                 )
