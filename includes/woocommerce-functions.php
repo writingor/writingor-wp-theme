@@ -246,6 +246,9 @@ if ( ! function_exists( 'writingor__woocommerce_header_cart' ) ) {
  * Change class
  * cover link single product
  */
+
+remove_action('woocommerce_before_shop_loop_item','woocommerce_template_loop_product_link_open', 10);
+
 add_action('woocommerce_template_loop_product_link_open', function() {
 	global $product;
 
