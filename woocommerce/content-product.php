@@ -51,7 +51,12 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	 */
 	do_action('woocommerce_after_shop_loop_item_title');
 
+	?>
+	<div class="writingor--card-6__body">
+	<?
+
 	// >>>>>>>>>> Title replaced
+
 	/**
 	 * Hook: woocommerce_shop_loop_item_title.
 	 *
@@ -66,5 +71,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	 * @hooked woocommerce_template_loop_add_to_cart - 10
 	 */
 	do_action( 'woocommerce_after_shop_loop_item' );
+	
 	?>
+	</div>
 </div>
