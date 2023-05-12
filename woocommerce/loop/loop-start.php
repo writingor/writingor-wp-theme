@@ -19,4 +19,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 ?>
-<ul class="products columns-<?php echo esc_attr( wc_get_loop_prop( 'columns' ) ); ?>">
+<div class="writingor--layout-11 products">
+	<div class="writingor--layout-11__body columns-<?php echo esc_attr( wc_get_loop_prop( 'columns' ) ); ?>">

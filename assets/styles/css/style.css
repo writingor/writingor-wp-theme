@@ -2258,4 +2258,9 @@ code::selection {
   display: grid;
   grid-template-columns: 1fr 3fr;
   gap: 2rem;
+}
+.writingor--layout-11__body {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
 }/*# sourceMappingURL=style.css.map */
