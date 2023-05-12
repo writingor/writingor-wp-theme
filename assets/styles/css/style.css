@@ -567,7 +567,7 @@ code::selection {
           justify-content: center;
   text-decoration: none;
   z-index: 10;
-  padding: 0.15em 1em 0.3em 1.1em;
+  padding: 0.25em 1em 0.3em 1.1em;
   text-align: center;
   font-weight: 500;
   background-color: rgba(255, 255, 255, 0.7);
