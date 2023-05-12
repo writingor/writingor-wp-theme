@@ -315,19 +315,3 @@ add_action(
  	},
 	9
 );
-
-/**
- * Wrap nedded class
- * account page
- */
-add_action('woocommerce_before_account_navigation', function() {
-	echo '<div class="writingor--layout-10">';
-	echo '<div class="writingor--layout-10__container writingor--container">';
-	echo '<div class="writingor--layout-10__body">';
-});
-
-add_action('woocommerce_account_content', function() {
-	echo '</div>';
-	echo '</div>';
-	echo '</div>';
-}, 100);
