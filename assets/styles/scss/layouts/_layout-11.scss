@@ -5,6 +5,14 @@
         grid-template-columns: 1fr 1fr 1fr;
         gap: 2rem;
 
+        @media screen and (max-width: 1200px) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media screen and (max-width: 1000px) {
+            grid-template-columns: 1fr;
+        }
+
         &_col {
 
             &_1 {
@@ -13,14 +21,38 @@
 
             &_2 {
                 grid-template-columns: 1fr 1fr;
+
+                @media screen and (max-width: 1200px) {
+                    grid-template-columns: 1fr;
+                }
             }
 
             &_3 {
                 grid-template-columns: 1fr 1fr 1fr;
+
+                @media screen and (max-width: 1200px) {
+                    grid-template-columns: 1fr 1fr;
+                }
+
+                @media screen and (max-width: 1000px) {
+                    grid-template-columns: 1fr;
+                }
             }
 
             &_4 {
                 grid-template-columns: 1fr 1fr 1fr 1fr;
+
+                @media screen and (max-width: 1200px) {
+                    grid-template-columns: 1fr 1fr 1fr;
+                }
+
+                @media screen and (max-width: 1000px) {
+                    grid-template-columns: 1fr 1fr;
+                }
+
+                @media screen and (max-width: 800px) {
+                    grid-template-columns: 1fr;
+                }
             }
         }
     }
