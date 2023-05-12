@@ -982,6 +982,15 @@ code::selection {
   margin-bottom: 0;
 }
 
+.writingor--card-6 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
 .writingor--card-6__cover {
   position: relative;
   display: block;
@@ -1007,11 +1016,13 @@ code::selection {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 1rem;
+  height: 100%;
 }
 .writingor--card-6__title {
   margin: 0;
   font-size: 2rem;
   font-weight: 700;
+  margin-bottom: auto;
 }
 
 .writingor--form-1 {
