@@ -247,7 +247,7 @@ if ( ! function_exists( 'writingor__woocommerce_header_cart' ) ) {
  * cover link single product
  */
 
-remove_action('woocommerce_before_shop_loop_item','woocommerce_template_loop_product_link_open', 10);
+remove_action('woocommerce_before_shop_loop_item', 'woocommerce_template_loop_product_link_open', 10);
 
 add_action('woocommerce_before_shop_loop_item', function() {
 	global $product;
@@ -256,3 +256,14 @@ add_action('woocommerce_before_shop_loop_item', function() {
 
 	echo '<a href="' . esc_url( $link ) . '" class="writingor--card-6__cover woocommerce-LoopProduct-link woocommerce-loop-product__link">';
 }, 10);
+
+/**
+ * Remove closing a tag from
+ * woocommerce_after_shop_loop_item
+ */
+
+remove_action('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_product_link_close', 5);
+
+add_action('woocommerce_after_shop_loop_item_title', function() {
+	echo '</a>';
+}, 15);
