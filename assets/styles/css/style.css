@@ -590,9 +590,9 @@ code::selection {
 }
 .writingor--to-top.writingor--scrolled {
   opacity: 1;
-  -webkit-transform: rotate(-90deg) translate(0, -125%);
-      -ms-transform: rotate(-90deg) translate(0, -125%);
-          transform: rotate(-90deg) translate(0, -125%);
+  -webkit-transform: rotate(-90deg) translate(0, -115%);
+      -ms-transform: rotate(-90deg) translate(0, -115%);
+          transform: rotate(-90deg) translate(0, -115%);
 }
 
 .writingor--menu-toggler {
