@@ -20,9 +20,12 @@ defined('ABSPATH') || exit;
 $page_title = ('billing' === $load_address) ? esc_html__('Billing address', 'woocommerce') : esc_html__('Shipping address', 'woocommerce');
 
 // do_action('woocommerce_before_edit_account_address_form');
-
+?>
+slider
+<?
 writingor__woocommerce_output_all_notices();
 ?>
+asd
 
 <? if (!$load_address) : ?>
 	<? wc_get_template( 'myaccount/my-address.php' ); ?>
