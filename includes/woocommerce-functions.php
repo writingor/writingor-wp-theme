@@ -402,11 +402,11 @@ add_action(
 );
 
 // billing address
-remove_action('woocommerce_before_edit_account_address_form', 'woocommerce_output_all_notices', 10);
+remove_action('woocommerce_before_edit_account_address_form', 'woocommerce_output_all_notices', 20);
 
 add_action(
 	'woocommerce_before_edit_account_address_form', 
 	'writingor__woocommerce_output_all_notices',
-	10
+	20
 );
 
