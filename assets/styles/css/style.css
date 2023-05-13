@@ -1108,6 +1108,9 @@ code::selection {
   border-radius: 0;
   border: none;
 }
+.writingor--form-1 .select2-selection__arrow {
+  height: 100%;
+}
 .writingor--form-1 .select2-selection__rendered,
 .writingor--form-1 input[type=password],
 .writingor--form-1 input[type=text],
