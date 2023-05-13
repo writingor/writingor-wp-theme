@@ -402,5 +402,6 @@ add_filter(
 		echo '<div class="writingor--notices-1 woocommerce-notices-wrapper">';
 		wc_print_notices();
 		echo '</div>';
-	}
+	},
+	20
 );
