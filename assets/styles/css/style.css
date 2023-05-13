@@ -368,6 +368,9 @@ code::selection {
   height: 1rem;
   -webkit-box-shadow: 0px 0px 0px 1px #cccccc inset;
           box-shadow: 0px 0px 0px 1px #cccccc inset;
+  -webkit-transition: all linear 200ms;
+  -o-transition: all linear 200ms;
+  transition: all linear 200ms;
 }
 .writingor--checkbox-1 input:checked::before {
   background: url(../../images/icon/checked.svg) 50% 55% no-repeat;
