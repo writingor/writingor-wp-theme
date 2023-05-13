@@ -465,6 +465,29 @@ function writingor__woocommerce_form_field_email($field, $key, $args, $value) {
 	return $field;
 }
 
+// select
+add_filter('woocommerce_form_field_select', 'writingor__woocommerce_form_field_select', 10, 4);
+
+function writingor__woocommerce_form_field_select($field, $key, $args, $value) {
+
+	if (!empty($args['options'])) {
+		$label = $args['label'];
+		$field = "<div><p>$key, $value, $label</p><ul>";
+		
+		foreach ($args['options'] as $option_key => $option_text ) {
+			$field .= '<li>';
+			$field .= '<span type="select" value="' . esc_attr( $option_key ) . '" name="' . esc_attr( $key ) . '" id="' . esc_attr( $args['id'] ) . '_' . esc_attr( $option_key ) . '">';
+			$field .= esc_html($option_text);
+			$field .= '</span>';
+			$field .= '</li>';
+		}
+		
+		$field .= '</ul></div>';
+	}
+    
+    return $field;
+}
+
 // add_filter('woocommerce_form_field_radio', 'writingor__woocommerce_form_field_radio', 10, 4);
 
 // function writingor__woocommerce_form_field_radio($field, $key, $args, $value) {
