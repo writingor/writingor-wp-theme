@@ -105,6 +105,7 @@ code {
 .select2-container--open .select2-dropdown--below {
     border-radius: 0;
     border: 1px solid $gray-1;
+    box-shadow: $shadow-1;
 }
 
 .select2-container .select2-selection--single .select2-selection__rendered {

@@ -361,6 +361,8 @@ code::selection {
 .select2-container--open .select2-dropdown--below {
   border-radius: 0;
   border: 1px solid #f0f0f0;
+  -webkit-box-shadow: 3px 5px 10px rgba(32, 32, 32, 0.16);
+          box-shadow: 3px 5px 10px rgba(32, 32, 32, 0.16);
 }
 
 .select2-container .select2-selection--single .select2-selection__rendered {
