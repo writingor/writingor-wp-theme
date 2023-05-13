@@ -357,6 +357,7 @@ code::selection {
   background-color: #722DCA;
 }
 
+.select2-container--open .select2-dropdown--above,
 .select2-container--open .select2-dropdown--below {
   border-radius: 0;
   border: 1px solid #f0f0f0;

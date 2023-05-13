@@ -101,6 +101,7 @@ code {
     background-color: $violet;
 }
 
+.select2-container--open .select2-dropdown--above,
 .select2-container--open .select2-dropdown--below {
     border-radius: 0;
     border: 1px solid $gray-1;
