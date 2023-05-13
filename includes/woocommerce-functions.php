@@ -410,8 +410,8 @@ add_action(
 // 	20
 // );
 
-override_function(
-	'woocommerce_output_all_notices',
-	'',
-	'echo \'<div class="writingor--notices-1 woocommerce-notices-wrapper">\';wc_print_notices();echo \'</div>\';'
-);
+// override_function(
+// 	'woocommerce_output_all_notices',
+// 	'',
+// 	'echo \'<div class="writingor--notices-1 woocommerce-notices-wrapper">\';wc_print_notices();echo \'</div>\';'
+// );
