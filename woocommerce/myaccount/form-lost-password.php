@@ -34,11 +34,6 @@ defined( 'ABSPATH' ) || exit;
 						<? esc_html_e('Reset password', 'writingor') ?>
 					</h2>
 
-					<?= apply_filters(
-						'woocommerce_lost_password_message',
-						esc_html__('Lost your password? Please enter your username or email address. You will receive a link to create a new password via email.', 'woocommerce')
-					) ?>
-
 					<input
 						type="text"
 						placeholder="<? esc_html_e('Username or email', 'woocommerce') ?>"
@@ -66,6 +61,13 @@ defined( 'ABSPATH' ) || exit;
 					</button>
 
 					<p class="writingor--form-1__response-message"></p>
+
+					<p class="writingor--form-1__agreement">
+						<?= apply_filters(
+							'woocommerce_lost_password_message',
+							esc_html__('Lost your password? Please enter your username or email address. You will receive a link to create a new password via email.', 'woocommerce')
+						) ?>
+					</p>
 
 				</form>
 				<!--/ form 1 -->
