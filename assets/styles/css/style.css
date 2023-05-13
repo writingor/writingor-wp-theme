@@ -1123,7 +1123,7 @@ code::selection {
 .writingor--form-1 input[type=email] {
   display: block;
   width: 100%;
-  padding: 0.9em 1.3em;
+  padding: 0.83em 1.3em 0.95em;
   border-radius: 0;
   border: 1px solid #f0f0f0;
   font-size: 1.1rem;
