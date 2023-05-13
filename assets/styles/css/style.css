@@ -1150,6 +1150,16 @@ code::selection {
 .writingor--form-1 .select2-container .select2-selection--single .select2-selection__rendered {
   margin: 0;
 }
+.writingor--form-1 .select2-container--open .select2-dropdown--below {
+  border-radius: 0;
+  border: 1px solid #f0f0f0;
+}
+.writingor--form-1 .select2-container--default .select2-results__option--highlighted[aria-selected],
+.writingor--form-1 .select2-container--default .select2-results__option--highlighted[data-selected] {
+  padding: 0.83em 1.3em 0.95em;
+  background-color: #722DCA;
+  margin: 0;
+}
 .writingor--form-1 textarea {
   display: block;
   width: 100%;

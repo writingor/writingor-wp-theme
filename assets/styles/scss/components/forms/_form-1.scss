@@ -61,6 +61,18 @@
         margin: 0;
     }
 
+    .select2-container--open .select2-dropdown--below { // woo
+        border-radius: 0;
+        border: 1px solid $gray-1;
+    }
+
+    .select2-container--default .select2-results__option--highlighted[aria-selected], // woo
+    .select2-container--default .select2-results__option--highlighted[data-selected] { // woo 
+        padding: .83em 1.3em .95em;
+        background-color: $violet;
+        margin: 0;
+    }
+
     textarea {
         display: block;
         width: 100%;
