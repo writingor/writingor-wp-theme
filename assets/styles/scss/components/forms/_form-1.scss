@@ -48,7 +48,6 @@
         border: 1px solid $gray-1;
         font-size: 1.1rem;
         margin-bottom: 1em;
-        background-color: $violet !important;
 
         &.writingor--mouse:hover {
             border: 1px solid $gray-2;
@@ -69,11 +68,11 @@
         border: 1px solid $gray-1;
     }
 
-    .select2-container--default .select2-results__option--highlighted, // woo
-    .select2-container--default .select2-results__option--highlighted { // woo 
-        padding: .83em 1.3em .95em !important;
-        background-color: $violet !important;
-        margin: 0 !important;
+    .select2-container--default .select2-results__option--highlighted[aria-selected], // woo
+    .select2-container--default .select2-results__option--highlighted[data-selected] { // woo 
+        padding: .83em 1.3em .95em;
+        background-color: $violet;
+        margin: 0;
     }
 
     textarea {

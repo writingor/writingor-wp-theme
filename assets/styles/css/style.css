@@ -1129,7 +1129,6 @@ code::selection {
   border: 1px solid #f0f0f0;
   font-size: 1.1rem;
   margin-bottom: 1em;
-  background-color: #722DCA !important;
 }
 .writingor--form-1 .select2-container--default .select2-search--dropdown .select2-search__field.writingor--mouse:hover,
 .writingor--form-1 .select2-container .select2-selection--single .select2-selection__rendered.writingor--mouse:hover,
@@ -1159,11 +1158,11 @@ code::selection {
   border-radius: 0;
   border: 1px solid #f0f0f0;
 }
-.writingor--form-1 .select2-container--default .select2-results__option--highlighted,
-.writingor--form-1 .select2-container--default .select2-results__option--highlighted {
-  padding: 0.83em 1.3em 0.95em !important;
-  background-color: #722DCA !important;
-  margin: 0 !important;
+.writingor--form-1 .select2-container--default .select2-results__option--highlighted[aria-selected],
+.writingor--form-1 .select2-container--default .select2-results__option--highlighted[data-selected] {
+  padding: 0.83em 1.3em 0.95em;
+  background-color: #722DCA;
+  margin: 0;
 }
 .writingor--form-1 textarea {
   display: block;
