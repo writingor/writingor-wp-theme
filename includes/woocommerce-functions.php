@@ -465,10 +465,10 @@ function writingor__woocommerce_form_field_email($field, $key, $args, $value) {
 	return $field;
 }
 
-// country
-add_filter('woocommerce_form_field_country', 'writingor__woocommerce_form_field_country', 10, 4);
+// select2
+add_filter('woocommerce_form_field_select2', 'writingor__woocommerce_form_field_select2', 10, 4);
 
-function writingor__woocommerce_form_field_country($field, $key, $args, $value) {
+function writingor__woocommerce_form_field_select2($field, $key, $args, $value) {
 
 	if (!empty($args['options'])) {
 		$label = $args['label'];
@@ -476,7 +476,7 @@ function writingor__woocommerce_form_field_country($field, $key, $args, $value) 
 		
 		foreach ($args['options'] as $option_key => $option_text ) {
 			$field .= '<li>';
-			$field .= '<span type="country" value="' . esc_attr( $option_key ) . '" name="' . esc_attr( $key ) . '" id="' . esc_attr( $args['id'] ) . '_' . esc_attr( $option_key ) . '">';
+			$field .= '<span type="select2" value="' . esc_attr( $option_key ) . '" name="' . esc_attr( $key ) . '" id="' . esc_attr( $args['id'] ) . '_' . esc_attr( $option_key ) . '">';
 			$field .= esc_html($option_text);
 			$field .= '</span>';
 			$field .= '</li>';
