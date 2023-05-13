@@ -428,6 +428,7 @@ add_action(
  * Rewrite wc inputs html
  */
 
+// text
 add_filter('woocommerce_form_field_text', 'writingor__woocommerce_form_field_text', 10, 4);
 
 function writingor__woocommerce_form_field_text($field, $key, $args, $value) {
@@ -438,6 +439,36 @@ function writingor__woocommerce_form_field_text($field, $key, $args, $value) {
 	// }
 	
 	$field .= '<input type="text" placeholder="'. esc_attr($args['label']) .'" value="' . esc_attr($value) . '" name="' . esc_attr($key) . '" id="' . esc_attr($args['id']) . '">';
+	
+	return $field;
+}
+
+// tel
+add_filter('woocommerce_form_field_tel', 'writingor__woocommerce_form_field_tel', 10, 4);
+
+function writingor__woocommerce_form_field_tel($field, $key, $args, $value) {
+	$field = '';
+
+	// foreach ($args as $a_key => $a_value) {
+	// 	$field .= "<p>ARGS: Key: $a_key; Value: $a_value</p>";
+	// }
+	
+	$field .= '<input type="tel" placeholder="'. esc_attr($args['label']) .'" value="' . esc_attr($value) . '" name="' . esc_attr($key) . '" id="' . esc_attr($args['id']) . '">';
+	
+	return $field;
+}
+
+// email
+add_filter('woocommerce_form_field_email', 'writingor__woocommerce_form_field_email', 10, 4);
+
+function writingor__woocommerce_form_field_email($field, $key, $args, $value) {
+	$field = '';
+
+	// foreach ($args as $a_key => $a_value) {
+	// 	$field .= "<p>ARGS: Key: $a_key; Value: $a_value</p>";
+	// }
+	
+	$field .= '<input type="email" placeholder="'. esc_attr($args['label']) .'" value="' . esc_attr($value) . '" name="' . esc_attr($key) . '" id="' . esc_attr($args['id']) . '">';
 	
 	return $field;
 }
