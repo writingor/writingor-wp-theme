@@ -347,6 +347,46 @@ code::selection {
   color: #202020;
 }
 
+.writingor--checkbox-1 {
+  padding-left: 1.2em;
+  cursor: pointer;
+}
+.writingor--checkbox-1 input {
+  position: absolute;
+  left: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+.writingor--checkbox-1 input::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 1rem;
+  height: 1rem;
+  -webkit-box-shadow: 0px 0px 0px 1px #cccccc inset;
+          box-shadow: 0px 0px 0px 1px #cccccc inset;
+}
+.writingor--checkbox-1 input:checked::before {
+  background: url(../../images/icon/checked.svg) 50% 55%/contain no-repeat;
+  -webkit-box-shadow: 0px 0px 0px 1px #a0a0a0 inset;
+          box-shadow: 0px 0px 0px 1px #a0a0a0 inset;
+}
+.writingor--checkbox-1 span {
+  font-size: 0.7rem;
+  color: #202020;
+  -webkit-transition: all linear 200ms;
+  -o-transition: all linear 200ms;
+  transition: all linear 200ms;
+}
+.writingor--checkbox-1.writingor--mouse:hover {
+  -webkit-box-shadow: 0px 0px 0px 1px #722DCA inset;
+          box-shadow: 0px 0px 0px 1px #722DCA inset;
+}
+.writingor--checkbox-1.writingor--mouse:hover span {
+  opacity: 0.7;
+}
+
 .writingor--title-1 {
   font-weight: 500;
   font-size: 2.3rem;
