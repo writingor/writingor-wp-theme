@@ -1533,6 +1533,24 @@ code::selection {
           animation: third-square 300ms ease-in infinite alternate;
 }
 
+.writingor--notices-1 {
+  padding: 1rem;
+  background-color: #f0f0f0;
+  margin-bottom: 2rem;
+}
+.writingor--notices-1 ul {
+  padding-left: 1em;
+  font-size: 1rem;
+  color: #202020;
+}
+.writingor--notices-1 ul li {
+  font-size: 1rem;
+  color: #202020;
+}
+.writingor--notices-1 ul.woocommerce-error li {
+  color: #E74242;
+}
+
 .writingor--menu-1 {
   position: fixed;
   top: 0;

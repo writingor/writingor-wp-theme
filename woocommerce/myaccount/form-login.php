@@ -24,14 +24,9 @@ if (! defined('ABSPATH')) {
 
 		<? do_action('woocommerce_before_customer_login_form') ?>
 
-		<? if ('yes' === get_option('woocommerce_enable_myaccount_registration')) : ?>
-
 		<div class="writingor--layout-10__body u-columns col2-set" id="customer_login">
 
 			<div class="writingor--layout-10__col-1 u-column1 col-1">
-
-		<? endif; ?>
-
 				<!-- form 1 -->
 				<form
 					name="writingor__woo_register"
@@ -104,9 +99,9 @@ if (! defined('ABSPATH')) {
 
 				</form>
 				<!--/ form 1 -->
+			</div>
 
 		<? if ('yes' === get_option('woocommerce_enable_myaccount_registration')) : ?>
-			</div>
 
 			<div class="writingor--layout-10__col-2 u-column2 col-2">
 				<!-- form 1 -->
