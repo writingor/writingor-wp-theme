@@ -423,3 +423,42 @@ add_action(
 // 	'',
 // 	'echo "<div class=\"writingor--notices-1 woocommerce-notices-wrapper\">";wc_print_notices();echo "</div>";'
 // );
+
+/**
+ * Rewrite wc inputs html
+ */
+
+add_filter('woocommerce_form_field_text', 'writingor__woocommerce_form_field_text', 10, 4);
+
+function writingor__woocommerce_form_field_text($field, $key, $args, $value) {
+	$field = '';
+
+	foreach ($args as $a_key => $a_value) {
+		$field .= "<p>ARGS: Key: $a_key; Value: $a_value</p>";
+	}
+	
+	$field .= '<input type="text" value="' . esc_attr($value) . '" name="' . esc_attr($key) . '" id="' . esc_attr($args['id']) . '">';
+	
+	return $field;
+}
+
+// add_filter('woocommerce_form_field_radio', 'writingor__woocommerce_form_field_radio', 10, 4);
+
+// function writingor__woocommerce_form_field_radio($field, $key, $args, $value) {
+
+// 	if (!empty( $args['options'])) {
+		
+// 		$field = '<div><ul>';
+		
+// 		foreach ( $args['options'] as $option_key => $option_text ) {
+// 			$field .= '<li>';
+// 			$field .= '<input type="radio" value="' . esc_attr( $option_key ) . '" name="' . esc_attr( $key ) . '" id="' . esc_attr( $args['id'] ) . '_' . esc_attr( $option_key ) . '" />';
+// 			$field .= '<label>' . esc_html( $option_text ) . '</label>';
+// 			$field .= '</li>';
+// 		}
+		
+// 		$field .= '</ul></div>';
+// 	}
+    
+//     return $field;
+// }
