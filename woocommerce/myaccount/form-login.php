@@ -15,16 +15,16 @@
  * @version 7.0.1
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
+if (! defined('ABSPATH')) {
 	exit; // Exit if accessed directly.
 }
 ?>
 <div class="writingor--layout-10">
 	<div class="writingor--layout-10__container writingor--container">
 
-		<? do_action( 'woocommerce_before_customer_login_form' ) ?>
+		<? do_action('woocommerce_before_customer_login_form') ?>
 
-		<? if ('yes' === get_option( 'woocommerce_enable_myaccount_registration' ) ) : ?>
+		<? if ('yes' === get_option('woocommerce_enable_myaccount_registration')) : ?>
 
 		<div class="writingor--layout-10__body u-columns col2-set" id="customer_login">
 
@@ -32,49 +32,90 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<? endif; ?>
 
-				<h2><? esc_html_e( 'Login', 'woocommerce' ); ?></h2>
+				<!-- form 1 -->
+				<form
+					name="writingor__woo_register"
+					method="post"
+					class="writingor--form-1 woocommerce-form woocommerce-form-login login" <? do_action('woocommerce_register_form_tag') ?>
+				>
+					<h2 class="writingor--form-1__title">
+						<? esc_html_e('Login', 'woocommerce') ?>
+					</h2>
 
-				<form class="woocommerce-form woocommerce-form-login login" method="post">
+					<? do_action('woocommerce_login_form_start') ?>
 
-					<? do_action( 'woocommerce_login_form_start' ); ?>
+					<input
+						type="text"
+						placeholder="<? esc_html_e('Username or email address', 'woocommerce') ?>"
+						class="woocommerce-Input woocommerce-Input--text input-text"
+						name="username"
+						id="username"
+						autocomplete="username"
+						value="<?= (!empty($_POST['username'])) ? esc_attr(wp_unslash($_POST['username'])) : '' ?>"
+					>
 
-					<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-						<label for="username"><? esc_html_e( 'Username or email address', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
-						<input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="username" id="username" autocomplete="username" value="<? echo ( ! empty( $_POST['username'] ) ) ? esc_attr( wp_unslash( $_POST['username'] ) ) : ''; ?>" /><? // @codingStandardsIgnoreLine ?>
-					</p>
-					<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
-						<label for="password"><? esc_html_e( 'Password', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
-						<input class="woocommerce-Input woocommerce-Input--text input-text" type="password" name="password" id="password" autocomplete="current-password" />
-					</p>
+					<input
+						type="password"
+						placeholder="<? esc_html_e('Password', 'woocommerce') ?>"
+						class="woocommerce-Input woocommerce-Input--text input-text"
+						name="password"
+						id="password"
+						autocomplete="current-password"
+					>
 
-					<? do_action( 'woocommerce_login_form' ); ?>
+					<? do_action('woocommerce_login_form') ?>
 
-					<p class="form-row">
-						<label class="woocommerce-form__label woocommerce-form__label-for-checkbox woocommerce-form-login__rememberme">
-							<input class="woocommerce-form__input woocommerce-form__input-checkbox" name="rememberme" type="checkbox" id="rememberme" value="forever" /> <span><? esc_html_e( 'Remember me', 'woocommerce' ); ?></span>
-						</label>
-						<? wp_nonce_field( 'woocommerce-login', 'woocommerce-login-nonce' ); ?>
-						<button type="submit" class="woocommerce-button button woocommerce-form-login__submit<? echo esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '' ); ?>" name="login" value="<? esc_attr_e( 'Log in', 'woocommerce' ); ?>"><? esc_html_e( 'Log in', 'woocommerce' ); ?></button>
-					</p>
-					<p class="woocommerce-LostPassword lost_password">
-						<a href="<? echo esc_url( wp_lostpassword_url() ); ?>"><? esc_html_e( 'Lost your password?', 'woocommerce' ); ?></a>
-					</p>
+					<label class="writingor--checkbox-1 woocommerce-form__label woocommerce-form__label-for-checkbox woocommerce-form-login__rememberme">
+						<input
+							class="woocommerce-form__input woocommerce-form__input-checkbox"
+							name="rememberme"
+							type="checkbox"
+							id="rememberme"
+							value="forever"
+						>
+						<span>
+							<? esc_html_e('Remember me', 'woocommerce') ?>
+						</span>
+					</label>
 
-					<? do_action( 'woocommerce_login_form_end' ); ?>
+					<? wp_nonce_field('woocommerce-login', 'woocommerce-login-nonce') ?>
+
+					<button
+						data-text-1="<?= esc_attr__('Send', 'writingor') ?>"
+						data-text-2="<?= esc_attr__('Sending...', 'writingor') ?>"
+						type="submit"
+						class="writingor--button-4 woocommerce-button button woocommerce-form-login__submit<?= esc_attr(wc_wp_theme_get_element_class_name('button') ? ' ' . wc_wp_theme_get_element_class_name('button') : '') ?>"
+						name="login"
+						value="<? esc_attr_e('Log in', 'woocommerce') ?>"
+					>
+						<? esc_html_e('Log in', 'woocommerce'); ?>
+					</button>
+
+					<p class="writingor--form-1__response-message"></p>
+
+					<a
+						class="writingor--button-1"
+						href="<? echo esc_url(wp_lostpassword_url()) ?>"
+					>
+						<? esc_html_e('Lost your password?', 'woocommerce') ?>
+					</a>
+
+					<? do_action('woocommerce_login_form_end'); ?>
 
 				</form>
+				<!--/ form 1 -->
 
 		<? if ('yes' === get_option('woocommerce_enable_myaccount_registration')) : ?>
 			</div>
 
 			<div class="writingor--layout-10__col-2 u-column2 col-2">
 				<!-- form 1 -->
-				<form name="writingor__woo_register" method="post" class="writingor--form-1 woocommerce-form woocommerce-form-register register" <? do_action( 'woocommerce_register_form_tag' ); ?>>
+				<form name="writingor__woo_register" method="post" class="writingor--form-1 woocommerce-form woocommerce-form-register register" <? do_action('woocommerce_register_form_tag'); ?>>
 					<h2 class="writingor--form-1__title">
-						<? esc_html_e( 'Register', 'woocommerce' ); ?>
+						<? esc_html_e('Register', 'woocommerce'); ?>
 					</h2>
 
-					<? do_action( 'woocommerce_register_form_start' ); ?>
+					<? do_action('woocommerce_register_form_start'); ?>
 
 					<? if ('no' === get_option('woocommerce_registration_generate_username')) : ?>
 						<input
@@ -120,7 +161,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 						data-text-1="<?= esc_attr__('Send', 'writingor') ?>"
 						data-text-2="<?= esc_attr__('Sending...', 'writingor') ?>"
 						type="submit"
-						class="writingor--button-4 woocommerce-Button woocommerce-button button<?= esc_attr( wc_wp_theme_get_element_class_name('button') ? ' ' . wc_wp_theme_get_element_class_name('button') : '' )?> woocommerce-form-register__submit"
+						class="writingor--button-4 woocommerce-Button woocommerce-button button<?= esc_attr(wc_wp_theme_get_element_class_name('button') ? ' ' . wc_wp_theme_get_element_class_name('button') : '')?> woocommerce-form-register__submit"
 						name="register"
 						value="<? esc_attr_e('Register', 'woocommerce') ?>"
 					>
@@ -140,6 +181,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</div>
 		</div>
 		<? endif; ?>
-		<? do_action( 'woocommerce_after_customer_login_form' ); ?>
+		<? do_action('woocommerce_after_customer_login_form'); ?>
 	</div>
 </div>
