@@ -111,7 +111,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 						<p><? esc_html_e('A link to set a new password will be sent to your email address.', 'woocommerce') ?></p>
 					<? endif ?>
 
-					<!-- pivacy policy -->
+					<!-- pivacy policy removed -->
 					<? do_action('woocommerce_register_form') ?>
 
 					<? wp_nonce_field('woocommerce-register', 'woocommerce-register-nonce') ?>
@@ -130,7 +130,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 					<p class="writingor--form-1__response-message"></p>
 
-					<? do_action( 'woocommerce_register_form_end' ); ?>
+					<!-- policy will be here -->
+
+					<? do_action('woocommerce_register_form_end') ?>
 
 				</form>
 				<!--/ form 1 -->

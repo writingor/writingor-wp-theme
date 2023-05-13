@@ -330,12 +330,9 @@ function writingor__add_registration_privacy_policy() {
 		'label_class'   => ['woocommerce-form__label woocommerce-form__label-for-checkbox checkbox'],
 		'input_class'   => ['woocommerce-form__input woocommerce-form__input-checkbox input-checkbox'],
 		'required'      => true,
-		'label'         => esc_html__('By submitting the form you agree to', 'writingor')
-							. '	<a href="/privacy-policy/" target="_blank" rel="noreferrer noopener">'
-							. esc_html__('the rules for the processing of personal data', 'writingor')
-							. '</a> .',
+		'label'         => esc_html__('I accept agreement', 'writingor')
 	]);
-	
+
 	echo '</p>';
 }
 	
@@ -355,3 +352,28 @@ function writingor__validate_privacy_registration($errors, $username, $email) {
 	}
 	return $errors;
 }
+
+/**
+ * Privacy policy text change
+ */
+
+ remove_action(
+	'woocommerce_register_form',
+	'wc_registration_privacy_policy_text',
+	20
+);
+
+add_action(
+	'woocommerce_register_form_end',
+ 	function () {
+		?>
+		<p class="writingor--form-1__agreement">
+			<a href="/privacy-policy/" target="_blank" rel="noreferrer noopener">
+				<?= esc_html__('The rules for the processing of personal data', 'writingor') ?>
+			</a>
+			.
+		</p>
+		<?
+ 	},
+	1
+);
