@@ -111,6 +111,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 						<p><? esc_html_e('A link to set a new password will be sent to your email address.', 'woocommerce') ?></p>
 					<? endif ?>
 
+					<!-- pivacy policy -->
 					<? do_action('woocommerce_register_form') ?>
 
 					<? wp_nonce_field('woocommerce-register', 'woocommerce-register-nonce') ?>
@@ -128,14 +129,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
 					<p class="writingor--form-1__response-message"></p>
-					
-					<!-- <p class="writingor--form-1__agreement">
-						<?= esc_html__('By submitting the form you agree to', 'writingor') ?>
-						<a href="/privacy-policy/" target="_blank" rel="noreferrer noopener">
-							<?= esc_html__('the rules for the processing of personal data', 'writingor') ?>
-						</a>
-						.
-					</p> -->
 
 					<? do_action( 'woocommerce_register_form_end' ); ?>
 
