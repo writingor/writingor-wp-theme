@@ -23,7 +23,12 @@
         }
     }
 
-    .select2-selection__rendered, // woocommerce deopdown
+    .select2-selection { // woocommerce dropdown
+        border-radius: 0;
+        border: none;
+    }
+
+    .select2-selection__rendered, // woocommerce dropdown
     input[type=password],
     input[type=text],
     input[type=date],
@@ -45,6 +50,10 @@
         &:focus {
             border: 1px solid $violet;
         }
+    }
+
+    .select2-selection__rendered {
+        margin: 0;
     }
 
     textarea {
