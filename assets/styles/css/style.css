@@ -1544,8 +1544,10 @@ code::selection {
   font-size: 1rem;
   color: #202020;
 }
-.writingor--notices-1 ul.woocommerce-error li {
+.writingor--notices-1 ul.woocommerce-error {
   background-color: rgba(231, 66, 66, 0.1);
+}
+.writingor--notices-1 ul.woocommerce-error li {
   color: #E74242;
 }
 

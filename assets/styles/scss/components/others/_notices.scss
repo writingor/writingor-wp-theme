@@ -12,8 +12,9 @@
         }
 
         &.woocommerce-error {
+            background-color: rgba($color: $red, $alpha: .1);
+
             li {
-                background-color: rgba($color: $red, $alpha: .1);
                 color: $red;
             }
         }
