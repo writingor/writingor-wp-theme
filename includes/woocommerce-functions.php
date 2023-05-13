@@ -394,7 +394,7 @@ function writingor__woocommerce_output_all_notices() {
 
 // add_filter('woocommerce_output_all_notices', 'writingor__woocommerce_output_all_notices', 1, 0);
 
-// // login
+// login page
 remove_action('woocommerce_before_customer_login_form', 'woocommerce_output_all_notices', 10);
 
 add_action(
@@ -403,14 +403,14 @@ add_action(
 	10
 );
 
-// billing address
-// remove_action('woocommerce_before_edit_account_address_form', 'woocommerce_output_all_notices', 20);
+// account page
+remove_action('woocommerce_account_content', 'woocommerce_output_all_notices', 5);
 
-// add_action(
-// 	'woocommerce_before_edit_account_address_form', 
-// 	'writingor__woocommerce_output_all_notices',
-// 	20
-// );
+add_action(
+	'woocommerce_account_content', 
+	'writingor__woocommerce_output_all_notices',
+	5
+);
 
 // override_function(
 // 	'',
