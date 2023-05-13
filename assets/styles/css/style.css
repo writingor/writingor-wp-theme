@@ -1104,7 +1104,10 @@ code::selection {
     font-size: 1.8rem;
   }
 }
-.writingor--form-1 .select2-selection {
+.writingor--form-1 .select2-container .select2-selection--single {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   border-radius: 0;
   border: none;
 }

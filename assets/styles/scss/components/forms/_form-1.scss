@@ -23,7 +23,8 @@
         }
     }
 
-    .select2-selection { // woocommerce dropdown
+    .select2-container .select2-selection--single { // woocommerce dropdown
+        height: fit-content;
         border-radius: 0;
         border: none;
     }
