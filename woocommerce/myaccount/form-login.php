@@ -94,7 +94,7 @@ if (! defined('ABSPATH')) {
 					<p class="writingor--form-1__response-message"></p>
 
 					<a
-						class="writingor--button-1"
+						class="writingor--button-3"
 						href="<? echo esc_url(wp_lostpassword_url()) ?>"
 					>
 						<? esc_html_e('Lost your password?', 'woocommerce') ?>
