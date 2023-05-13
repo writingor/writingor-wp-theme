@@ -1147,7 +1147,7 @@ code::selection {
 .writingor--form-1 input[type=email]:focus {
   border: 1px solid #722DCA;
 }
-.writingor--form-1 .select2-selection__rendered {
+.writingor--form-1 .select2-container .select2-selection--single .select2-selection__rendered {
   margin: 0;
 }
 .writingor--form-1 textarea {

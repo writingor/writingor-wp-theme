@@ -57,7 +57,7 @@
         }
     }
 
-    .select2-selection__rendered { // woo
+    .select2-container .select2-selection--single .select2-selection__rendered { // woo
         margin: 0;
     }
 
