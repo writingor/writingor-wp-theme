@@ -1158,8 +1158,8 @@ code::selection {
   border-radius: 0;
   border: 1px solid #f0f0f0;
 }
-.writingor--form-1 .select2-container--default .select2-results__option--highlighted[aria-selected],
-.writingor--form-1 .select2-container--default .select2-results__option--highlighted[data-selected] {
+.writingor--form-1 .select2-container--default .select2-results__option--highlighted[aria-selected=true],
+.writingor--form-1 .select2-container--default .select2-results__option--highlighted[data-selected=true] {
   padding: 0.83em 1.3em 0.95em;
   background-color: #722DCA;
   margin: 0;

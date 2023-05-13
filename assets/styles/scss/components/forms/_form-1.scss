@@ -68,8 +68,8 @@
         border: 1px solid $gray-1;
     }
 
-    .select2-container--default .select2-results__option--highlighted[aria-selected], // woo
-    .select2-container--default .select2-results__option--highlighted[data-selected] { // woo 
+    .select2-container--default .select2-results__option--highlighted[aria-selected=true], // woo
+    .select2-container--default .select2-results__option--highlighted[data-selected=true] { // woo 
         padding: .83em 1.3em .95em;
         background-color: $violet;
         margin: 0;
