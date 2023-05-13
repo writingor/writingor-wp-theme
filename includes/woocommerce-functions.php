@@ -448,10 +448,6 @@ add_filter('woocommerce_form_field_tel', 'writingor__woocommerce_form_field_tel'
 
 function writingor__woocommerce_form_field_tel($field, $key, $args, $value) {
 	$field = '';
-
-	// foreach ($args as $a_key => $a_value) {
-	// 	$field .= "<p>ARGS: Key: $a_key; Value: $a_value</p>";
-	// }
 	
 	$field .= '<input type="tel" placeholder="'. esc_attr($args['label']) .'" value="' . esc_attr($value) . '" name="' . esc_attr($key) . '" id="' . esc_attr($args['id']) . '">';
 	
@@ -463,10 +459,6 @@ add_filter('woocommerce_form_field_email', 'writingor__woocommerce_form_field_em
 
 function writingor__woocommerce_form_field_email($field, $key, $args, $value) {
 	$field = '';
-
-	// foreach ($args as $a_key => $a_value) {
-	// 	$field .= "<p>ARGS: Key: $a_key; Value: $a_value</p>";
-	// }
 	
 	$field .= '<input type="email" placeholder="'. esc_attr($args['label']) .'" value="' . esc_attr($value) . '" name="' . esc_attr($key) . '" id="' . esc_attr($args['id']) . '">';
 	
