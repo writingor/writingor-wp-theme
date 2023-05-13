@@ -1,10 +1,9 @@
 .writingor--notices-1 {
-    padding: 1rem;
-    background-color: rgba($color: $gray-1, $alpha: 1.0);
     margin-bottom: 2rem;
 
     ul {
-        padding-left: 1em;
+        padding: 1rem 1rem 1rem 2rem;
+        background-color: rgba($color: $gray-1, $alpha: 1);
         font-size: 1rem;
         color: $black;
 
@@ -15,6 +14,7 @@
 
         &.woocommerce-error {
             li {
+                background-color: rgba($color: $red, $alpha: .1);
                 color: $red;
             }
         }
