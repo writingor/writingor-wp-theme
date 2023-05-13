@@ -58,7 +58,7 @@
         }
     }
 
-    .select2-container--default .select2-search--dropdown .select2-search__field, // woocommerce dropdown
+    input.select2-search--dropdown .select2-search__field, // woocommerce dropdown
     .select2-container .select2-selection--single .select2-selection__rendered { // woo
         margin: 0;
     }
@@ -68,8 +68,8 @@
         border: 1px solid $gray-1;
     }
 
-    .select2-container--default .select2-results__option--highlighted[aria-selected], // woo
-    .select2-container--default .select2-results__option--highlighted[data-selected] { // woo 
+    li.select2-results__option--highlighted[aria-selected], // woo
+    li.select2-results__option--highlighted[data-selected] { // woo 
         padding: .83em 1.3em .95em;
         background-color: $violet;
         margin: 0;
