@@ -7,6 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <? wp_head() ?>
+
+    <style>
+        .select2-container--default .select2-results__option--highlighted[aria-selected],
+        .select2-container--default .select2-results__option--highlighted[data-selected] {
+            background-color: black;
+        }
+    </style>
 </head>
 <body class="writingor--body" id="writingor--body">
     <!-- preloader -->
