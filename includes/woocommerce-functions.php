@@ -411,7 +411,13 @@ add_action(
 // );
 
 // override_function(
-// 	'woocommerce_output_all_notices',
+// 	'',
 // 	'',
 // 	'echo \'<div class="writingor--notices-1 woocommerce-notices-wrapper">\';wc_print_notices();echo \'</div>\';'
 // );
+
+runkit_function_redefine(
+	'woocommerce_output_all_notices',
+	'',
+	'echo "<div class=\"writingor--notices-1 woocommerce-notices-wrapper\">";wc_print_notices();echo "</div>";'
+);
