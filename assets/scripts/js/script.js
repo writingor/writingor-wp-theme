@@ -342,7 +342,7 @@ const addMouseClass = (elems) => {
 }
 {
     const elems = document.querySelectorAll(
-        'a, button, input, textarea, .writingor--card-1'
+        'a, button, input, label, textarea, .writingor--card-1'
     )
 
     addMouseClass(elems)
