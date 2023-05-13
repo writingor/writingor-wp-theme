@@ -33,6 +33,7 @@
         height: 100%;
     }
 
+    .select2-container--default .select2-search--dropdown .select2-search__field, // woocommerce dropdown
     .select2-container .select2-selection--single .select2-selection__rendered, // woocommerce dropdown
     input[type=password],
     input[type=text],
@@ -57,6 +58,7 @@
         }
     }
 
+    .select2-container--default .select2-search--dropdown .select2-search__field, // woocommerce dropdown
     .select2-container .select2-selection--single .select2-selection__rendered { // woo
         margin: 0;
     }
