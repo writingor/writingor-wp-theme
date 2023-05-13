@@ -1,4 +1,4 @@
-<?php
+<?
 /**
  * Edit address form
  *
@@ -15,42 +15,55 @@
  * @version 7.0.1
  */
 
-defined( 'ABSPATH' ) || exit;
+defined('ABSPATH') || exit;
 
-$page_title = ( 'billing' === $load_address ) ? esc_html__( 'Billing address', 'woocommerce' ) : esc_html__( 'Shipping address', 'woocommerce' );
+$page_title = ('billing' === $load_address) ? esc_html__('Billing address', 'woocommerce') : esc_html__('Shipping address', 'woocommerce');
 
-do_action( 'woocommerce_before_edit_account_address_form' ); ?>
+do_action('woocommerce_before_edit_account_address_form') ?>
 
-<?php if ( ! $load_address ) : ?>
-	<?php wc_get_template( 'myaccount/my-address.php' ); ?>
-<?php else : ?>
+<? if (!$load_address) : ?>
+	<? wc_get_template( 'myaccount/my-address.php' ); ?>
+<? else : ?>
 
-	<form method="post">
+	<!-- form 1 -->
+	<form
+		method="post"
+		class="writingor--form-1"
+	>
+		<h3 class="writingor--form-1__title">
+			<?= apply_filters('woocommerce_my_account_edit_address_title', $page_title, $load_address) ?>
+		</h3>
 
-		<h3><?php echo apply_filters( 'woocommerce_my_account_edit_address_title', $page_title, $load_address ); ?></h3><?php // @codingStandardsIgnoreLine ?>
+		<? do_action("woocommerce_before_edit_address_form_{$load_address}") ?>
 
-		<div class="woocommerce-address-fields">
-			<?php do_action( "woocommerce_before_edit_address_form_{$load_address}" ); ?>
+		<?
+		foreach ($address as $key => $field) {
+			woocommerce_form_field($key, $field, wc_get_post_data_by_key($key, $field['value']));
+		}
+		?>
 
-			<div class="woocommerce-address-fields__field-wrapper">
-				<?php
-				foreach ( $address as $key => $field ) {
-					woocommerce_form_field( $key, $field, wc_get_post_data_by_key( $key, $field['value'] ) );
-				}
-				?>
-			</div>
+		<? do_action( "woocommerce_after_edit_address_form_{$load_address}" ); ?>
 
-			<?php do_action( "woocommerce_after_edit_address_form_{$load_address}" ); ?>
+		<input type="hidden" name="action" value="edit_address">
 
-			<p>
-				<button type="submit" class="button<?php echo esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '' ); ?>" name="save_address" value="<?php esc_attr_e( 'Save address', 'woocommerce' ); ?>"><?php esc_html_e( 'Save address', 'woocommerce' ); ?></button>
-				<?php wp_nonce_field( 'woocommerce-edit_address', 'woocommerce-edit-address-nonce' ); ?>
-				<input type="hidden" name="action" value="edit_address" />
-			</p>
-		</div>
+		<? wp_nonce_field('woocommerce-edit_address', 'woocommerce-edit-address-nonce') ?>
+
+		<button
+			data-text-1="<?= esc_attr__('Send', 'writingor') ?>"
+			data-text-2="<?= esc_attr__('Sending...', 'writingor') ?>"
+			type="submit"
+			class="writingor--button-4 button<? echo esc_attr(wc_wp_theme_get_element_class_name('button') ? ' ' . wc_wp_theme_get_element_class_name('button') : '' ) ?>"
+			name="save_address"
+			value="<? esc_attr_e('Save address', 'woocommerce') ?>"
+		>
+			<? esc_html_e( 'Save address', 'woocommerce' ); ?>
+		</button>
+
+		<p class="writingor--form-1__response-message"></p>
 
 	</form>
+	<!--/ form 1 -->
 
-<?php endif; ?>
+<? endif ?>
 
-<?php do_action( 'woocommerce_after_edit_account_address_form' ); ?>
+<? do_action( 'woocommerce_after_edit_account_address_form' ); ?>
