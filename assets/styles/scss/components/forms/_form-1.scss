@@ -33,7 +33,7 @@
         height: 100%;
     }
 
-    .select2-selection__rendered, // woocommerce dropdown
+    .select2-container .select2-selection--single .select2-selection__rendered, // woocommerce dropdown
     input[type=password],
     input[type=text],
     input[type=date],

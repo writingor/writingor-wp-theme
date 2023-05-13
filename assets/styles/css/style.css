@@ -1114,7 +1114,7 @@ code::selection {
 .writingor--form-1 .select2-selection__arrow {
   height: 100%;
 }
-.writingor--form-1 .select2-selection__rendered,
+.writingor--form-1 .select2-container .select2-selection--single .select2-selection__rendered,
 .writingor--form-1 input[type=password],
 .writingor--form-1 input[type=text],
 .writingor--form-1 input[type=date],
@@ -1129,7 +1129,7 @@ code::selection {
   font-size: 1.1rem;
   margin-bottom: 1em;
 }
-.writingor--form-1 .select2-selection__rendered.writingor--mouse:hover,
+.writingor--form-1 .select2-container .select2-selection--single .select2-selection__rendered.writingor--mouse:hover,
 .writingor--form-1 input[type=password].writingor--mouse:hover,
 .writingor--form-1 input[type=text].writingor--mouse:hover,
 .writingor--form-1 input[type=date].writingor--mouse:hover,
@@ -1138,7 +1138,7 @@ code::selection {
 .writingor--form-1 input[type=email].writingor--mouse:hover {
   border: 1px solid #a0a0a0;
 }
-.writingor--form-1 .select2-selection__rendered:focus,
+.writingor--form-1 .select2-container .select2-selection--single .select2-selection__rendered:focus,
 .writingor--form-1 input[type=password]:focus,
 .writingor--form-1 input[type=text]:focus,
 .writingor--form-1 input[type=date]:focus,
