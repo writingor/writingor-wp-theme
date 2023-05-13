@@ -385,23 +385,15 @@ add_action(
  * all notices
  * op login page
  */
-// remove_action('woocommerce_before_customer_login_form', 'woocommerce_output_all_notices', 10);
-// add_action(
-// 	'woocommerce_before_customer_login_form', 
-// 	function () {
-// 		echo '<div class="writingor--notices-1 woocommerce-notices-wrapper">';
-// 		wc_print_notices();
-// 		echo '</div>';
-// 	},
-// 	10
-// );
 
-add_filter(
-	'woocommerce_output_all_notices',
+remove_action('woocommerce_before_customer_login_form', 'woocommerce_output_all_notices', 10);
+
+add_action(
+	'woocommerce_before_customer_login_form', 
 	function () {
 		echo '<div class="writingor--notices-1 woocommerce-notices-wrapper">';
 		wc_print_notices();
 		echo '</div>';
 	},
-	20
+	10
 );
