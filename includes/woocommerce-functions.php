@@ -433,11 +433,11 @@ add_filter('woocommerce_form_field_text', 'writingor__woocommerce_form_field_tex
 function writingor__woocommerce_form_field_text($field, $key, $args, $value) {
 	$field = '';
 
-	foreach ($args as $a_key => $a_value) {
-		$field .= "<p>ARGS: Key: $a_key; Value: $a_value</p>";
-	}
+	// foreach ($args as $a_key => $a_value) {
+	// 	$field .= "<p>ARGS: Key: $a_key; Value: $a_value</p>";
+	// }
 	
-	$field .= '<input type="text" value="' . esc_attr($value) . '" name="' . esc_attr($key) . '" id="' . esc_attr($args['id']) . '">';
+	$field .= '<input type="text" placeholder="'. esc_attr($args['label']) .'" value="' . esc_attr($value) . '" name="' . esc_attr($key) . '" id="' . esc_attr($args['id']) . '">';
 	
 	return $field;
 }
