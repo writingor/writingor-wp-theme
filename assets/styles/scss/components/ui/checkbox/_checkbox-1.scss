@@ -12,13 +12,14 @@
             content: '';
             position: absolute;
             left: 0;
+            top: .5em;
             width: 1rem;
             height: 1rem;
             box-shadow: 0px 0px 0px 1px $gray-3 inset;
         }
 
         &:checked::before {
-            background: url(../../images/icon/checked.svg) 50% 55% / contain no-repeat;
+            background: url(../../images/icon/checked.svg) 50% 55% no-repeat;
             box-shadow: 0px 0px 0px 1px $gray-2 inset;
         }
     }
@@ -34,7 +35,10 @@
     }
 
     &.writingor--mouse:hover {
-        box-shadow: 0px 0px 0px 1px $violet inset;
+
+        input::before {
+            box-shadow: 0px 0px 0px 1px $violet inset;
+        }
 
         span {
             opacity: .7;
