@@ -1533,14 +1533,12 @@ code::selection {
           animation: third-square 300ms ease-in infinite alternate;
 }
 
-.writingor--notices-1 {
-  margin-bottom: 2rem;
-}
 .writingor--notices-1 ul {
   padding: 1rem 1rem 1rem 2rem;
   background-color: #f0f0f0;
   font-size: 1rem;
   color: #202020;
+  margin-bottom: 2em;
 }
 .writingor--notices-1 ul li {
   font-size: 1rem;
