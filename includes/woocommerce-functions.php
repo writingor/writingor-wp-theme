@@ -386,27 +386,32 @@ add_action(
  * on pages
  */
 
-function writingor__woocommerce_output_all_notices () {
-	echo '<div class="writingor--notices-1 woocommerce-notices-wrapper">';
-	wc_print_notices();
-	echo '</div>';
-}
+// function writingor__woocommerce_output_all_notices () {
+	
+	
+	
+// }
 
-// login
-remove_action('woocommerce_before_customer_login_form', 'woocommerce_output_all_notices', 10);
+// // login
+// remove_action('woocommerce_before_customer_login_form', 'woocommerce_output_all_notices', 10);
 
-add_action(
-	'woocommerce_before_customer_login_form', 
-	'writingor__woocommerce_output_all_notices',
-	10
-);
+// add_action(
+// 	'woocommerce_before_customer_login_form', 
+// 	'writingor__woocommerce_output_all_notices',
+// 	10
+// );
 
 // billing address
-remove_action('woocommerce_before_edit_account_address_form', 'woocommerce_output_all_notices', 20);
+// remove_action('woocommerce_before_edit_account_address_form', 'woocommerce_output_all_notices', 20);
 
-add_action(
-	'woocommerce_before_edit_account_address_form', 
-	'writingor__woocommerce_output_all_notices',
-	20
+// add_action(
+// 	'woocommerce_before_edit_account_address_form', 
+// 	'writingor__woocommerce_output_all_notices',
+// 	20
+// );
+
+override_function(
+	'woocommerce_output_all_notices',
+	'',
+	'echo \'<div class="writingor--notices-1 woocommerce-notices-wrapper">\';wc_print_notices();echo \'</div>\';'
 );
-
