@@ -40,7 +40,7 @@ do_action('woocommerce_before_edit_account_address_form');
 
 		<?
 		foreach ($address as $key => $field) {
-			echo "<p>$key, $field</p>";
+			// echo "<p>$key, $field</p>";
 			woocommerce_form_field($key, $field, wc_get_post_data_by_key($key, $field['value']));
 		}
 		?>

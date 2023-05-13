@@ -465,10 +465,10 @@ function writingor__woocommerce_form_field_email($field, $key, $args, $value) {
 	return $field;
 }
 
-// selection
-add_filter('woocommerce_form_field_selection', 'writingor__woocommerce_form_field_selection', 10, 4);
+// select_og
+add_filter('woocommerce_form_field_select_og', 'writingor__woocommerce_form_field_select_og', 10, 4);
 
-function writingor__woocommerce_form_field_selection($field, $key, $args, $value) {
+function writingor__woocommerce_form_field_select_og($field, $key, $args, $value) {
 
 	if (!empty($args['options'])) {
 		$label = $args['label'];
@@ -476,7 +476,7 @@ function writingor__woocommerce_form_field_selection($field, $key, $args, $value
 		
 		foreach ($args['options'] as $option_key => $option_text ) {
 			$field .= '<li>';
-			$field .= '<span type="selection" value="' . esc_attr( $option_key ) . '" name="' . esc_attr( $key ) . '" id="' . esc_attr( $args['id'] ) . '_' . esc_attr( $option_key ) . '">';
+			$field .= '<span type="select_og" value="' . esc_attr( $option_key ) . '" name="' . esc_attr( $key ) . '" id="' . esc_attr( $args['id'] ) . '_' . esc_attr( $option_key ) . '">';
 			$field .= esc_html($option_text);
 			$field .= '</span>';
 			$field .= '</li>';
