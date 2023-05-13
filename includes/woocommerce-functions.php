@@ -383,17 +383,30 @@ add_action(
 /**
  * Change woocommerce
  * all notices
- * op login page
+ * on pages
  */
 
+function writingor__woocommerce_output_all_notices () {
+	echo '<div class="writingor--notices-1 woocommerce-notices-wrapper">';
+	wc_print_notices();
+	echo '</div>';
+}
+
+// login
 remove_action('woocommerce_before_customer_login_form', 'woocommerce_output_all_notices', 10);
 
 add_action(
 	'woocommerce_before_customer_login_form', 
-	function () {
-		echo '<div class="writingor--notices-1 woocommerce-notices-wrapper">';
-		wc_print_notices();
-		echo '</div>';
-	},
+	'writingor__woocommerce_output_all_notices',
 	10
 );
+
+// billing address
+remove_action('woocommerce_before_edit_account_address_form', 'woocommerce_output_all_notices', 10);
+
+add_action(
+	'woocommerce_before_edit_account_address_form', 
+	'writingor__woocommerce_output_all_notices',
+	10
+);
+
