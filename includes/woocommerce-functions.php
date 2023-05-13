@@ -392,7 +392,7 @@ function writingor__woocommerce_output_all_notices() {
 	echo "</div>";
 }
 
-add_filter('woocommerce_output_all_notices', 'writingor__woocommerce_output_all_notices');
+add_filter('woocommerce_output_all_notices', 'writingor__woocommerce_output_all_notices', 100, 0);
 
 // // login
 // remove_action('woocommerce_before_customer_login_form', 'woocommerce_output_all_notices', 10);
