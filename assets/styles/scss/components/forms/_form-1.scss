@@ -58,22 +58,6 @@
         }
     }
 
-    input.select2-search__field, // woocommerce dropdown
-    .select2-container .select2-selection--single .select2-selection__rendered { // woo
-        margin: 0;
-    }
-
-    .select2-container--open .select2-dropdown--below { // woo
-        border-radius: 0;
-        border: 1px solid $gray-1;
-    }
-
-    li.select2-results__option { // woo 
-        padding: .83em 1.3em .95em;
-        background-color: $violet;
-        margin: 0;
-    }
-
     textarea {
         display: block;
         width: 100%;
@@ -113,4 +97,26 @@
         color: $black;
         text-align: center;
     }
+}
+
+// woo dd
+
+.select2-container--default .select2-results__option {
+    padding: .83em 1.3em .95em;
+    margin: 0;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected],
+.select2-container--default .select2-results__option--highlighted[data-selected] {
+    background-color: $violet;
+}
+
+.select2-container--open .select2-dropdown--below {
+    border-radius: 0;
+    border: 1px solid $gray-1;
+}
+
+input.select2-search__field,
+.select2-container .select2-selection--single .select2-selection__rendered {
+    margin: 0;
 }
