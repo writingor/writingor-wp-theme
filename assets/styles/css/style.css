@@ -1129,6 +1129,7 @@ code::selection {
   border: 1px solid #f0f0f0;
   font-size: 1.1rem;
   margin-bottom: 1em;
+  background-color: #722DCA !important;
 }
 .writingor--form-1 .select2-container--default .select2-search--dropdown .select2-search__field.writingor--mouse:hover,
 .writingor--form-1 .select2-container .select2-selection--single .select2-selection__rendered.writingor--mouse:hover,
