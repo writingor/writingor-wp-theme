@@ -1150,7 +1150,7 @@ code::selection {
 .writingor--form-1 input[type=email]:focus {
   border: 1px solid #722DCA;
 }
-.writingor--form-1 input.select2-search--dropdown .select2-search__field,
+.writingor--form-1 input.select2-search__field,
 .writingor--form-1 .select2-container .select2-selection--single .select2-selection__rendered {
   margin: 0;
 }
@@ -1158,8 +1158,7 @@ code::selection {
   border-radius: 0;
   border: 1px solid #f0f0f0;
 }
-.writingor--form-1 li.select2-results__option--highlighted[aria-selected],
-.writingor--form-1 li.select2-results__option--highlighted[data-selected] {
+.writingor--form-1 li.select2-results__option {
   padding: 0.83em 1.3em 0.95em;
   background-color: #722DCA;
   margin: 0;
