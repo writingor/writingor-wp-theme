@@ -31,20 +31,20 @@ if (!defined('ABSPATH')) {
 		<ul class="writingor--dropdown-1__list">
 			<?
 			$i = 0;
-			$default_value = $_GET('orderby');
+			$default_value = $_GET['orderby'];
 			$default_name = '';
 
 			foreach ($catalog_orderby_options as $id => $name) :
 
-				// if (!$default_value && $i === 0) {
-				// 	$default_value = $id;
-				// 	$default_name = $name;
+				if (!$default_value && $i === 0) {
+					$default_value = $id;
+					$default_name = $name;
 
-				// } else if ($default_value === $id) {
-				// 	$default_name = $name;
-				// } else {
-				// 	$default_name = __('Incorrect sorting', 'writingor');
-				// }
+				} else if ($default_value === $id) {
+					$default_name = $name;
+				} else {
+					$default_name = __('Incorrect sorting', 'writingor');
+				}
 			?>
 				<li
 					class="writingor--dropdown-1__list-item"
