@@ -28,9 +28,8 @@ if ( $total <= 1 ) {
 	return;
 }
 ?>
-<nav class="woocommerce-pagination">
-	<?php
-	echo paginate_links(
+<nav class="writingor--pagination woocommerce-pagination">
+	<?= paginate_links(
 		apply_filters(
 			'woocommerce_pagination_args',
 			array( // WPCS: XSS ok.
@@ -42,8 +41,8 @@ if ( $total <= 1 ) {
 				'prev_text' => is_rtl() ? '&rarr;' : '&larr;',
 				'next_text' => is_rtl() ? '&larr;' : '&rarr;',
 				'type'      => 'list',
-				'end_size'  => 3,
-				'mid_size'  => 3,
+				'end_size'  => 2,
+				'mid_size'  => 2,
 			)
 		)
 	);
