@@ -36,15 +36,15 @@ if (!defined('ABSPATH')) {
 
 			foreach ($catalog_orderby_options as $id => $name) :
 
-				if (!$default_value && $i === 0) {
-					$default_value = $id;
-					$default_name = $name;
+				// if (!$default_value && $i === 0) {
+				// 	$default_value = $id;
+				// 	$default_name = $name;
 
-				} else if ($default_value === $id) {
-					$default_name = $name;
-				} else {
-					$default_name = __('Incorrect sorting', 'writingor');
-				}
+				// } else if ($default_value === $id) {
+				// 	$default_name = $name;
+				// } else {
+				// 	$default_name = __('Incorrect sorting', 'writingor');
+				// }
 			?>
 				<li
 					class="writingor--dropdown-1__list-item"
