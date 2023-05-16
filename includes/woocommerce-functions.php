@@ -486,3 +486,18 @@ function writingor__woocommerce_form_field_email($field, $key, $args, $value) {
     
 //     return $field;
 // }
+
+
+/**
+ * WC pagination
+ */
+
+add_filter('woocommerce_breadcrumb_defaults', function() {
+	return [
+		'delimeter' => '',
+		'wrap_before' => '<nav class="writingor--pagination woocommerce-pagination"><ul>',
+		'wrap_after' => '</ul></nav>',
+		'before' => '<li>',
+		'after' => '</li>'
+	];
+});
