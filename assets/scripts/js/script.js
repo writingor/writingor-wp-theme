@@ -1121,9 +1121,52 @@ function dpropdown_1(e) {
                 })
             }
         })
+
         document.addEventListener('click', (e) => {
             let dd = e.target.closest('.writingor--dropdown-1')
             if (!dd) {
+                /**
+                 * Replace to function
+                 * this
+                 */
+                dds.forEach(dd => {
+                    dd.classList.remove('writingor--dropdown-1_active')
+                })
+                let lists = document.querySelectorAll('.writingor--dropdown-1__list_active')
+                if (lists) {
+                    lists.forEach(list => {
+                        if (list) {
+                            list.classList.remove('writingor--dropdown-1__list_active')
+                        }
+                    })
+                }
+                let arrows = document.querySelectorAll('.writingor--dropdown-1__arrow_active')
+                if (arrows) {
+                    arrows.forEach(arrow => {
+                        if (arrow) {
+                            arrow.classList.remove('writingor--dropdown-1__arrow_active')
+                        }
+                    })
+                }
+            }
+        }, {
+            passive: true
+        })
+
+        // on esc button
+        document.addEventListener('keydown', function (e) {
+            e = e || window.event
+            let isEscape = false
+            if ('key' in e) {
+                isEscape = (e.key === 'Escape' || e.key === 'Esc')
+            } else {
+                isEscape = (e.keyCode === 27)
+            }
+            if (isEscape) {
+                /**
+                 * Replace to function
+                 * this
+                 */
                 dds.forEach(dd => {
                     dd.classList.remove('writingor--dropdown-1_active')
                 })
