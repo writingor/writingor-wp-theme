@@ -517,6 +517,33 @@ code::selection {
   margin: 0;
 }
 
+.writingor--breadcrumb ul, .writingor--breadcrumb__list {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  margin: 0;
+}
+.writingor--breadcrumb li, .writingor--breadcrumb__list-item {
+  font-size: 0.8rem;
+  margin: 0;
+}
+.writingor--breadcrumb li a, .writingor--breadcrumb__list-item a {
+  display: block;
+  font-size: 0.8rem;
+  padding: 0.4rem 0.7rem;
+  color: #a0a0a0;
+  text-decoration: none;
+  margin: 0;
+}
+.writingor--breadcrumb li span, .writingor--breadcrumb__list-item span {
+  font-size: 0.8rem;
+}
+
 .writingor--title-1 {
   font-weight: 500;
   font-size: 2.3rem;
@@ -1917,7 +1944,7 @@ code::selection {
           transform: translate(0, 240%) rotate(-45deg);
 }
 
-.writingor--pagination__list {
+.writingor--pagination ul, .writingor--pagination__list {
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1928,17 +1955,20 @@ code::selection {
   gap: 1rem;
   margin: 0;
 }
-.writingor--pagination__list-item {
+.writingor--pagination li, .writingor--pagination__list-item {
   font-size: 0.8rem;
   margin: 0;
 }
-.writingor--pagination__list-item a {
+.writingor--pagination li a, .writingor--pagination__list-item a {
   display: block;
   font-size: 0.8rem;
   padding: 0.4rem 0.7rem;
   color: #a0a0a0;
   text-decoration: none;
   margin: 0;
+}
+.writingor--pagination li span, .writingor--pagination__list-item span {
+  font-size: 0.8rem;
 }
 
 .writingor--layout-1 {
