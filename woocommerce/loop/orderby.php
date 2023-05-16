@@ -38,12 +38,10 @@ if (!defined('ABSPATH')) {
 
 				if (!$default_value && $i === 0) {
 					$default_value = $id;
+				}
+				
+				if ($default_value === $id) {
 					$default_name = $name;
-
-				} else if ($default_value === $id) {
-					$default_name = $name;
-				} else {
-					$default_name = __('Incorrect sorting', 'writingor');
 				}
 			?>
 				<li
