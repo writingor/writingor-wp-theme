@@ -60,7 +60,7 @@ if (!defined('ABSPATH')) {
 		</ul>
 		<input
 			class="writingor--dropdown-1__input"
-			type="text"
+			type="hidden"
 			name="orderby"
 			value="<?= esc_attr($default_value) ?>"
 			placeholder="<?= esc_attr($default_name) ?>"
@@ -68,6 +68,9 @@ if (!defined('ABSPATH')) {
 			onclick="return false;"
 			aria-label="<? esc_attr_e('Shop order', 'woocommerce') ?>"
 		>
+		<span class="writingor--dropdown-1__current-value">
+			<?= esc_attr($default_name) ?>
+		</span>
 	</div>
 
 	<input type="hidden" name="paged" value="1" />

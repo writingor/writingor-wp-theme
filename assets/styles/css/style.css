@@ -445,7 +445,7 @@ code::selection {
   background: white;
   cursor: pointer;
 }
-.writingor--dropdown-1__input {
+.writingor--dropdown-1__current-value, .writingor--dropdown-1__input {
   width: 100%;
   height: 100%;
   font-weight: 500;
