@@ -444,6 +444,9 @@ code::selection {
   max-width: 300px;
   padding: 0.8rem 1.2rem;
   background: white;
+  -webkit-transition: all linear 200ms;
+  -o-transition: all linear 200ms;
+  transition: all linear 200ms;
   cursor: pointer;
 }
 .writingor--dropdown-1__current-value, .writingor--dropdown-1__input {
@@ -467,6 +470,9 @@ code::selection {
   border-width: 8px 7px 0 7px;
   border-color: #202020 transparent transparent transparent;
   pointer-events: none;
+  -webkit-transition: all linear 200ms;
+  -o-transition: all linear 200ms;
+  transition: all linear 200ms;
 }
 .writingor--dropdown-1__arrow_active {
   -webkit-transform: rotate(-180deg);

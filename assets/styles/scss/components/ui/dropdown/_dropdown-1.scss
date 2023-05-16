@@ -6,7 +6,7 @@
     max-width: 300px;
     padding: .8rem 1.2rem;
     background: white;
-    // transition: $transition;
+    transition: $transition;
     cursor: pointer;
 
     &__current-value,
@@ -31,6 +31,7 @@
         border-width: 8px 7px 0 7px;
         border-color: $black transparent transparent transparent;
         pointer-events: none;
+        transition: $transition;
 
         &_active {
             transform: rotate(-180deg);
