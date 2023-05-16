@@ -23,6 +23,7 @@ if (!defined('ABSPATH')) {
 <form class="woocommerce-ordering" method="get">
 
 	<div class="writingor--dropdown-1">
+		<div class="writingor--dropdown-1__arrow"></div>
 		<!-- <img
 			class="writingor--dropdown-1__arrow"
 			src=""
