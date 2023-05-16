@@ -495,9 +495,10 @@ function writingor__woocommerce_form_field_email($field, $key, $args, $value) {
 add_filter('woocommerce_breadcrumb_defaults', function() {
 	return [
 		'delimeter' => '',
-		'wrap_before' => '<nav class="writingor--pagination woocommerce-pagination"><ul>',
+		'wrap_before' => '<nav class="writingor--pagination woocommerce-pagination"><ul class="writingor--pagination__list">',
 		'wrap_after' => '</ul></nav>',
-		'before' => '<li>',
-		'after' => '</li>'
+		'before' => '<li class="writingor--pagination__list-item">',
+		'after' => '</li>',
+		'home' => __('Main', 'writingor')
 	];
 });
