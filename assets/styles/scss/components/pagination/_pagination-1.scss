@@ -13,12 +13,10 @@
     li,
     &__list-item {
         // pass
-        font-size: .8rem;
         margin: 0;
         
         a {
             display: block;
-            font-size: .8rem;
             padding: .4rem .7rem;
             color: $gray-2;
             text-decoration: none;  
@@ -26,7 +24,7 @@
         }
 
         span {
-            font-size: .8rem;
+            // pass
         }
     }
 }
