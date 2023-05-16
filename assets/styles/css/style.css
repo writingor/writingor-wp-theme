@@ -1944,6 +1944,9 @@ code::selection {
           transform: translate(0, 240%) rotate(-45deg);
 }
 
+.writingor--pagination {
+  padding: 1rem 0;
+}
 .writingor--pagination ul, .writingor--pagination__list {
   list-style: none;
   display: -webkit-box;
