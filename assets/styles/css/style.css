@@ -492,6 +492,7 @@ code::selection {
   overflow-y: auto;
   -webkit-box-shadow: 0 0.5rem 1rem rgba(106, 158, 190, 0.1);
           box-shadow: 0 0.5rem 1rem rgba(106, 158, 190, 0.1);
+  margin: 0;
 }
 .writingor--dropdown-1__list_active {
   display: -webkit-box;

@@ -51,6 +51,7 @@
         display: none;
         overflow-y: auto;
         box-shadow: 0 .5rem 1rem rgba(106, 158, 190, .1);
+        margin: 0;
 
         &_active {
             display: flex;
