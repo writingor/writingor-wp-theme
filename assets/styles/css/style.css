@@ -447,6 +447,7 @@ code::selection {
 }
 .writingor--dropdown-1__current-value, .writingor--dropdown-1__input {
   width: 100%;
+  max-width: 300px;
   height: 100%;
   font-weight: 500;
   line-height: 100%;
@@ -454,14 +455,18 @@ code::selection {
   border: none;
   pointer-events: none;
   background: transparent;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
 }
 .writingor--dropdown-1__arrow {
   position: absolute;
   right: 1rem;
-  width: 10px;
-  height: 5px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px 7px 0 7px;
+  border-color: #202020 transparent transparent transparent;
   pointer-events: none;
-  margin-top: -2px;
 }
 .writingor--dropdown-1__arrow_active {
   -webkit-transform: rotate(-180deg);

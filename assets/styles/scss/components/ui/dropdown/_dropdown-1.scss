@@ -11,6 +11,7 @@
     &__current-value,
     &__input {
         width: 100%;
+        max-width: 300px;
         height: 100%;
         font-weight: 500;
         line-height: 100%;
@@ -18,16 +19,18 @@
         border: none;
         pointer-events: none;
         background: transparent;
+        text-overflow: ellipsis;
     }
 
     &__arrow {
         position: absolute;
         right: 1rem;
-        width: 10px;
-        height: 5px;
-        // transition: $transition;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 8px 7px 0 7px;
+        border-color: $black transparent transparent transparent;
         pointer-events: none;
-        margin-top: -2px;
 
         &_active {
             transform: rotate(-180deg);
