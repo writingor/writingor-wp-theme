@@ -1,4 +1,4 @@
-<?php
+<?
 /**
  * The Template for displaying product archives, including the main shop page which is a post type archive
  *
@@ -33,6 +33,20 @@ get_header('shop');
 				 */
 				do_action('woocommerce_before_main_content');
 				?>
+				<? if (apply_filters('woocommerce_show_page_title', true)) : ?>
+					<h1 class="woocommerce-products-header__title page-title">
+						<? woocommerce_page_title() ?>
+					</h1>
+				<? endif ?>
+				<?
+				/**
+				 * Hook: woocommerce_archive_description.
+				 *
+				 * @hooked woocommerce_taxonomy_archive_description - 10
+				 * @hooked woocommerce_product_archive_description - 10
+				 */
+				do_action('woocommerce_archive_description');
+				?>
 			</div>
 		</div>
 
@@ -52,26 +66,8 @@ get_header('shop');
 					
                 </div>
                 <div class="writingor--layout-10__col-2">
-					<header class="woocommerce-products-header">
-						<?php if (apply_filters('woocommerce_show_page_title', true)) : ?>
-							<h1 class="woocommerce-products-header__title page-title">
-								<? woocommerce_page_title() ?>
-							</h1>
-						<? endif ?>
-
-						<?php
-						/**
-						 * Hook: woocommerce_archive_description.
-						 *
-						 * @hooked woocommerce_taxonomy_archive_description - 10
-						 * @hooked woocommerce_product_archive_description - 10
-						 */
-						do_action( 'woocommerce_archive_description' );
-						?>
-					</header>
-					<?php
-					if ( woocommerce_product_loop() ) {
-
+					<?
+					if (woocommerce_product_loop()) {
 						/**
 						 * Hook: woocommerce_before_shop_loop.
 						 *
@@ -79,20 +75,18 @@ get_header('shop');
 						 * @hooked woocommerce_result_count - 20
 						 * @hooked woocommerce_catalog_ordering - 30
 						 */
-						do_action( 'woocommerce_before_shop_loop' );
+						do_action('woocommerce_before_shop_loop');
 
 						woocommerce_product_loop_start();
 
-						if ( wc_get_loop_prop( 'total' ) ) {
-							while ( have_posts() ) {
+						if (wc_get_loop_prop('total')) {
+							while (have_posts()) {
 								the_post();
-
 								/**
 								 * Hook: woocommerce_shop_loop.
 								 */
-								do_action( 'woocommerce_shop_loop' );
-
-								wc_get_template_part( 'content', 'product' );
+								do_action('woocommerce_shop_loop');
+								wc_get_template_part('content', 'product');
 							}
 						}
 
