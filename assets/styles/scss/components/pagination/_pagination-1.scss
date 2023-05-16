@@ -1,3 +1,27 @@
-.writingor--pagination-1 {
-    // pass
+.writingor--pagination {
+    
+    
+    &__list {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        margin: 0;
+    }
+
+    &__list-item {
+        // pass
+        font-size: .8rem;
+        margin: 0;
+        
+        a {
+            display: block;
+            font-size: .8rem;
+            padding: .4rem .7rem;
+            color: $gray-2;
+            text-decoration: none;  
+            margin: 0;
+        }
+    }
 }

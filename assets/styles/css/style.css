@@ -1917,6 +1917,33 @@ code::selection {
           transform: translate(0, 240%) rotate(-45deg);
 }
 
+.writingor--pagination__list {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+  margin: 0;
+}
+.writingor--pagination__list-item {
+  font-size: 0.8rem;
+  margin: 0;
+}
+.writingor--pagination__list-item a {
+  display: block;
+  font-size: 0.8rem;
+  padding: 0.4rem 0.7rem;
+  color: #a0a0a0;
+  text-decoration: none;
+  margin: 0;
+}
+
 .writingor--layout-1 {
   background-color: #722DCA;
   overflow: hidden;
