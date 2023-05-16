@@ -1945,7 +1945,7 @@ code::selection {
 }
 
 .writingor--pagination {
-  padding: 1rem 0;
+  padding: 2rem 0;
 }
 .writingor--pagination ul, .writingor--pagination__list {
   list-style: none;

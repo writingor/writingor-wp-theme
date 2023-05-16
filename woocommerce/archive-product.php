@@ -34,7 +34,7 @@ get_header('shop');
 				do_action('woocommerce_before_main_content');
 				?>
 				<? if (apply_filters('woocommerce_show_page_title', true)) : ?>
-					<h1 class="woocommerce-products-header__title page-title">
+					<h1 class="writingor--title-1 woocommerce-products-header__title page-title">
 						<? woocommerce_page_title() ?>
 					</h1>
 				<? endif ?>
