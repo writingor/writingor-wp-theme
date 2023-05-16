@@ -23,23 +23,29 @@ if (!defined('ABSPATH')) {
 <form class="woocommerce-ordering" method="get">
 
 	<div class="writingor--dropdown-1">
-		<input
-			class="writingor--dropdown-1__input"
-			type="text"
-			name="orderby"
-			value=""
-			placeholder="Все отделения"
-			onkeydown="return false;"
-			onclick="return false;"
-			aria-label="<? esc_attr_e('Shop order', 'woocommerce') ?>"
-		>
-		<img
+		<!-- <img
 			class="writingor--dropdown-1__arrow"
-			src="/local/templates/perinatal-center/asset/img/icon/arr-11-b.png"
+			src=""
 			alt="arrow"
-		>
+		> -->
 		<ul class="writingor--dropdown-1__list">
-			<? foreach ($catalog_orderby_options as $id => $name) : ?>
+			<?
+			$i = 0;
+			$default_value = $_GET('orderby');
+			$default_name = '';
+
+			foreach ($catalog_orderby_options as $id => $name) :
+
+				if (!$default_value && $i === 0) {
+					$default_value = $id;
+					$default_name = $name;
+
+				} else if ($default_value === $id) {
+					$default_name = $name;
+				} else {
+					$default_name = __('Incorrect sorting', 'writingor');
+				}
+			?>
 				<li
 					class="writingor--dropdown-1__list-item"
 					data-value="<?= esc_attr($id) ?>"
@@ -47,8 +53,21 @@ if (!defined('ABSPATH')) {
 				>
 					<?= esc_html($name) ?>
 				</li>
-			<? endforeach ?>
+			<?
+				$i++;
+			endforeach;
+			?>
 		</ul>
+		<input
+			class="writingor--dropdown-1__input"
+			type="text"
+			name="orderby"
+			value="<?= esc_attr($default_value) ?>"
+			placeholder="<?= esc_attr($default_name) ?>"
+			onkeydown="return false;"
+			onclick="return false;"
+			aria-label="<? esc_attr_e('Shop order', 'woocommerce') ?>"
+		>
 	</div>
 
 	<input type="hidden" name="paged" value="1" />
