@@ -15,17 +15,42 @@
  * @version     3.6.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
+if (!defined('ABSPATH')) {
 	exit;
 }
 
 ?>
 <form class="woocommerce-ordering" method="get">
-	<select name="orderby" class="orderby" aria-label="<?php esc_attr_e( 'Shop order', 'woocommerce' ); ?>">
-		<?php foreach ( $catalog_orderby_options as $id => $name ) : ?>
-			<option value="<?php echo esc_attr( $id ); ?>" <?php selected( $orderby, $id ); ?>><?php echo esc_html( $name ); ?></option>
-		<?php endforeach; ?>
-	</select>
+
+	<div class="writingor--dropdown-1">
+		<input
+			class="writingor--dropdown-1__input"
+			type="text"
+			name="orderby"
+			value=""
+			placeholder="Все отделения"
+			onkeydown="return false;"
+			onclick="return false;"
+			aria-label="<? esc_attr_e('Shop order', 'woocommerce') ?>"
+		>
+		<img
+			class="writingor--dropdown-1__arrow"
+			src="/local/templates/perinatal-center/asset/img/icon/arr-11-b.png"
+			alt="arrow"
+		>
+		<ul class="writingor--dropdown-1__list">
+			<? foreach ($catalog_orderby_options as $id => $name) : ?>
+				<li
+					class="writingor--dropdown-1__list-item"
+					data-value="<?= esc_attr($id) ?>"
+					<? selected($orderby, $id) ?>
+				>
+					<?= esc_html($name) ?>
+				</li>
+			<? endforeach ?>
+		</ul>
+	</div>
+
 	<input type="hidden" name="paged" value="1" />
 	<?php wc_query_string_form_fields( null, array( 'orderby', 'submit', 'paged', 'product-page' ) ); ?>
 </form>

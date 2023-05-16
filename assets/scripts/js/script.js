@@ -9,9 +9,9 @@ window.addEventListener('resize', () => {
     vh = window.innerHeight * 0.01
     document.documentElement.style.setProperty('--vh', `${vh}px`)
 },
-{
-    passive: true
-})
+    {
+        passive: true
+    })
 
 /**
  * Add .writingor--scrolled to elements
@@ -36,13 +36,13 @@ const addScrolledClass = (element, distance) => {
         addScrolledClass(header, 100)
     }
     if (toTopButton) {
-        addScrolledClass(toTopButton, vh*100)
+        addScrolledClass(toTopButton, vh * 100)
     }
     if (topSection) {
-        addScrolledClass(topSection, vh*70)
+        addScrolledClass(topSection, vh * 70)
     }
     if (aboutSection) {
-        addScrolledClass(aboutSection, vh*120)
+        addScrolledClass(aboutSection, vh * 120)
     }
 
     window.addEventListener('scroll', () => {
@@ -50,18 +50,18 @@ const addScrolledClass = (element, distance) => {
             addScrolledClass(header, 100)
         }
         if (toTopButton) {
-            addScrolledClass(toTopButton, vh*100)
+            addScrolledClass(toTopButton, vh * 100)
         }
         if (topSection) {
-            addScrolledClass(topSection, vh*70)
+            addScrolledClass(topSection, vh * 70)
         }
         if (aboutSection) {
-            addScrolledClass(aboutSection, vh*120)
+            addScrolledClass(aboutSection, vh * 120)
         }
     },
-    {
-        passive: true
-    })
+        {
+            passive: true
+        })
 }
 
 /**
@@ -83,12 +83,12 @@ const addScrolledClass = (element, distance) => {
 
             let path = document.createElementNS('http://www.w3.org/2000/svg', 'path')
             path.setAttribute(
-                'd', 
+                'd',
                 'M500.5 92.5C289.835 81.5981 0 230 0 230V232H1896H1920V92C1920 92 1879.5 103.5 1821 110.5C1660.26 129.734 1635.22 -52.256 1417.5 15.5L860 189C642.283 256.756 645.669 100.013 500.5 92.5Z'
-                )
+            )
 
             let fill = '#ffffff'
-        
+
             let currentLayout = transitionBlock.closest('[data-layout=writingor--layout]')
 
             if (currentLayout) {
@@ -114,7 +114,7 @@ const addScrolledClass = (element, distance) => {
                     if (nextElementTransition) {
                         transitionBlock.setAttribute('style', 'display: none !important')
                     }
-                    
+
                 } else {
                     let footer = document.querySelector('.writingor--footer')
 
@@ -134,7 +134,7 @@ const addScrolledClass = (element, distance) => {
             path.setAttribute('fill', fill)
 
             svg.append(path)
-            
+
             transitionBlock.append(svg)
         })
     }
@@ -153,12 +153,12 @@ const addScrolledClass = (element, distance) => {
 
             let path = document.createElementNS('http://www.w3.org/2000/svg', 'path')
             path.setAttribute(
-                'd', 
+                'd',
                 'M0 204.77V0H1920V60.1388C1920 60.1388 1787.62 141.197 1684.38 138.17C1567.94 134.757 1537.8 27.3358 1405.73 27.3358C1273.66 27.3358 740.886 264.909 629.828 230.615C518.77 196.321 533.278 153.41 430.724 122.266C328.171 91.1208 0 204.77 0 204.77Z'
-                )
+            )
 
             let fill = '#ffffff'
-        
+
             let currentLayout = transitionBlock.closest('[data-layout=writingor--layout]')
 
             if (currentLayout) {
@@ -178,7 +178,7 @@ const addScrolledClass = (element, distance) => {
                             fill = compStyles.getPropertyValue('background-color')
                         }
                     }
-                    
+
                 } else {
                     let nodes = document.querySelectorAll('.writingor--main [data-layout]')
                     let lastLayoutInMain = nodes[nodes.length - 1]
@@ -188,10 +188,10 @@ const addScrolledClass = (element, distance) => {
                         if (lastLayoutInMain.classList.contains('writingor--layout')) {
                             let compStyles = window.getComputedStyle(lastLayoutInMain)
                             fill = compStyles.getPropertyValue('background-color')
-    
+
                         } else {
                             let innerLayout = lastLayoutInMain.querySelector('.writingor--layout')
-    
+
                             if (innerLayout) {
                                 let compStyles = window.getComputedStyle(innerLayout)
                                 fill = compStyles.getPropertyValue('background-color')
@@ -204,7 +204,7 @@ const addScrolledClass = (element, distance) => {
             path.setAttribute('fill', fill)
 
             svg.append(path)
-            
+
             transitionBlock.append(svg)
         })
     }
@@ -227,7 +227,7 @@ const addScrolledClass = (element, distance) => {
                 speed: 800,
                 draggable: true,
                 // autoHeight: true,
-                
+
                 keyboard: {
                     enabled: true,
                     onlyInViewport: true,
@@ -498,13 +498,13 @@ function elementInViewport(element) {
         var left = element.offsetLeft
         var width = element.offsetWidth
         var height = element.offsetHeight
-    
+
         while (element.offsetParent) {
             element = element.offsetParent
             top += element.offsetTop
             left += element.offsetLeft
         }
-    
+
         return (
             top < (window.pageYOffset + window.innerHeight) &&
             left < (window.pageXOffset + window.innerWidth) &&
@@ -609,9 +609,9 @@ function elementInViewport_byY(element, percent = 0) {
             })
         }
     },
-    {
-        passive: true
-    })
+        {
+            passive: true
+        })
 }
 
 /**
@@ -668,7 +668,7 @@ function elementInViewport_byY(element, percent = 0) {
                     url: form.getAttribute('action'),
                     data: data,
 
-                    success: function(response) {
+                    success: function (response) {
 
                         form.classList.remove('writingor--disabled')
 
@@ -691,7 +691,7 @@ function elementInViewport_byY(element, percent = 0) {
                                     input.value = ''
                                 })
                             }
-                            
+
                             if (button) {
                                 button.classList.add('writingor--disabled')
                                 setTimeout(() => {
@@ -709,7 +709,7 @@ function elementInViewport_byY(element, percent = 0) {
                             }
                         }
                     }
-                })   
+                })
             }
         })
     }
@@ -723,7 +723,7 @@ function elementInViewport_byY(element, percent = 0) {
     const moreButton = document.querySelector('.writingor--layout-5__more')
 
     if (moreButton) {
-        
+
         moreButton.onclick = (e) => {
             e.preventDefault()
 
@@ -746,7 +746,7 @@ function elementInViewport_byY(element, percent = 0) {
                     paged: moreButton.getAttribute('data-paged')
                 },
 
-                success: function(response) {
+                success: function (response) {
 
                     // console.log(response)
 
@@ -763,7 +763,7 @@ function elementInViewport_byY(element, percent = 0) {
                         moreButton.classList.remove('writingor--disabled')
                     }, 1000)
                 }
-            })   
+            })
         }
     }
 }
@@ -777,10 +777,10 @@ function toggleLanguageSwitcherList(e) {
         e &&
         e.target.closest('.writingor--language-switcher') &&
         !e.target.closest('.writingor--language-switcher__list')
-        ) {
+    ) {
 
         let list = e.target.closest('.writingor--language-switcher').querySelector('.writingor--language-switcher__list')
-        
+
         if (list) {
             list.classList.toggle('writingor--language-switcher__list_active')
         }
@@ -793,7 +793,7 @@ function toggleLanguageSwitcherList(e) {
  */
 function hideAllActiveLanguageSwitherLists() {
     let allLanguageSwitcherListActive = document.querySelectorAll('.writingor--language-switcher__list_active')
-            
+
     if (allLanguageSwitcherListActive) {
         allLanguageSwitcherListActive.forEach(list => {
             list.classList.remove('writingor--language-switcher__list_active')
@@ -1010,4 +1010,142 @@ function toggleMobileSubMenu(event, prevent = true) {
     }, {
         passive: true
     })
+}
+
+/**
+ * Dropdown 1
+ */
+function dpropdown_1(e) {
+
+    if (!e) {
+        return
+    }
+
+    let dd = e.target.closest('.writingor--dropdown-1')
+    let list = e.target.closest('.writingor--dropdown-1__list')
+    let arrow = e.target.closest('.writingor--dropdown-1').querySelector('.writingor--dropdown-1__arrow')
+
+    if (!list) {
+        list = e.target.closest('.writingor--dropdown-1').querySelector('.writingor--dropdown-1__list')
+        if (list) {
+            list.classList.toggle('writingor--dropdown-1__list_active')
+        }
+        if (arrow) {
+            arrow.classList.toggle('writingor--dropdown-1__arrow_active')
+        }
+        if (dd) {
+            dd.classList.toggle('writingor--dropdown-1_active')
+        }
+
+    } else {
+        list.classList.remove('writingor--dropdown-1__list_active')
+        if (arrow) {
+            arrow.classList.remove('writingor--dropdown-1__arrow_active')
+        }
+        if (dd) {
+            dd.classList.remove('writingor--dropdown-1_active')
+        }
+    }
+
+    document.addEventListener('click', (e) => {
+
+        let dd = e.target.closest('.writingor--dropdown-1')
+
+        if (!dd) {
+            let lists = document.querySelectorAll('.writingor--dropdown-1__list_active')
+            if (lists) {
+                lists.forEach(list => {
+                    if (list) {
+                        list.classList.remove('writingor--dropdown-1__list_active')
+                        let arrow = dd.querySelector('.writingor--dropdown-1__arrow')
+                        if (arrow) {
+                            arrow.classList.remove('writingor--dropdown-1__arrow_active')
+                        }
+                    }
+                })
+            }
+        }
+    }, {
+        passive: true
+    })
+}
+{
+    const dds = document.querySelectorAll('.writingor--dropdown-1')
+
+    if (dds) {
+        dds.forEach((dd, i1) => {
+            dd.addEventListener('click', (e) => {
+                dds.forEach((dd, i2) => {
+                    if (i1 !== i2) {
+                        dd.classList.remove('writingor--dropdown-1_active')
+                        let list = dd.querySelector('.writingor--dropdown-1__list_active')
+                        if (list) {
+                            list.classList.remove('writingor--dropdown-1__list_active')
+                            let arrow = dd.querySelector('.writingor--dropdown-1__arrow')
+                            if (arrow) {
+                                arrow.classList.remove('writingor--dropdown-1__arrow_active')
+                            }
+                        }
+                    }
+                })
+                dpropdown_1(e, Date.now())
+            }, {
+                passive: true
+            })
+
+            let items = dd.querySelectorAll('.writingor--dropdown-1__list-item')
+
+            if (items) {
+                items.forEach(item => {
+                    if (item) {
+                        item.addEventListener('click', () => {
+                            let val = item.getAttribute('data-value')
+                            // let text = item.textContent
+                            if (val) {
+                                let input = dd.querySelector('.writingor--dropdown-1__input')
+                                if (input) {
+                                    input.value = val
+                                }
+                                dd.classList.remove('writingor--dropdown-1_active')
+
+                                let form = dd.closest('form')
+
+                                if (form) {
+                                    form.submit();
+                                }
+                            }
+                        }, {
+                            passive: true
+                        })
+                    }
+                })
+            }
+        })
+        document.addEventListener('click', (e) => {
+            let dd = e.target.closest('.writingor--dropdown-1')
+            if (!dd) {
+                dds.forEach(dd => {
+                    dd.classList.remove('writingor--dropdown-1_active')
+                })
+                let lists = document.querySelectorAll('.writingor--dropdown-1__list_active')
+                if (lists) {
+                    lists.forEach(list => {
+                        if (list) {
+                            list.classList.remove('writingor--dropdown-1__list_active')
+                        }
+                    })
+                }
+                let arrows = document.querySelectorAll('.writingor--dropdown-1__arrow_active')
+                if (arrows) {
+                    arrows.forEach(arrow => {
+                        if (arrow) {
+                            arrow.classList.remove('writingor--dropdown-1__arrow_active')
+                        }
+                    })
+                }
+            }
+        }, {
+            passive: true
+        })
+    }
 }

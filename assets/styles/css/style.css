@@ -432,6 +432,24 @@ code::selection {
   opacity: 0.7;
 }
 
+.writingor--dropdown-1 {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 40px;
+  width: 100%;
+  padding: 0 1rem;
+  background: #fff;
+  -webkit-transition: all linear 200ms;
+  -o-transition: all linear 200ms;
+  transition: all linear 200ms;
+  cursor: pointer;
+}
+
 .writingor--title-1 {
   font-weight: 500;
   font-size: 2.3rem;
